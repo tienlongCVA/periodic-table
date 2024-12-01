@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./img/bg.jpg);
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.vien-kim-loai-kiem:hover{
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.periodic-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.periodic-table td[colspan] {
+    border: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.periodic-table {
+    width: 100%;
+    border-collapse: separate; /* Thay đổi từ collapse sang separate để tạo khoảng cách */
+    border-spacing: 6px; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+.periodic-table td {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng phóng to và đổ bóng */
+}
+/* Màu của nguyên tố kim loại thổ */
+.kim-loai-tho{
+    color: rgb(255, 251, 0);
+    border: 2px solid  rgb(255, 251, 0);
+}
+/* Màu của nguyên tố kim loại kiềm */
+.alkali-metal { 
+    color: rgb(255, 196, 0);
+    border: 2px solid  rgb(255, 196, 0);
+}
+/* Màu của nguyên tố Họ Lathan */
+.ho-lathan {
+    color: rgb(204, 0, 255);
+    border: 2px solid  rgb(204, 0, 255);
+}
+/* Màu của nguyên tố Họ Actini */
+.ho-actini {
+    color: rgb(119, 0, 255);
+    border: 2px solid  rgb(119, 0, 255);
+}
+/* Màu của nguyên tố kim loại chuyển tiếp */
+.kim-loai-chuyen-tiep {
+    color: rgb(255, 51, 0);
+    border: 2px solid  rgb(255, 51, 0);
+}
+/* Màu của nguyên tố kim loại khác */
+.kim-loai-khac {
+    color: rgb(0, 195, 255);
+    border: 2px solid  rgb(0, 195, 255);
+}
+/* Màu của nguyên tố phi kim */
+.phi-kim {
+    color: rgb(62, 250, 77);
+    border: 2px solid  rgb(62, 250, 77);
+    }
+/* Màu của nguyên tố Á kim */
+.a-kim {
+    color: rgb(0, 255, 191);
+    border: 2px solid  rgb(0, 255, 191);
+}
+/* Màu của nguyên tố Khí hiếm */
+.khi-hiem {
+    color: rgb(17, 0, 255);
+    border: 2px solid  rgb(17, 0, 255);
+}
+/* Màu của nguyên tố Unknow */
+.unknow {
+    color: rgb(255, 255, 255);
+    border: 2px solid  rgb(255, 255, 255)
+}
+.sheet-hover:hover{
+    background-color: #000000;
+    transform: scale(1.5); /* Phóng to lên 1.2 lần */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng để tăng hiệu ứng */
+    z-index: 10; /* Đảm bảo ô phóng to không bị che khuất */
+    cursor: pointer;
+}
+.hide-col:hover{
+    background-color: #ffffff00;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 85%;
+    height: 550px;
+}
+/* /* .periodic-table .extended{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+} */
+
+.extended {
+    width: 100%;
+    margin: 20px auto;
+}
+.ntmr{
+    color: #afaeae;
+    font-size: 28px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.element-content {
+    display: flex;
+    flex-direction: column;
+    left: 5px;
+    
+}
+
+.element-number {
+    font-size: 14px;
+    font-weight: bold;
+    left: 3px;
+}
+
+.element-symbol {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.element-mass {
+    font-size: 12px;
+}
+.element-info{
+    font-size: 12px;
+}
+/* Mặc định tất cả các ô hiện rõ */
+.element{
+    opacity: 1;
+    transition: opcity 0.3s ease;
+}
+/* Lớp cho các ô không được chọn (mờ đi) */
+.dimmed{
+    opacity: 0.3;
+}
+/* Khi di chuột, các ô sẽ không mờ đi nếu đang bị làm mờ */
+.element:hover{
+    opacity: 1;
+
+}
+
+
