@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Căn giữa nội dung trong body */
+}
+
+.profile-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    padding: 20px;
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center; /* Căn giữa video theo chiều ngang */
+}
+
+video {
+    max-width: 100%; /* Đảm bảo video không vượt quá chiều rộng của màn hình */
+    height: auto;
+}
