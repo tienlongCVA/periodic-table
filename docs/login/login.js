@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
   if (username === 'tienlongCVA' && password === 'long10pen') {
     localStorage.setItem('loggedIn', 'true');
-    window.location.href = "/docs/index.html";
+    window.location.href = "/docs/";
   } else {
     document.getElementById('errorMessage').innerText = "Sai thông tin đăng nhập!";
   }
