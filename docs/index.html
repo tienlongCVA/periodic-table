@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANG MÔ PHỎNG 3D CẦU TẠO NGUYÊN TỬ TRONG BẢNG TUẦN HOÀN HÓA HỌC</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+      if (isLoggedIn !== "true") {
+        window.location.href = "/docs/login/login.html";
+      }
+    });
+  </script>
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/jpg" href="./img/images.jpg"/>
 </head>
-<body>
+<body>  
     <header>
         <nav>
             <ul class="menu">
