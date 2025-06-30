@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
   if (username === 'tienlongCVA' && password === 'long10pen') {
     localStorage.setItem('loggedIn', 'true');
-    window.location.href = "/docs/";
+    window.location.href = "/periodic-table/";
   } else {
     document.getElementById('errorMessage').innerText = "Sai thông tin đăng nhập!";
   }
