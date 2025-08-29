@@ -1,10 +1,7 @@
 function showElementDetails(name, symbol, number, mass) {
-    document.getElementById("element-name").innerText = name;
-    document.getElementById("element-symbol").innerText = symbol;
-    document.getElementById("element-number").innerText = number;
-    document.getElementById("element-mass").innerText = mass;
-
-    document.getElementById("element-details").style.display = "block";
+    // Mở trang element3d.html với query string
+    const url = `element3d.html?name=${encodeURIComponent(name)}&number=${number}&mass=${mass}`;
+    window.location.href = url;
 }
 
 function closeModal() {

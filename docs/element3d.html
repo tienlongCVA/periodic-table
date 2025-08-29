@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Atom Viewer</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: black; color: white; font-family: Arial; }
+    #info {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(0,0,0,0.6); padding: 10px; border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="info"></div>
+
+  <!-- Three.js bản cũ (ổn định với OrbitControls) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <script>
+    // --- Lấy tham số từ URL ---
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name") || "Unknown";
+    const number = parseInt(params.get("number")) || 1; 
+    const mass = params.get("mass") || "?";
+
+    document.getElementById("info").innerHTML = `
+      <h2>${name}</h2>
+      <p><b>Atomic Number:</b> ${number}</p>
+      <p><b>Atomic Mass:</b> ${mass}</p>
+    `;
+
+    // --- Scene setup ---
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({antialias:true});
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Ánh sáng
+    scene.add(new THREE.AmbientLight(0x404040, 2));
+    const pointLight = new THREE.PointLight(0xffffff, 1.5);
+    pointLight.position.set(5, 5, 5);
+    scene.add(pointLight);
+
+    // Hạt nhân (đỏ)
+    const nucleusGeometry = new THREE.SphereGeometry(0.6, 32, 32);
+    const nucleusMaterial = new THREE.MeshPhongMaterial({color: 0xff3333, emissive: 0x660000});
+    const nucleus = new THREE.Mesh(nucleusGeometry, nucleusMaterial);
+    scene.add(nucleus);
+
+    // Electron (xanh phát sáng)
+    const electronGeometry = new THREE.SphereGeometry(0.15, 16, 16);
+    const electronMaterial = new THREE.MeshPhongMaterial({color: 0x33aaff, emissive: 0x004488});
+    const electrons = [];
+
+    // Orbit rings (quỹ đạo)
+    function createOrbit(radius) {
+      const curve = new THREE.EllipseCurve(0, 0, radius, radius);
+      const points = curve.getPoints(100);
+      const geometry = new THREE.BufferGeometry().setFromPoints(points);
+      const material = new THREE.LineBasicMaterial({ color: 0x555555 });
+      const orbit = new THREE.LineLoop(geometry, material);
+      orbit.rotation.x = Math.PI / 2; // đặt vòng nằm ngang
+      scene.add(orbit);
+    }
+
+    // Phân bố electron vào lớp (2,8,18,32…)
+    function distributeElectrons(Z) {
+      const shells = [];
+      let remaining = Z;
+      let capacities = [2, 8, 18, 32];
+      for (let i = 0; i < capacities.length && remaining > 0; i++) {
+        let count = Math.min(remaining, capacities[i]);
+        shells.push(count);
+        remaining -= count;
+      }
+      return shells;
+    }
+
+    const electronShells = distributeElectrons(number);
+
+    electronShells.forEach((count, shellIndex) => {
+      const radius = 1.5 + shellIndex * 1.2;
+      createOrbit(radius); // tạo vòng quỹ đạo
+      for (let i=0; i<count; i++) {
+        const e = new THREE.Mesh(electronGeometry, electronMaterial);
+        e.userData = {
+          radius: radius,
+          angle: i * (2 * Math.PI / count),
+          speed: 0.01 + Math.random()*0.02
+        };
+        electrons.push(e);
+        scene.add(e);
+      }
+    });
+
+    // Camera
+    camera.position.z = 6;
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    // Animation
+    function animate() {
+      requestAnimationFrame(animate);
+      electrons.forEach(e => {
+         e.userData.angle += e.userData.speed;
+         e.position.x = e.userData.radius * Math.cos(e.userData.angle);
+         e.position.z = e.userData.radius * Math.sin(e.userData.angle); // bay theo vòng tròn XZ
+      });
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize
+    window.addEventListener("resize", () => {
+      camera.aspect = window.innerWidth/window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>

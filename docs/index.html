@@ -17,6 +17,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/jpg" href="img/images.jpg"/>
 </head>
+<!-- Khung hiển thị mô hình 3D Carbon -->
+<div id="carbon-popup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%); background: #222; padding: 20px; border-radius: 12px; z-index: 1000; box-shadow: 0 0 10px black;">
+  <h3 style="color: white; text-align: center;">Mô hình nguyên tử Carbon</h3>
+  <iframe src="Carbon/build/index.html" width="400" height="400" frameborder="0" style="border-radius: 10px;"></iframe>
+  <div style="text-align: center; margin-top: 10px;">
+    <button onclick="document.getElementById('carbon-popup').style.display = 'none'">Đóng</button>
+  </div>
+</div>
+<script>
+  // Danh sách nguyên tố mẫu (bạn có thể tách ra file elements.js sau)
+  const elements = {
+    H:  { name: "Hydrogen", symbol: "H", number: 1,  mass: 1.008 },
+    He: { name: "Helium",   symbol: "He", number: 2,  mass: 4.0026 },
+    Li: { name: "Lithium",  symbol: "Li", number: 3,  mass: 6.94 },
+    Be: { name: "Beryllium",symbol: "Be", number: 4,  mass: 9.0122 },
+    B:  { name: "Boron",    symbol: "B", number: 5,  mass: 10.81 },
+    C:  { name: "Carbon",   symbol: "C", number: 6,  mass: 12.011 },
+    N:  { name: "Nitrogen", symbol: "N", number: 7,  mass: 14.007 },
+    O:  { name: "Oxygen",   symbol: "O", number: 8,  mass: 15.999 },
+    Ne: { name: "Neon",     symbol: "Ne", number: 10, mass: 20.180 }
+  };
+
+  function openElement(symbol) {
+    const el = elements[symbol];
+    if (el) {
+      const url = `element3d.html?name=${el.name}&number=${el.number}&mass=${el.mass}`;
+      window.location.href = url;
+    } else {
+      alert("Chưa có dữ liệu cho nguyên tố này!");
+    }
+  }
+</script>
+
 <body>  
     <header>
         <nav>
@@ -67,7 +100,7 @@
                 <span class="element-number">2</span>
                 <span class="element-symbol">He</span>
                 <span class="element-info">Hellium</span>
-                <span class="element-mass">4.0026</span>
+                <span class="element-mass">4.0026</span>    
                 </div>
             </td>
         </tr>
@@ -98,7 +131,7 @@
                 <span class="element-mass">10.81</span>
                 </div>
             </td>
-            <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Carbon', 'C', 6, 12.011)">
+            <td class="phi-kim sheet-hover p-phi-kim element" onclick="openElement('C')">
                 <div class="element-content">
                 <span class="element-number">6</span>
                 <span class="element-symbol">C</span>
