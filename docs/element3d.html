@@ -6,19 +6,59 @@
   <style>
     body { margin: 0; overflow: hidden; background: black; color: white; font-family: Arial; }
     #info {
-      position: absolute; top: 10px; left: 10px;
-      background: rgba(0,0,0,0.6); padding: 10px; border-radius: 8px;
+      position: absolute; top: 20px; left: 20px;
+      background: rgba(20,20,20,0.7);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      box-shadow: 0 0 12px rgba(0,255,255,0.5);
+      width: 220px;
+    }
+    #info h2 { margin: 0 0 8px; font-size: 20px; color: #00ffff; text-align: center; }
+
+    /* Nút thoát */
+    #exitBtn {
+      position: absolute;
+      top: 20px; right: 20px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255,50,50,0.8);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,0,0,0.7);
+      transition: 0.2s;
+    }
+    #exitBtn:hover {
+      background: rgba(255,0,0,1);
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
   <div id="info"></div>
+  <button id="exitBtn" onclick="goBack()">⏎ Quay lại</button>
 
-  <!-- Three.js bản cũ (ổn định với OrbitControls) -->
+  <!-- Three.js + OrbitControls -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
+  <!-- Postprocessing scripts (Bloom) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+
   <script>
+    // Hàm quay lại bảng tuần hoàn
+    function goBack() {
+      window.location.href = "index.html";
+    }
+
     // --- Lấy tham số từ URL ---
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name") || "Unknown";
@@ -40,33 +80,47 @@
 
     // Ánh sáng
     scene.add(new THREE.AmbientLight(0x404040, 2));
-    const pointLight = new THREE.PointLight(0xffffff, 1.5);
+    const pointLight = new THREE.PointLight(0xffffff, 1.5, 100);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
 
-    // Hạt nhân (đỏ)
-    const nucleusGeometry = new THREE.SphereGeometry(0.6, 32, 32);
-    const nucleusMaterial = new THREE.MeshPhongMaterial({color: 0xff3333, emissive: 0x660000});
-    const nucleus = new THREE.Mesh(nucleusGeometry, nucleusMaterial);
-    scene.add(nucleus);
+    // Group chứa nguyên tử
+    const atomGroup = new THREE.Group();
+    scene.add(atomGroup);
 
-    // Electron (xanh phát sáng)
-    const electronGeometry = new THREE.SphereGeometry(0.15, 16, 16);
-    const electronMaterial = new THREE.MeshPhongMaterial({color: 0x33aaff, emissive: 0x004488});
+    // Hạt nhân (nucleus)
+    const nucleusGeometry = new THREE.SphereGeometry(0.6, 32, 32);
+    const nucleusMaterial = new THREE.MeshPhongMaterial({
+      color: 0xff3333,
+      emissive: 0xaa0000,
+      shininess: 100,
+      transparent: true,
+      opacity: 0.95
+    });
+    const nucleus = new THREE.Mesh(nucleusGeometry, nucleusMaterial);
+    atomGroup.add(nucleus);
+
+    // Electron
+    const electronGeometry = new THREE.SphereGeometry(0.12, 16, 16);
+    const electronMaterial = new THREE.MeshPhongMaterial({
+      color: 0x33aaff,
+      emissive: 0x0088ff,
+      shininess: 150
+    });
     const electrons = [];
 
-    // Orbit rings (quỹ đạo)
+    // Orbit rings
     function createOrbit(radius) {
       const curve = new THREE.EllipseCurve(0, 0, radius, radius);
-      const points = curve.getPoints(100);
+      const points = curve.getPoints(200);
       const geometry = new THREE.BufferGeometry().setFromPoints(points);
-      const material = new THREE.LineBasicMaterial({ color: 0x555555 });
+      const material = new THREE.LineBasicMaterial({ color: 0x8888ff, transparent: true, opacity: 0.25 });
       const orbit = new THREE.LineLoop(geometry, material);
-      orbit.rotation.x = Math.PI / 2; // đặt vòng nằm ngang
-      scene.add(orbit);
+      orbit.rotation.x = Math.PI / 2;
+      atomGroup.add(orbit);
     }
 
-    // Phân bố electron vào lớp (2,8,18,32…)
+    // Phân bố electron
     function distributeElectrons(Z) {
       const shells = [];
       let remaining = Z;
@@ -83,34 +137,70 @@
 
     electronShells.forEach((count, shellIndex) => {
       const radius = 1.5 + shellIndex * 1.2;
-      createOrbit(radius); // tạo vòng quỹ đạo
+      createOrbit(radius);
       for (let i=0; i<count; i++) {
         const e = new THREE.Mesh(electronGeometry, electronMaterial);
         e.userData = {
           radius: radius,
           angle: i * (2 * Math.PI / count),
-          speed: 0.01 + Math.random()*0.02
+          speed: 0.01 + Math.random()*0.015
         };
         electrons.push(e);
-        scene.add(e);
+        atomGroup.add(e);
       }
     });
 
-    // Camera
+    // ⭐ Background vũ trụ (sao lấp lánh)
+    function createStars() {
+      const starGeometry = new THREE.BufferGeometry();
+      const starCount = 2000;
+      const positions = [];
+      for (let i=0; i<starCount; i++) {
+        const x = (Math.random() - 0.5) * 200;
+        const y = (Math.random() - 0.5) * 200;
+        const z = (Math.random() - 0.5) * 200;
+        positions.push(x,y,z);
+      }
+      starGeometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+      const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.6 });
+      const stars = new THREE.Points(starGeometry, starMaterial);
+      scene.add(stars);
+    }
+    createStars();
+
+    // Camera + OrbitControls
     camera.position.z = 6;
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    // Hiệu ứng Bloom
+    const composer = new THREE.EffectComposer(renderer);
+    const renderPass = new THREE.RenderPass(scene, camera);
+    composer.addPass(renderPass);
+
+    const bloomPass = new THREE.UnrealBloomPass(
+      new THREE.Vector2(window.innerWidth, window.innerHeight),
+      1.2,
+      0.4, 
+      0.85
+    );
+    composer.addPass(bloomPass);
 
     // Animation
     function animate() {
       requestAnimationFrame(animate);
+
+      // electron bay vòng quanh
       electrons.forEach(e => {
-         e.userData.angle += e.userData.speed;
-         e.position.x = e.userData.radius * Math.cos(e.userData.angle);
-         e.position.z = e.userData.radius * Math.sin(e.userData.angle); // bay theo vòng tròn XZ
+        e.userData.angle += e.userData.speed;
+        e.position.x = e.userData.radius * Math.cos(e.userData.angle);
+        e.position.z = e.userData.radius * Math.sin(e.userData.angle);
       });
 
+      // xoay nguyên tử
+      atomGroup.rotation.y += 0.002;
+
       controls.update();
-      renderer.render(scene, camera);
+      composer.render();
     }
     animate();
 
@@ -119,6 +209,7 @@
       camera.aspect = window.innerWidth/window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      composer.setSize(window.innerWidth, window.innerHeight);
     });
   </script>
 </body>
