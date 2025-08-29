@@ -40,3 +40,11 @@ function filterElements(type){
         })       
     }
 }
+document.getElementById("logoutBtn").addEventListener("click", function() {
+  // Xóa hết dữ liệu đăng nhập
+  localStorage.removeItem("user");  
+  // hoặc localStorage.clear(); nếu bạn lưu nhiều key
+  
+  // Quay về trang login
+  window.location.href = "login.html";
+});
