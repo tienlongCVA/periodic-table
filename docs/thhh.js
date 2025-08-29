@@ -46,5 +46,5 @@ document.getElementById("logoutBtn").addEventListener("click", function() {
   // hoặc localStorage.clear(); nếu bạn lưu nhiều key
   
   // Quay về trang login
-  window.location.href = "login.html";
+  window.location.href = "login/login.html";
 });
