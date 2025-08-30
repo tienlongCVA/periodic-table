@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông Tin Tài Khoản</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" type="image/jpg" href="/docs/img/images.jpg"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông Tin Tài Khoản</title>
+  <link rel="stylesheet" href="thongtintaikhoan.css">
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
-
-    <div class="bg-white p-6 rounded-2xl shadow-lg w-96 text-center">
-        <!-- Avatar -->
-        <div class="relative w-24 h-24 mx-auto">
-            <img id="avatar" src="/docs/img/images.jpg" alt="Avatar" class="w-24 h-24 rounded-full mx-auto border-2 border-gray-300">
-            <input type="file" id="avatarInput" accept="image/*" class="hidden" onchange="previewAvatar(event)">
-            <button onclick="document.getElementById('avatarInput').click()" class="absolute bottom-0 right-0 bg-gray-800 text-white text-xs px-2 py-1 rounded-full">
-                ✏️
-            </button>
-        </div>
-
-        <!-- Thông tin cá nhân -->
-        <h2 id="username" class="text-xl font-semibold mt-3">Nguyễn Tiến Long</h2>
-        <p id="email" class="text-gray-500 text-sm">ntienlongcva@gmail.com</p>
-
-        <div class="mt-4 space-y-2 text-gray-700">
-            <p><strong>Ngày sinh:</strong> <span id="dob">28/01/2012</span></p>
-            <p><strong>Giới tính:</strong> <span id="gender">Nam</span></p>
-        </div>
-
-        <button onclick="editProfile()" class="mt-5 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
-            Chỉnh sửa thông tin
-        </button>
+<body>
+  <div class="profile-container">
+    <!-- Avatar -->
+    <div class="avatar-box">
+      <img id="avatar" src="/docs/img/images.jpg" alt="Avatar">
+      <input type="file" id="avatarInput" accept="image/*" onchange="previewAvatar(event)">
+      <button class="edit-avatar" onclick="document.getElementById('avatarInput').click()">✏️</button>
     </div>
 
-    <script src="thongtintaikhoan.js"></script>
+    <!-- Thông tin cá nhân -->
+    <h2 id="username">Nguyễn Tiến Long</h2>
+    <p id="email">ntienlongcva@gmail.com</p>
+
+    <div class="info">
+      <p><strong>Ngày sinh:</strong> <span id="dob">28/01/2012</span></p>
+      <p><strong>Giới tính:</strong> <span id="gender">Nam</span></p>
+    </div>
+
+    <button class="edit-btn" onclick="editProfile()">Chỉnh sửa thông tin</button>
+  </div>
+
+  <script src="thongtintaikhoan.js"></script>
 </body>
 </html>
