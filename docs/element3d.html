@@ -12,7 +12,7 @@
       border-radius: 10px;
       border: 1px solid #444;
       box-shadow: 0 0 12px rgba(0,255,255,0.5);
-      width: 220px;
+      width: 260px;
     }
     #info h2 { margin: 0 0 8px; font-size: 20px; color: #00ffff; text-align: center; }
 
@@ -64,12 +64,6 @@
     const name = params.get("name") || "Unknown";
     const number = parseInt(params.get("number")) || 1; 
     const mass = params.get("mass") || "?";
-
-    document.getElementById("info").innerHTML = `
-      <h2>${name}</h2>
-      <p><b>Số hiệu nguyên tử:</b> ${number}</p>
-      <p><b>Khối lượng nguyên tử:</b> ${mass}</p>
-    `;
 
     // --- Scene setup ---
     const scene = new THREE.Scene();
@@ -211,6 +205,37 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       composer.setSize(window.innerWidth, window.innerHeight);
     });
+
+    // --- Load JSON info ---
+    async function loadElementInfo(name) {
+      try {
+        const res = await fetch("elements.json");
+        const data = await res.json();
+
+        if (data[name]) {
+          const el = data[name];
+          document.getElementById("info").innerHTML = `
+            <h2>${name} (${el.symbol})</h2>
+            <p><b>Số hiệu nguyên tử:</b> ${el.atomicNumber}</p>
+            <p><b>Nguyên tử khối:</b> ${el.atomicMass}</p>
+            <p><b>Người phát hiện:</b> ${el.discoverer}</p>
+            <p><b>Nhiệt độ nóng chảy:</b> ${el.meltingPoint}</p>
+            <p><b>Nhiệt độ sôi:</b> ${el.boilingPoint}</p>
+            <p><b>Ứng dụng:</b> ${el.applications}</p>
+            <p><b>Thông tin thú vị:</b> ${el.funFact}</p>
+          `;
+        } else {
+          document.getElementById("info").innerHTML =
+            `<p>Chưa có dữ liệu cho nguyên tố <b>${name}</b></p>`;
+        }
+      } catch (err) {
+        console.error("Lỗi load JSON:", err);
+        document.getElementById("info").innerHTML =
+          `<p>Không tải được dữ liệu nguyên tố.</p>`;
+      }
+    }
+
+    loadElementInfo(name);
   </script>
 </body>
 </html>

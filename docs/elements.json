@@ -1,0 +1,1183 @@
+{
+  "Hydrogen": {
+    "symbol": "H",
+    "atomicNumber": 1,
+    "atomicMass": "1.008",
+    "discoverer": "Henry Cavendish (1766)",
+    "meltingPoint": "-259.1 °C",
+    "boilingPoint": "-252.9 °C",
+    "applications": "Sử dụng trong công nghiệp hóa chất, làm nhiên liệu tên lửa, sản xuất amoniac.",
+    "funFact": "Hydro chiếm khoảng 75% khối lượng vũ trụ và là nguyên tố đơn giản nhất."
+  },
+  "Helium": {
+    "symbol": "He",
+    "atomicNumber": 2,
+    "atomicMass": "4.0026",
+    "discoverer": "Pierre Janssen và Norman Lockyer (1868)",
+    "meltingPoint": "-272.2 °C",
+    "boilingPoint": "-268.9 °C",
+    "applications": "Dùng trong bóng bay, khí cầu, làm mát nam châm siêu dẫn.",
+    "funFact": "Heli được phát hiện đầu tiên trên Mặt Trời trước khi tìm thấy trên Trái Đất."
+  },
+  "Lithium": {
+    "symbol": "Li",
+    "atomicNumber": 3,
+    "atomicMass": "6.94",
+    "discoverer": "Johan August Arfvedson (1817)",
+    "meltingPoint": "180.5 °C",
+    "boilingPoint": "1342 °C",
+    "applications": "Pin sạc, hợp kim nhẹ, điều trị rối loạn tâm thần.",
+    "funFact": "Lithium là kim loại nhẹ nhất, có thể nổi trên nước."
+  },
+  "Beryllium": {
+    "symbol": "Be",
+    "atomicNumber": 4,
+    "atomicMass": "9.0122",
+    "discoverer": "Louis-Nicolas Vauquelin (1798)",
+    "meltingPoint": "1287 °C",
+    "boilingPoint": "2469 °C",
+    "applications": "Dùng trong hợp kim bền, công nghiệp hàng không.",
+    "funFact": "Beryllium rất độc, hít phải bụi có thể gây bệnh phổi."
+  },
+  "Boron": {
+    "symbol": "B",
+    "atomicNumber": 5,
+    "atomicMass": "10.81",
+    "discoverer": "Joseph Louis Gay-Lussac và Louis Jacques Thénard (1808)",
+    "meltingPoint": "2076 °C",
+    "boilingPoint": "3927 °C",
+    "applications": "Dùng trong sản xuất thủy tinh chịu nhiệt, phân bón, chất bán dẫn.",
+    "funFact": "Bo có vai trò quan trọng đối với sự phát triển của thực vật."
+  },
+  "Carbon": {
+    "symbol": "C",
+    "atomicNumber": 6,
+    "atomicMass": "12.011",
+    "discoverer": "Được biết từ thời cổ đại",
+    "meltingPoint": "3550 °C",
+    "boilingPoint": "4027 °C",
+    "applications": "Sử dụng trong thép, than hoạt tính, kim cương công nghiệp.",
+    "funFact": "Carbon có nhiều dạng thù hình: than chì, kim cương, graphene."
+  },
+  "Nitrogen": {
+    "symbol": "N",
+    "atomicNumber": 7,
+    "atomicMass": "14.007",
+    "discoverer": "Daniel Rutherford (1772)",
+    "meltingPoint": "-210 °C",
+    "boilingPoint": "-196 °C",
+    "applications": "Sử dụng trong bảo quản thực phẩm, phân bón, thuốc nổ.",
+    "funFact": "Nitơ chiếm khoảng 78% thể tích khí quyển Trái Đất."
+  },
+  "Oxygen": {
+    "symbol": "O",
+    "atomicNumber": 8,
+    "atomicMass": "15.999",
+    "discoverer": "Carl Wilhelm Scheele (1771)",
+    "meltingPoint": "-218.8 °C",
+    "boilingPoint": "-183 °C",
+    "applications": "Y học, luyện kim, công nghiệp hóa chất.",
+    "funFact": "Oxy chiếm 21% khí quyển và là nguyên tố phổ biến nhất trong vỏ Trái Đất."
+  },
+  "Fluorine": {
+    "symbol": "F",
+    "atomicNumber": 9,
+    "atomicMass": "18.998",
+    "discoverer": "Henri Moissan (1886)",
+    "meltingPoint": "-219.6 °C",
+    "boilingPoint": "-188.1 °C",
+    "applications": "Dùng trong sản xuất teflon, thuốc đánh răng, công nghiệp hạt nhân.",
+    "funFact": "Flo là phi kim hoạt động mạnh nhất trong bảng tuần hoàn."
+  },
+  "Neon": {
+    "symbol": "Ne",
+    "atomicNumber": 10,
+    "atomicMass": "20.180",
+    "discoverer": "William Ramsay và Morris Travers (1898)",
+    "meltingPoint": "-248.6 °C",
+    "boilingPoint": "-246.1 °C",
+    "applications": "Đèn neon, biển quảng cáo.",
+    "funFact": "Khi phóng điện, neon phát sáng màu đỏ cam đặc trưng."
+  },
+  "Sodium": {
+    "symbol": "Na",
+    "atomicNumber": 11,
+    "atomicMass": "22.990",
+    "discoverer": "Humphry Davy (1807)",
+    "meltingPoint": "97.8 °C",
+    "boilingPoint": "883 °C",
+    "applications": "Dùng trong muối ăn, công nghiệp hóa chất.",
+    "funFact": "Natri phản ứng mãnh liệt với nước, tạo hydro và kiềm."
+  },
+  "Magnesium": {
+    "symbol": "Mg",
+    "atomicNumber": 12,
+    "atomicMass": "24.305",
+    "discoverer": "Joseph Black (1755)",
+    "meltingPoint": "650 °C",
+    "boilingPoint": "1090 °C",
+    "applications": "Sử dụng trong hợp kim nhẹ, pháo hoa, y học.",
+    "funFact": "Magie cháy tạo ánh sáng trắng sáng chói."
+  },
+  "Aluminium": {
+    "symbol": "Al",
+    "atomicNumber": 13,
+    "atomicMass": "26.982",
+    "discoverer": "Hans Christian Ørsted (1825)",
+    "meltingPoint": "660.3 °C",
+    "boilingPoint": "2519 °C",
+    "applications": "Hợp kim nhôm, lon nước giải khát, dây điện.",
+    "funFact": "Nhôm chiếm hơn 8% khối lượng vỏ Trái Đất."
+  },
+  "Silicon": {
+    "symbol": "Si",
+    "atomicNumber": 14,
+    "atomicMass": "28.085",
+    "discoverer": "Jöns Jacob Berzelius (1824)",
+    "meltingPoint": "1414 °C",
+    "boilingPoint": "3265 °C",
+    "applications": "Chip máy tính, pin mặt trời, thủy tinh.",
+    "funFact": "Silic là nguyên tố bán dẫn quan trọng nhất trong công nghệ hiện đại."
+  },
+  "Phosphorus": {
+    "symbol": "P",
+    "atomicNumber": 15,
+    "atomicMass": "30.974",
+    "discoverer": "Hennig Brand (1669)",
+    "meltingPoint": "44.1 °C",
+    "boilingPoint": "280 °C",
+    "applications": "Phân bón, diêm, pháo hoa.",
+    "funFact": "Phốt pho trắng có thể tự bốc cháy trong không khí."
+  },
+  "Sulfur": {
+    "symbol": "S",
+    "atomicNumber": 16,
+    "atomicMass": "32.06",
+    "discoverer": "Được biết từ thời cổ đại",
+    "meltingPoint": "115.2 °C",
+    "boilingPoint": "444.6 °C",
+    "applications": "Sản xuất axit sulfuric, diêm, thuốc trừ sâu.",
+    "funFact": "Lưu huỳnh từng được gọi là 'hòn đá của quỷ' vì mùi khó chịu."
+  },
+  "Chlorine": {
+    "symbol": "Cl",
+    "atomicNumber": 17,
+    "atomicMass": "35.45",
+    "discoverer": "Carl Wilhelm Scheele (1774)",
+    "meltingPoint": "-101.5 °C",
+    "boilingPoint": "-34.0 °C",
+    "applications": "Khử trùng nước, sản xuất PVC.",
+    "funFact": "Clor từng được dùng làm vũ khí hóa học trong Thế chiến I."
+  },
+  "Argon": {
+    "symbol": "Ar",
+    "atomicNumber": 18,
+    "atomicMass": "39.948",
+    "discoverer": "Lord Rayleigh và William Ramsay (1894)",
+    "meltingPoint": "-189.3 °C",
+    "boilingPoint": "-185.8 °C",
+    "applications": "Khí trơ trong hàn, đèn chiếu sáng.",
+    "funFact": "Argon chiếm gần 1% khí quyển Trái Đất."
+  },
+  "Potassium": {
+    "symbol": "K",
+    "atomicNumber": 19,
+    "atomicMass": "39.098",
+    "discoverer": "Humphry Davy (1807)",
+    "meltingPoint": "63.5 °C",
+    "boilingPoint": "759 °C",
+    "applications": "Phân bón, pháo hoa, hợp kim.",
+    "funFact": "Kali có thể bốc cháy khi tiếp xúc với nước."
+  },
+  "Calcium": {
+    "symbol": "Ca",
+    "atomicNumber": 20,
+    "atomicMass": "40.078",
+    "discoverer": "Humphry Davy (1808)",
+    "meltingPoint": "842 °C",
+    "boilingPoint": "1484 °C",
+    "applications": "Xi măng, vôi, sinh học (xương, răng).",
+    "funFact": "Canxi là nguyên tố kim loại phổ biến thứ 5 trong vỏ Trái Đất."
+  },
+  "Scandium": {
+    "symbol": "Sc",
+    "atomicNumber": 21,
+    "atomicMass": "44.956",
+    "discoverer": "Lars Fredrik Nilson (1879)",
+    "meltingPoint": "1541 °C",
+    "boilingPoint": "2836 °C",
+    "applications": "Dùng trong hợp kim nhôm scandium cho ngành hàng không và thể thao.",
+    "funFact": "Tên gọi bắt nguồn từ 'Scandia' nghĩa là bán đảo Scandinavia."
+  },
+  "Titanium": {
+    "symbol": "Ti",
+    "atomicNumber": 22,
+    "atomicMass": "47.867",
+    "discoverer": "William Gregor (1791)",
+    "meltingPoint": "1668 °C",
+    "boilingPoint": "3287 °C",
+    "applications": "Dùng trong công nghiệp hàng không, y tế (cấy ghép) nhờ độ bền và chống ăn mòn.",
+    "funFact": "Titanium mạnh bằng thép nhưng nhẹ hơn 45%."
+  },
+  "Vanadium": {
+    "symbol": "V",
+    "atomicNumber": 23,
+    "atomicMass": "50.942",
+    "discoverer": "Andrés Manuel del Río (1801)",
+    "meltingPoint": "1910 °C",
+    "boilingPoint": "3407 °C",
+    "applications": "Dùng trong sản xuất thép cường độ cao, pin vanadium redox.",
+    "funFact": "Tên lấy từ nữ thần sắc đẹp Vanadis trong thần thoại Bắc Âu."
+  },
+  "Chromium": {
+    "symbol": "Cr",
+    "atomicNumber": 24,
+    "atomicMass": "51.996",
+    "discoverer": "Louis Nicolas Vauquelin (1797)",
+    "meltingPoint": "1907 °C",
+    "boilingPoint": "2671 °C",
+    "applications": "Mạ crom, sản xuất thép không gỉ, chất nhuộm.",
+    "funFact": "Tên xuất phát từ 'chroma' (màu sắc) do các hợp chất crom rất nhiều màu."
+  },
+  "Manganese": {
+    "symbol": "Mn",
+    "atomicNumber": 25,
+    "atomicMass": "54.938",
+    "discoverer": "Johan Gottlieb Gahn (1774)",
+    "meltingPoint": "1246 °C",
+    "boilingPoint": "2061 °C",
+    "applications": "Dùng trong sản xuất pin khô, thép chịu va đập.",
+    "funFact": "Thiếu mangan ở cây trồng gây hiện tượng 'lá vàng'."
+  },
+  "Iron": {
+    "symbol": "Fe",
+    "atomicNumber": 26,
+    "atomicMass": "55.845",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "1538 °C",
+    "boilingPoint": "2862 °C",
+    "applications": "Sản xuất thép, công nghiệp xây dựng, cơ khí.",
+    "funFact": "Là nguyên tố phổ biến nhất trong lõi Trái Đất."
+  },
+  "Cobalt": {
+    "symbol": "Co",
+    "atomicNumber": 27,
+    "atomicMass": "58.933",
+    "discoverer": "Georg Brandt (1735)",
+    "meltingPoint": "1495 °C",
+    "boilingPoint": "2927 °C",
+    "applications": "Dùng trong pin lithium-ion, hợp kim từ tính, thuốc xạ trị.",
+    "funFact": "Tên bắt nguồn từ 'kobold' (yêu tinh) vì quặng cobalt gây khó khăn khi luyện kim."
+  },
+  "Nickel": {
+    "symbol": "Ni",
+    "atomicNumber": 28,
+    "atomicMass": "58.693",
+    "discoverer": "Axel Fredrik Cronstedt (1751)",
+    "meltingPoint": "1455 °C",
+    "boilingPoint": "2913 °C",
+    "applications": "Mạ kim loại, hợp kim niken–crom, pin sạc.",
+    "funFact": "Chiếm hơn 6% lõi Trái Đất cùng với sắt."
+  },
+  "Copper": {
+    "symbol": "Cu",
+    "atomicNumber": 29,
+    "atomicMass": "63.546",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "1085 °C",
+    "boilingPoint": "2562 °C",
+    "applications": "Dùng trong dây điện, hợp kim đồng–thiếc (bronze).",
+    "funFact": "Tên gọi xuất phát từ Cyprus, nơi khai thác đồng thời La Mã."
+  },
+  "Zinc": {
+    "symbol": "Zn",
+    "atomicNumber": 30,
+    "atomicMass": "65.38",
+    "discoverer": "Đã biết từ thời cổ đại (luyện kim phổ biến thế kỷ 13–16)",
+    "meltingPoint": "419.5 °C",
+    "boilingPoint": "907 °C",
+    "applications": "Dùng để mạ kẽm, sản xuất hợp kim đồng thau, pin kẽm–carbon.",
+    "funFact": "Là nguyên tố vi lượng quan trọng cho hệ miễn dịch."
+  },
+  "Gallium": {
+    "symbol": "Ga",
+    "atomicNumber": 31,
+    "atomicMass": "69.723",
+    "discoverer": "Paul-Émile Lecoq de Boisbaudran (1875)",
+    "meltingPoint": "29.8 °C",
+    "boilingPoint": "2400 °C",
+    "applications": "Dùng trong chất bán dẫn GaAs, nhiệt kế không độc hại.",
+    "funFact": "Có thể tan chảy trong lòng bàn tay vì nhiệt độ nóng chảy thấp."
+  },
+  "Germanium": {
+    "symbol": "Ge",
+    "atomicNumber": 32,
+    "atomicMass": "72.630",
+    "discoverer": "Clemens Winkler (1886)",
+    "meltingPoint": "938.3 °C",
+    "boilingPoint": "2833 °C",
+    "applications": "Chất bán dẫn, sợi quang học, hồng ngoại.",
+    "funFact": "Tên gọi lấy từ 'Germania' (nước Đức)."
+  },
+  "Arsenic": {
+    "symbol": "As",
+    "atomicNumber": 33,
+    "atomicMass": "74.922",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "817 °C (dưới áp suất cao)",
+    "boilingPoint": "614 °C (thăng hoa)",
+    "applications": "Dùng trong hợp kim chì, thuốc trừ sâu (hiện ít dùng).",
+    "funFact": "Asen là chất độc nổi tiếng trong lịch sử."
+  },
+  "Selenium": {
+    "symbol": "Se",
+    "atomicNumber": 34,
+    "atomicMass": "78.971",
+    "discoverer": "Jöns Jacob Berzelius (1817)",
+    "meltingPoint": "221 °C",
+    "boilingPoint": "685 °C",
+    "applications": "Dùng trong pin mặt trời, kính màu, dược phẩm.",
+    "funFact": "Tên lấy từ Selene – nữ thần Mặt Trăng Hy Lạp."
+  },
+  "Bromine": {
+    "symbol": "Br",
+    "atomicNumber": 35,
+    "atomicMass": "79.904",
+    "discoverer": "Antoine Jérôme Balard (1826)",
+    "meltingPoint": "-7.2 °C",
+    "boilingPoint": "58.8 °C",
+    "applications": "Dùng trong chất chống cháy, thuốc trừ sâu, hóa chất xử lý nước.",
+    "funFact": "Là nguyên tố lỏng duy nhất trong nhóm halogen ở nhiệt độ phòng."
+  },
+  "Krypton": {
+    "symbol": "Kr",
+    "atomicNumber": 36,
+    "atomicMass": "83.798",
+    "discoverer": "William Ramsay & Morris Travers (1898)",
+    "meltingPoint": "-157.4 °C",
+    "boilingPoint": "-153.4 °C",
+    "applications": "Dùng trong đèn huỳnh quang, đèn flash chụp ảnh tốc độ cao.",
+    "funFact": "Tên xuất phát từ 'kryptos' (ẩn giấu)."
+  },
+  "Rubidium": {
+    "symbol": "Rb",
+    "atomicNumber": 37,
+    "atomicMass": "85.468",
+    "discoverer": "Robert Bunsen & Gustav Kirchhoff (1861)",
+    "meltingPoint": "39.3 °C",
+    "boilingPoint": "688 °C",
+    "applications": "Dùng trong pin ion, nghiên cứu đồng hồ nguyên tử.",
+    "funFact": "Tên xuất phát từ 'rubidus' nghĩa là đỏ thẫm trong tiếng Latin."
+  },
+  "Strontium": {
+    "symbol": "Sr",
+    "atomicNumber": 38,
+    "atomicMass": "87.62",
+    "discoverer": "Adair Crawford (1790)",
+    "meltingPoint": "777 °C",
+    "boilingPoint": "1377 °C",
+    "applications": "Dùng trong pháo hoa màu đỏ, gốm điện tử, kính CRT.",
+    "funFact": "Tên lấy từ làng Strontian ở Scotland."
+  },
+  "Yttrium": {
+    "symbol": "Y",
+    "atomicNumber": 39,
+    "atomicMass": "88.906",
+    "discoverer": "Johan Gadolin (1794)",
+    "meltingPoint": "1526 °C",
+    "boilingPoint": "3336 °C",
+    "applications": "Dùng trong LED đỏ, siêu dẫn, hợp kim.",
+    "funFact": "Được phát hiện từ khoáng chất ở Ytterby, Thụy Điển."
+  },
+  "Zirconium": {
+    "symbol": "Zr",
+    "atomicNumber": 40,
+    "atomicMass": "91.224",
+    "discoverer": "Martin Heinrich Klaproth (1789)",
+    "meltingPoint": "1855 °C",
+    "boilingPoint": "4409 °C",
+    "applications": "Dùng trong công nghiệp hạt nhân, hợp kim chịu ăn mòn.",
+    "funFact": "Tên xuất phát từ tiếng Ả Rập 'zargun' nghĩa là đá quý màu vàng."
+  },
+   "Niobium": {
+    "symbol": "Nb",
+    "atomicNumber": 41,
+    "atomicMass": "92.906",
+    "discoverer": "Charles Hatchett (1801)",
+    "meltingPoint": "2477 °C",
+    "boilingPoint": "4744 °C",
+    "applications": "Dùng trong hợp kim chịu nhiệt, siêu dẫn, vũ khí hàng không.",
+    "funFact": "Ban đầu Niobium bị nhầm lẫn với Tantalum vì tính chất hóa học rất giống."
+  },
+  "Molybdenum": {
+    "symbol": "Mo",
+    "atomicNumber": 42,
+    "atomicMass": "95.95",
+    "discoverer": "Carl Wilhelm Scheele (1778, tách được bởi Peter Jacob Hjelm 1781)",
+    "meltingPoint": "2623 °C",
+    "boilingPoint": "4639 °C",
+    "applications": "Hợp kim thép chịu nhiệt, xúc tác hóa dầu.",
+    "funFact": "Cần thiết cho sự phát triển của thực vật và vi sinh vật."
+  },
+  "Technetium": {
+    "symbol": "Tc",
+    "atomicNumber": 43,
+    "atomicMass": "98",
+    "discoverer": "Carlo Perrier & Emilio Segrè (1937)",
+    "meltingPoint": "2200 °C",
+    "boilingPoint": "4877 °C",
+    "applications": "Y học hạt nhân (dấu vết phóng xạ trong chẩn đoán).",
+    "funFact": "Là nguyên tố đầu tiên được tổng hợp nhân tạo."
+  },
+  "Ruthenium": {
+    "symbol": "Ru",
+    "atomicNumber": 44,
+    "atomicMass": "101.07",
+    "discoverer": "Karl Ernst Claus (1844)",
+    "meltingPoint": "2334 °C",
+    "boilingPoint": "4150 °C",
+    "applications": "Xúc tác, hợp kim điện cực.",
+    "funFact": "Tên lấy từ 'Ruthenia' – tên cũ của nước Nga."
+  },
+  "Rhodium": {
+    "symbol": "Rh",
+    "atomicNumber": 45,
+    "atomicMass": "102.91",
+    "discoverer": "William Hyde Wollaston (1803)",
+    "meltingPoint": "1964 °C",
+    "boilingPoint": "3695 °C",
+    "applications": "Xúc tác trong bộ lọc khí thải ô tô, trang sức.",
+    "funFact": "Là kim loại quý hiếm hơn vàng và bạch kim."
+  },
+  "Palladium": {
+    "symbol": "Pd",
+    "atomicNumber": 46,
+    "atomicMass": "106.42",
+    "discoverer": "William Hyde Wollaston (1803)",
+    "meltingPoint": "1554 °C",
+    "boilingPoint": "2963 °C",
+    "applications": "Xúc tác công nghiệp, pin nhiên liệu, nha khoa.",
+    "funFact": "Được đặt tên theo tiểu hành tinh Pallas."
+  },
+  "Silver": {
+    "symbol": "Ag",
+    "atomicNumber": 47,
+    "atomicMass": "107.87",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "961.8 °C",
+    "boilingPoint": "2162 °C",
+    "applications": "Trang sức, tiền xu, dẫn điện, kháng khuẩn.",
+    "funFact": "Có độ dẫn điện và dẫn nhiệt cao nhất trong tất cả kim loại."
+  },
+  "Cadmium": {
+    "symbol": "Cd",
+    "atomicNumber": 48,
+    "atomicMass": "112.41",
+    "discoverer": "Friedrich Stromeyer (1817)",
+    "meltingPoint": "321.1 °C",
+    "boilingPoint": "767 °C",
+    "applications": "Pin niken-cadmium, mạ kim loại, hợp kim.",
+    "funFact": "Độc hại và hiện nay dần bị hạn chế sử dụng."
+  },
+  "Indium": {
+    "symbol": "In",
+    "atomicNumber": 49,
+    "atomicMass": "114.82",
+    "discoverer": "Ferdinand Reich & Hieronymous Richter (1863)",
+    "meltingPoint": "156.6 °C",
+    "boilingPoint": "2072 °C",
+    "applications": "Màn hình cảm ứng, hợp kim hàn, pin mặt trời.",
+    "funFact": "Được đặt tên vì quang phổ của nó có vạch xanh lam đặc trưng như màu chàm (indigo)."
+  },
+  "Tin": {
+    "symbol": "Sn",
+    "atomicNumber": 50,
+    "atomicMass": "118.71",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "231.9 °C",
+    "boilingPoint": "2602 °C",
+    "applications": "Hợp kim đồng thiếc (bronze), hàn, bao bì thực phẩm.",
+    "funFact": "Có hiện tượng 'dịch bệnh thiếc' – biến đổi cấu trúc tinh thể ở nhiệt độ thấp."
+  },
+  "Antimony": {
+    "symbol": "Sb",
+    "atomicNumber": 51,
+    "atomicMass": "121.76",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "630.6 °C",
+    "boilingPoint": "1587 °C",
+    "applications": "Chất chống cháy, hợp kim chì trong ắc quy.",
+    "funFact": "Tên viết tắt Sb đến từ 'stibium' trong tiếng Latin."
+  },
+  "Tellurium": {
+    "symbol": "Te",
+    "atomicNumber": 52,
+    "atomicMass": "127.60",
+    "discoverer": "Franz-Joseph Müller von Reichenstein (1782)",
+    "meltingPoint": "449.5 °C",
+    "boilingPoint": "988 °C",
+    "applications": "Pin mặt trời CdTe, hợp kim, chất bán dẫn.",
+    "funFact": "Tên xuất phát từ 'Tellus' – nữ thần Trái Đất La Mã."
+  },
+  "Iodine": {
+    "symbol": "I",
+    "atomicNumber": 53,
+    "atomicMass": "126.90",
+    "discoverer": "Bernard Courtois (1811)",
+    "meltingPoint": "113.7 °C",
+    "boilingPoint": "184.3 °C",
+    "applications": "Khử trùng, dược phẩm, muối i-ốt.",
+    "funFact": "Ở nhiệt độ phòng, i-ốt có thể thăng hoa trực tiếp thành khí màu tím."
+  },
+  "Xenon": {
+    "symbol": "Xe",
+    "atomicNumber": 54,
+    "atomicMass": "131.29",
+    "discoverer": "William Ramsay & Morris Travers (1898)",
+    "meltingPoint": "-111.8 °C",
+    "boilingPoint": "-108.1 °C",
+    "applications": "Đèn flash, gây mê, vệ tinh ion.",
+    "funFact": "Tên xuất phát từ 'xenos' (lạ lùng) vì hiếm gặp trong khí quyển."
+  },
+  "Cesium": {
+    "symbol": "Cs",
+    "atomicNumber": 55,
+    "atomicMass": "132.91",
+    "discoverer": "Robert Bunsen & Gustav Kirchhoff (1860)",
+    "meltingPoint": "28.5 °C",
+    "boilingPoint": "671 °C",
+    "applications": "Đồng hồ nguyên tử chính xác nhất, nghiên cứu vật lý hạt nhân.",
+    "funFact": "Có thể tan chảy ngay trong lòng bàn tay vì nhiệt độ nóng chảy thấp."
+  },
+  "Barium": {
+    "symbol": "Ba",
+    "atomicNumber": 56,
+    "atomicMass": "137.33",
+    "discoverer": "Carl Wilhelm Scheele (1774, tách được bởi Humphry Davy 1808)",
+    "meltingPoint": "727 °C",
+    "boilingPoint": "1897 °C",
+    "applications": "Màn hình tivi, pháo hoa màu xanh lá, y học (chụp X-quang dạ dày).",
+    "funFact": "Tên xuất phát từ 'barys' (nặng) trong tiếng Hy Lạp."
+  },
+  "Lanthanum": {
+    "symbol": "La",
+    "atomicNumber": 57,
+    "atomicMass": "138.91",
+    "discoverer": "Carl Gustaf Mosander (1839)",
+    "meltingPoint": "920 °C",
+    "boilingPoint": "3464 °C",
+    "applications": "Kính quang học, pin nickel–metal hydride.",
+    "funFact": "Tên xuất phát từ 'lanthanein' (ẩn giấu) vì khó phát hiện."
+  },
+  "Cerium": {
+    "symbol": "Ce",
+    "atomicNumber": 58,
+    "atomicMass": "140.12",
+    "discoverer": "Jöns Jacob Berzelius & Wilhelm Hisinger (1803)",
+    "meltingPoint": "798 °C",
+    "boilingPoint": "3443 °C",
+    "applications": "Chất xúc tác ô tô, đánh bóng thủy tinh.",
+    "funFact": "Được đặt tên theo tiểu hành tinh Ceres."
+  },
+  "Praseodymium": {
+    "symbol": "Pr",
+    "atomicNumber": 59,
+    "atomicMass": "140.91",
+    "discoverer": "Carl Auer von Welsbach (1885)",
+    "meltingPoint": "931 °C",
+    "boilingPoint": "3520 °C",
+    "applications": "Nam châm, hợp kim máy bay, kính bảo hộ laser.",
+    "funFact": "Tên có nghĩa 'song sinh xanh lục' do hợp chất muối có màu xanh lá."
+  },
+  "Neodymium": {
+    "symbol": "Nd",
+    "atomicNumber": 60,
+    "atomicMass": "144.24",
+    "discoverer": "Carl Auer von Welsbach (1885)",
+    "meltingPoint": "1024 °C",
+    "boilingPoint": "3074 °C",
+    "applications": "Nam châm NdFeB cực mạnh, tai nghe, tua-bin gió.",
+    "funFact": "Nam châm neodymium là loại nam châm vĩnh cửu mạnh nhất hiện nay."
+  },
+  "Promethium": {
+    "symbol": "Pm",
+    "atomicNumber": 61,
+    "atomicMass": "145",
+    "discoverer": "Jacob A. Marinsky, Lawrence E. Glendenin & Charles D. Coryell (1945)",
+    "meltingPoint": "1042 °C",
+    "boilingPoint": "3000 °C",
+    "applications": "Pin hạt nhân, sơn phát sáng.",
+    "funFact": "Không tồn tại dạng bền tự nhiên, tất cả đồng vị đều phóng xạ."
+  },
+  "Samarium": {
+    "symbol": "Sm",
+    "atomicNumber": 62,
+    "atomicMass": "150.36",
+    "discoverer": "Paul Émile Lecoq de Boisbaudran (1879)",
+    "meltingPoint": "1072 °C",
+    "boilingPoint": "1794 °C",
+    "applications": "Nam châm SmCo, lò phản ứng hạt nhân.",
+    "funFact": "Tên lấy theo khoáng chất 'samarskite', đặt theo tên kỹ sư Nga Samarsky."
+  },
+  "Europium": {
+    "symbol": "Eu",
+    "atomicNumber": 63,
+    "atomicMass": "151.96",
+    "discoverer": "Eugène-Anatole Demarçay (1901)",
+    "meltingPoint": "822 °C",
+    "boilingPoint": "1527 °C",
+    "applications": "Màn hình tivi, đèn LED, chống giả tiền giấy.",
+    "funFact": "Tên lấy từ châu Âu."
+  },
+  "Gadolinium": {
+    "symbol": "Gd",
+    "atomicNumber": 64,
+    "atomicMass": "157.25",
+    "discoverer": "Jean Charles Galissard de Marignac (1880)",
+    "meltingPoint": "1313 °C",
+    "boilingPoint": "3273 °C",
+    "applications": "Chụp cộng hưởng từ (MRI), hợp kim từ.",
+    "funFact": "Tên lấy theo nhà hóa học Phần Lan Johan Gadolin."
+  },
+  "Terbium": {
+    "symbol": "Tb",
+    "atomicNumber": 65,
+    "atomicMass": "158.93",
+    "discoverer": "Carl Gustaf Mosander (1843)",
+    "meltingPoint": "1356 °C",
+    "boilingPoint": "3230 °C",
+    "applications": "Đèn huỳnh quang xanh lá, thiết bị điện tử.",
+    "funFact": "Được phát hiện từ khoáng chất ở Ytterby, Thụy Điển."
+  },
+  "Dysprosium": {
+    "symbol": "Dy",
+    "atomicNumber": 66,
+    "atomicMass": "162.50",
+    "discoverer": "Paul Émile Lecoq de Boisbaudran (1886)",
+    "meltingPoint": "1412 °C",
+    "boilingPoint": "2567 °C",
+    "applications": "Nam châm mạnh chịu nhiệt, lò phản ứng hạt nhân.",
+    "funFact": "Tên xuất phát từ 'dysprositos' nghĩa là 'khó tiếp cận'."
+  },
+  "Holmium": {
+    "symbol": "Ho",
+    "atomicNumber": 67,
+    "atomicMass": "164.93",
+    "discoverer": "Marc Delafontaine & Jacques-Louis Soret (1878)",
+    "meltingPoint": "1474 °C",
+    "boilingPoint": "2700 °C",
+    "applications": "Laser y học, hợp kim nam châm.",
+    "funFact": "Tên lấy từ 'Holmia' – tên Latin của thủ đô Stockholm."
+  },
+  "Erbium": {
+    "symbol": "Er",
+    "atomicNumber": 68,
+    "atomicMass": "167.26",
+    "discoverer": "Carl Gustaf Mosander (1843)",
+    "meltingPoint": "1529 °C",
+    "boilingPoint": "2868 °C",
+    "applications": "Sợi quang học, laser y học.",
+    "funFact": "Được phát hiện từ khoáng chất ở Ytterby, Thụy Điển."
+  },
+  "Thulium": {
+    "symbol": "Tm",
+    "atomicNumber": 69,
+    "atomicMass": "168.93",
+    "discoverer": "Per Teodor Cleve (1879)",
+    "meltingPoint": "1545 °C",
+    "boilingPoint": "1950 °C",
+    "applications": "Laser y học, nguồn tia X di động.",
+    "funFact": "Là nguyên tố đất hiếm hiếm nhất trong tự nhiên."
+  },
+  "Ytterbium": {
+    "symbol": "Yb",
+    "atomicNumber": 70,
+    "atomicMass": "173.05",
+    "discoverer": "Jean Charles Galissard de Marignac (1878)",
+    "meltingPoint": "824 °C",
+    "boilingPoint": "1196 °C",
+    "applications": "Laser sợi quang, hợp kim thép.",
+    "funFact": "Được phát hiện từ khoáng chất ở Ytterby, Thụy Điển."
+  },
+  "Lutetium": {
+    "symbol": "Lu",
+    "atomicNumber": 71,
+    "atomicMass": "174.97",
+    "discoverer": "Georges Urbain (1907)",
+    "meltingPoint": "1663 °C",
+    "boilingPoint": "3402 °C",
+    "applications": "Xúc tác hóa dầu, y học hạt nhân.",
+    "funFact": "Tên xuất phát từ 'Lutetia' – tên Latin của Paris."
+  },
+  "Hafnium": {
+    "symbol": "Hf",
+    "atomicNumber": 72,
+    "atomicMass": "178.49",
+    "discoverer": "Dirk Coster & George de Hevesy (1923)",
+    "meltingPoint": "2233 °C",
+    "boilingPoint": "4603 °C",
+    "applications": "Thanh điều khiển lò phản ứng hạt nhân, hợp kim chịu nhiệt.",
+    "funFact": "Tên xuất phát từ 'Hafnia' – tên Latin của Copenhagen."
+  },
+  "Tantalum": {
+    "symbol": "Ta",
+    "atomicNumber": 73,
+    "atomicMass": "180.95",
+    "discoverer": "Anders Gustaf Ekeberg (1802)",
+    "meltingPoint": "3017 °C",
+    "boilingPoint": "5458 °C",
+    "applications": "Tụ điện, thiết bị y tế chống ăn mòn.",
+    "funFact": "Tên lấy từ vua Tantalus trong thần thoại Hy Lạp."
+  },
+  "Tungsten": {
+    "symbol": "W",
+    "atomicNumber": 74,
+    "atomicMass": "183.84",
+    "discoverer": "Juan José & Fausto Elhuyar (1783)",
+    "meltingPoint": "3422 °C",
+    "boilingPoint": "5555 °C",
+    "applications": "Bóng đèn sợi đốt, hợp kim cứng, đạn xuyên giáp.",
+    "funFact": "Có nhiệt độ nóng chảy cao nhất trong tất cả kim loại."
+  },
+  "Rhenium": {
+    "symbol": "Re",
+    "atomicNumber": 75,
+    "atomicMass": "186.21",
+    "discoverer": "Ida Noddack, Walter Noddack & Otto Berg (1925)",
+    "meltingPoint": "3186 °C",
+    "boilingPoint": "5596 °C",
+    "applications": "Động cơ phản lực, xúc tác hóa dầu.",
+    "funFact": "Là một trong những nguyên tố hiếm nhất trong vỏ Trái Đất."
+  },
+  "Osmium": {
+    "symbol": "Os",
+    "atomicNumber": 76,
+    "atomicMass": "190.23",
+    "discoverer": "Smithson Tennant (1803)",
+    "meltingPoint": "3033 °C",
+    "boilingPoint": "5012 °C",
+    "applications": "Bút máy, điện cực, hợp kim siêu cứng.",
+    "funFact": "Là kim loại có mật độ cao nhất trong tự nhiên."
+  },
+  "Iridium": {
+    "symbol": "Ir",
+    "atomicNumber": 77,
+    "atomicMass": "192.22",
+    "discoverer": "Smithson Tennant (1803)",
+    "meltingPoint": "2446 °C",
+    "boilingPoint": "4428 °C",
+    "applications": "Xúc tác, điện cực, hợp kim chịu nhiệt.",
+    "funFact": "Tên xuất phát từ 'iris' (cầu vồng) do muối iridi có nhiều màu sắc."
+  },
+  "Platinum": {
+    "symbol": "Pt",
+    "atomicNumber": 78,
+    "atomicMass": "195.08",
+    "discoverer": "Đã biết từ thời cổ đại Nam Mỹ",
+    "meltingPoint": "1768 °C",
+    "boilingPoint": "3825 °C",
+    "applications": "Xúc tác ô tô, trang sức, nha khoa.",
+    "funFact": "Tên xuất phát từ 'platina' nghĩa là 'bạc nhỏ' trong tiếng Tây Ban Nha."
+  },
+  "Gold": {
+    "symbol": "Au",
+    "atomicNumber": 79,
+    "atomicMass": "196.97",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "1064 °C",
+    "boilingPoint": "2856 °C",
+    "applications": "Trang sức, dự trữ tài chính, thiết bị điện tử.",
+    "funFact": "Vàng không bị ăn mòn hay gỉ sét, tồn tại gần như vĩnh cửu."
+  },
+  "Mercury": {
+    "symbol": "Hg",
+    "atomicNumber": 80,
+    "atomicMass": "200.59",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "-38.8 °C",
+    "boilingPoint": "356.7 °C",
+    "applications": "Nhiệt kế, đèn huỳnh quang (hiện nay ít dùng do độc tính).",
+    "funFact": "Là kim loại duy nhất ở dạng lỏng ở nhiệt độ phòng."
+  },
+  "Thallium": {
+    "symbol": "Tl",
+    "atomicNumber": 81,
+    "atomicMass": "204.38",
+    "discoverer": "William Crookes (1861)",
+    "meltingPoint": "304 °C",
+    "boilingPoint": "1473 °C",
+    "applications": "Kính đặc biệt, dược phẩm, thiết bị điện tử.",
+    "funFact": "Tên xuất phát từ 'thallos' (chồi xanh) vì vạch quang phổ màu xanh lục."
+  },
+  "Lead": {
+    "symbol": "Pb",
+    "atomicNumber": 82,
+    "atomicMass": "207.2",
+    "discoverer": "Đã biết từ thời cổ đại",
+    "meltingPoint": "327.5 °C",
+    "boilingPoint": "1749 °C",
+    "applications": "Ắc quy, chắn phóng xạ, hợp kim.",
+    "funFact": "Rất độc, từng gây ra nhiều vấn đề sức khỏe khi dùng trong sơn và ống nước."
+  },
+  "Bismuth": {
+    "symbol": "Bi",
+    "atomicNumber": 83,
+    "atomicMass": "208.98",
+    "discoverer": "Đã biết từ thời Trung cổ",
+    "meltingPoint": "271.4 °C",
+    "boilingPoint": "1564 °C",
+    "applications": "Thuốc dạ dày, hợp kim dễ chảy.",
+    "funFact": "Không độc hại như chì và còn có tính chất chống vi khuẩn."
+  },
+  "Polonium": {
+    "symbol": "Po",
+    "atomicNumber": 84,
+    "atomicMass": "209",
+    "discoverer": "Marie & Pierre Curie (1898)",
+    "meltingPoint": "254 °C",
+    "boilingPoint": "962 °C",
+    "applications": "Nguồn nhiệt cho vệ tinh, thiết bị chống tĩnh điện.",
+    "funFact": "Được đặt tên theo quê hương của Marie Curie – Ba Lan (Polonia)."
+  },
+  "Astatine": {
+    "symbol": "At",
+    "atomicNumber": 85,
+    "atomicMass": "210",
+    "discoverer": "Dale R. Corson, Kenneth Ross MacKenzie & Emilio Segrè (1940)",
+    "meltingPoint": "302 °C",
+    "boilingPoint": "337 °C",
+    "applications": "Nghiên cứu y học hạt nhân.",
+    "funFact": "Nguyên tố hiếm nhất tự nhiên trên Trái Đất, chỉ tồn tại dạng vết."
+  },
+  "Radon": {
+    "symbol": "Rn",
+    "atomicNumber": 86,
+    "atomicMass": "222",
+    "discoverer": "Friedrich Ernst Dorn (1898)",
+    "meltingPoint": "-71 °C",
+    "boilingPoint": "-61.7 °C",
+    "applications": "Y học hạt nhân (trước đây), nghiên cứu phóng xạ.",
+    "funFact": "Là khí phóng xạ tự nhiên có thể tích tụ trong nhà."
+  },
+  "Francium": {
+    "symbol": "Fr",
+    "atomicNumber": 87,
+    "atomicMass": "223",
+    "discoverer": "Marguerite Perey (1939)",
+    "meltingPoint": "27 °C",
+    "boilingPoint": "677 °C",
+    "applications": "Chủ yếu dùng trong nghiên cứu.",
+    "funFact": "Là một trong những nguyên tố hiếm nhất, cực kỳ phóng xạ."
+  },
+  "Radium": {
+    "symbol": "Ra",
+    "atomicNumber": 88,
+    "atomicMass": "226",
+    "discoverer": "Marie & Pierre Curie (1898)",
+    "meltingPoint": "700 °C",
+    "boilingPoint": "1737 °C",
+    "applications": "Từng được dùng trong đồng hồ phát sáng, nay chủ yếu dùng trong y học.",
+    "funFact": "Phát sáng trong bóng tối do tính phóng xạ."
+  },
+  "Actinium": {
+    "symbol": "Ac",
+    "atomicNumber": 89,
+    "atomicMass": "227",
+    "discoverer": "Friedrich Oskar Giesel (1899)",
+    "meltingPoint": "1050 °C",
+    "boilingPoint": "3200 °C",
+    "applications": "Nguồn neutron, nghiên cứu phóng xạ.",
+    "funFact": "Là nguyên tố actinide đầu tiên."
+  },
+  "Thorium": {
+    "symbol": "Th",
+    "atomicNumber": 90,
+    "atomicMass": "232.04",
+    "discoverer": "Jöns Jacob Berzelius (1828)",
+    "meltingPoint": "1750 °C",
+    "boilingPoint": "4788 °C",
+    "applications": "Nhiên liệu hạt nhân thay thế uranium.",
+    "funFact": "Tên lấy từ thần sấm Thor."
+  },
+  "Protactinium": {
+    "symbol": "Pa",
+    "atomicNumber": 91,
+    "atomicMass": "231.04",
+    "discoverer": "Kasimir Fajans & Oswald Helmuth Göhring (1913)",
+    "meltingPoint": "1572 °C",
+    "boilingPoint": "4000 °C",
+    "applications": "Rất hạn chế, chủ yếu nghiên cứu.",
+    "funFact": "Rất hiếm, khó tách chiết."
+  },
+  "Uranium": {
+    "symbol": "U",
+    "atomicNumber": 92,
+    "atomicMass": "238.03",
+    "discoverer": "Martin Heinrich Klaproth (1789)",
+    "meltingPoint": "1135 °C",
+    "boilingPoint": "4131 °C",
+    "applications": "Nhiên liệu lò phản ứng hạt nhân, vũ khí hạt nhân.",
+    "funFact": "Được đặt tên theo hành tinh Uranus."
+  },
+  "Neptunium": {
+    "symbol": "Np",
+    "atomicNumber": 93,
+    "atomicMass": "237",
+    "discoverer": "Edwin McMillan & Philip H. Abelson (1940)",
+    "meltingPoint": "644 °C",
+    "boilingPoint": "3902 °C",
+    "applications": "Nguồn neutron, nghiên cứu hạt nhân.",
+    "funFact": "Nguyên tố đầu tiên được tổng hợp nhân tạo sau uranium."
+  },
+  "Plutonium": {
+    "symbol": "Pu",
+    "atomicNumber": 94,
+    "atomicMass": "244",
+    "discoverer": "Glenn T. Seaborg, Joseph W. Kennedy, Edward M. McMillan & Arthur Wahl (1940)",
+    "meltingPoint": "639 °C",
+    "boilingPoint": "3232 °C",
+    "applications": "Vũ khí hạt nhân, nguồn năng lượng tàu vũ trụ.",
+    "funFact": "Được đặt tên theo hành tinh Pluto."
+  },
+  "Americium": {
+    "symbol": "Am",
+    "atomicNumber": 95,
+    "atomicMass": "243",
+    "discoverer": "Glenn T. Seaborg (1944)",
+    "meltingPoint": "1176 °C",
+    "boilingPoint": "2607 °C",
+    "applications": "Đầu dò khói, nghiên cứu hạt nhân.",
+    "funFact": "Được đặt tên theo châu Mỹ."
+  },
+  "Curium": {
+    "symbol": "Cm",
+    "atomicNumber": 96,
+    "atomicMass": "247",
+    "discoverer": "Glenn T. Seaborg & Albert Ghiorso (1944)",
+    "meltingPoint": "1340 °C",
+    "boilingPoint": "3110 °C",
+    "applications": "Nguồn nhiệt cho vệ tinh và tàu thăm dò.",
+    "funFact": "Đặt tên để vinh danh Marie & Pierre Curie."
+  },
+  "Berkelium": {
+    "symbol": "Bk",
+    "atomicNumber": 97,
+    "atomicMass": "247",
+    "discoverer": "Glenn T. Seaborg & Albert Ghiorso (1949)",
+    "meltingPoint": "986 °C",
+    "boilingPoint": "2627 °C",
+    "applications": "Chủ yếu nghiên cứu.",
+    "funFact": "Đặt theo tên thành phố Berkeley, nơi phát hiện."
+  },
+  "Californium": {
+    "symbol": "Cf",
+    "atomicNumber": 98,
+    "atomicMass": "251",
+    "discoverer": "Glenn T. Seaborg & Albert Ghiorso (1950)",
+    "meltingPoint": "900 °C",
+    "boilingPoint": "1470 °C",
+    "applications": "Nguồn neutron, nghiên cứu hạt nhân.",
+    "funFact": "1 gram californium có thể phát ra 170 triệu neutron mỗi phút."
+  },
+  "Einsteinium": {
+    "symbol": "Es",
+    "atomicNumber": 99,
+    "atomicMass": "252",
+    "discoverer": "Albert Ghiorso (1952, từ vụ thử bom H)",
+    "meltingPoint": "860 °C",
+    "boilingPoint": "Không rõ",
+    "applications": "Nghiên cứu khoa học.",
+    "funFact": "Đặt theo tên nhà bác học Albert Einstein."
+  },
+  "Fermium": {
+    "symbol": "Fm",
+    "atomicNumber": 100,
+    "atomicMass": "257",
+    "discoverer": "Albert Ghiorso (1952, từ vụ thử bom H)",
+    "meltingPoint": "1527 °C",
+    "boilingPoint": "Không rõ",
+    "applications": "Chủ yếu nghiên cứu.",
+    "funFact": "Đặt theo tên Enrico Fermi."
+  },
+  "Mendelevium": {
+    "symbol": "Md",
+    "atomicNumber": 101,
+    "atomicMass": "258",
+    "discoverer": "Albert Ghiorso (1955)",
+    "meltingPoint": "827 °C",
+    "boilingPoint": "Không rõ",
+    "applications": "Nghiên cứu hạt nhân.",
+    "funFact": "Đặt theo tên Dmitri Mendeleev – cha đẻ bảng tuần hoàn."
+  },
+  "Nobelium": {
+    "symbol": "No",
+    "atomicNumber": 102,
+    "atomicMass": "259",
+    "discoverer": "Nobel Institute for Physics (1957)",
+    "meltingPoint": "827 °C",
+    "boilingPoint": "Không rõ",
+    "applications": "Chủ yếu nghiên cứu.",
+    "funFact": "Đặt theo tên Alfred Nobel – người sáng lập giải Nobel."
+  },
+  "Lawrencium": {
+    "symbol": "Lr",
+    "atomicNumber": 103,
+    "atomicMass": "262",
+    "discoverer": "Albert Ghiorso (1961)",
+    "meltingPoint": "1627 °C",
+    "boilingPoint": "Không rõ",
+    "applications": "Nghiên cứu hạt nhân.",
+    "funFact": "Đặt theo tên Ernest O. Lawrence – người phát minh cyclotron."
+  },
+  "Rutherfordium": {
+    "symbol": "Rf",
+    "atomicNumber": 104,
+    "atomicMass": "267",
+    "discoverer": "Nhóm Dubna (1964) & Berkeley (1969)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Ernest Rutherford."
+  },
+  "Dubnium": {
+    "symbol": "Db",
+    "atomicNumber": 105,
+    "atomicMass": "270",
+    "discoverer": "Viện Dubna (1967)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên thành phố Dubna (Nga)."
+  },
+  "Seaborgium": {
+    "symbol": "Sg",
+    "atomicNumber": 106,
+    "atomicMass": "271",
+    "discoverer": "Lawrence Berkeley Laboratory (1974)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Glenn T. Seaborg."
+  },
+  "Bohrium": {
+    "symbol": "Bh",
+    "atomicNumber": 107,
+    "atomicMass": "270",
+    "discoverer": "Viện Dubna (1981)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên nhà toán học Niels Bohr."
+  },
+  "Hassium": {
+    "symbol": "Hs",
+    "atomicNumber": 108,
+    "atomicMass": "277",
+    "discoverer": "Viện GSI, Đức (1984)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên bang Hessen (Đức)."
+  },
+  "Meitnerium": {
+    "symbol": "Mt",
+    "atomicNumber": 109,
+    "atomicMass": "278",
+    "discoverer": "Viện GSI, Đức (1982)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Lise Meitner – nữ khoa học gia vật lý hạt nhân."
+  },
+  "Darmstadtium": {
+    "symbol": "Ds",
+    "atomicNumber": 110,
+    "atomicMass": "281",
+    "discoverer": "Viện GSI, Đức (1994)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên thành phố Darmstadt (Đức)."
+  },
+  "Roentgenium": {
+    "symbol": "Rg",
+    "atomicNumber": 111,
+    "atomicMass": "282",
+    "discoverer": "Viện GSI, Đức (1994)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Wilhelm Röntgen – người phát hiện tia X."
+  },
+  "Copernicium": {
+    "symbol": "Cn",
+    "atomicNumber": 112,
+    "atomicMass": "285",
+    "discoverer": "Viện GSI, Đức (1996)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Nicolaus Copernicus."
+  },
+  "Nihonium": {
+    "symbol": "Nh",
+    "atomicNumber": 113,
+    "atomicMass": "286",
+    "discoverer": "Viện RIKEN, Nhật Bản (2003)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Tên xuất phát từ 'Nihon' (Nhật Bản)."
+  },
+  "Flerovium": {
+    "symbol": "Fl",
+    "atomicNumber": 114,
+    "atomicMass": "289",
+    "discoverer": "Viện Dubna, Nga (1998)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên phòng thí nghiệm Flerov."
+  },
+  "Moscovium": {
+    "symbol": "Mc",
+    "atomicNumber": 115,
+    "atomicMass": "290",
+    "discoverer": "Viện Dubna, Nga & LLNL, Mỹ (2003)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Moscow."
+  },
+  "Livermorium": {
+    "symbol": "Lv",
+    "atomicNumber": 116,
+    "atomicMass": "293",
+    "discoverer": "Viện Dubna, Nga & LLNL, Mỹ (2000)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên Lawrence Livermore National Laboratory (Mỹ)."
+  },
+  "Tennessine": {
+    "symbol": "Ts",
+    "atomicNumber": 117,
+    "atomicMass": "294",
+    "discoverer": "Viện Dubna, Nga & Oak Ridge National Laboratory (2010)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên bang Tennessee (Mỹ)."
+  },
+  "Oganesson": {
+    "symbol": "Og",
+    "atomicNumber": 118,
+    "atomicMass": "294",
+    "discoverer": "Viện Dubna, Nga (2002)",
+    "meltingPoint": "Không rõ",
+    "boilingPoint": "Không rõ",
+    "applications": "Chỉ nghiên cứu.",
+    "funFact": "Đặt theo tên nhà vật lý Yuri Oganessian."
+  }
+}
+
