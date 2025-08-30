@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>3D Atom Viewer</title>
+  <title>Mô hình 3D</title>
   <style>
     body { margin: 0; overflow: hidden; background: black; color: white; font-family: Arial; }
     #info {
@@ -143,7 +143,7 @@
         e.userData = {
           radius: radius,
           angle: i * (2 * Math.PI / count),
-          speed: 0.01 + Math.random()*0.015
+          speed: 0.02
         };
         electrons.push(e);
         atomGroup.add(e);
