@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tra cứu thuật ngữ</title>
+  <link rel="stylesheet" href="tracuu.css">
+</head>
+<body>
+  <header>
+    <h1>📖 Tra cứu thuật ngữ hóa học</h1>
+    <button class="back-btn" onclick="goBack()">⏎ Quay lại</button>
+  </header>
+
+  <main>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Nhập từ khóa để tìm...">
+    </div>
+
+    <div id="termsList" class="terms-list">
+      <!-- Thuật ngữ sẽ được load từ JSON -->
+    </div>
+  </main>
+
+  <script src="tracuu.js"></script>
+</body>
+</html>

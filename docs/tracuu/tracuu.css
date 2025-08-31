@@ -1,0 +1,97 @@
+/* Nền chung giống video + tài khoản */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #00e5ff;
+}
+
+.back-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 10px rgba(255,0,0,0.6);
+}
+.back-btn:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* Ô tìm kiếm */
+.search-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-box input {
+  width: 60%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 12px rgba(0,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* Danh sách thuật ngữ */
+.terms-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.term {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0,255,255,0.3);
+  border-radius: 15px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.term:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+}
+
+.term h3 {
+  margin-top: 0;
+  color: #00ffff;
+  font-size: 18px;
+}
+
+.term p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ddd;
+}
