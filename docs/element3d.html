@@ -1,124 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Mô hình 3D</title>
+  <title>Mô hình 3D Nguyên Tố</title>
   <style>
     body { margin: 0; overflow: hidden; background: black; color: white; font-family: Arial; }
     #info {
-      position: absolute; top: 20px; left: 20px;
+      position: absolute;
+      top: 20px; left: 20px;
       background: rgba(20,20,20,0.7);
       padding: 12px 16px;
       border-radius: 10px;
       border: 1px solid #444;
       box-shadow: 0 0 12px rgba(0,255,255,0.5);
-      width: 260px;
+      width: 240px;
     }
     #info h2 { margin: 0 0 8px; font-size: 20px; color: #00ffff; text-align: center; }
-
-    /* Nút thoát */
     #exitBtn {
-      position: absolute;
-      top: 20px; right: 20px;
+      position: absolute; top: 20px; right: 20px;
       padding: 10px 16px;
-      border: none;
-      border-radius: 8px;
+      border: none; border-radius: 8px;
       background: rgba(255,50,50,0.8);
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(255,0,0,0.7);
+      color: white; font-size: 14px; font-weight: bold;
+      cursor: pointer; box-shadow: 0 0 10px rgba(255,0,0,0.7);
       transition: 0.2s;
     }
-    #exitBtn:hover {
-      background: rgba(255,0,0,1);
-      transform: scale(1.05);
-    }
+    #exitBtn:hover { background: rgba(255,0,0,1); transform: scale(1.05); }
   </style>
 </head>
 <body>
   <div id="info"></div>
-  <button id="exitBtn" onclick="goBack()">⏎ Quay lại</button>
+  <button id="exitBtn" onclick="window.location.href='index.html'">⏎ Quay lại</button>
 
-  <!-- Three.js + OrbitControls -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-
-  <!-- Postprocessing scripts (Bloom) -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
-
   <script>
-    // Hàm quay lại bảng tuần hoàn
-    function goBack() {
-      window.location.href = "index.html";
-    }
-
-    // --- Lấy tham số từ URL ---
     const params = new URLSearchParams(window.location.search);
-    const name = params.get("name") || "Unknown";
-    const number = parseInt(params.get("number")) || 1; 
+    const name = params.get("name") || "Hydrogen";
+    const number = parseInt(params.get("number")) || 1;
     const mass = params.get("mass") || "?";
 
-    // --- Scene setup ---
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    document.getElementById("info").innerHTML = `
+      <h2>${name}</h2>
+      <p><b>Số hiệu nguyên tử:</b> ${number}</p>
+      <p><b>Khối lượng nguyên tử:</b> ${mass}</p>
+    `;
 
-    // Ánh sáng
-    scene.add(new THREE.AmbientLight(0x404040, 2));
-    const pointLight = new THREE.PointLight(0xffffff, 1.5, 100);
-    pointLight.position.set(5, 5, 5);
-    scene.add(pointLight);
+    let electronConfig = {};
 
-    // Group chứa nguyên tử
-    const atomGroup = new THREE.Group();
-    scene.add(atomGroup);
+    fetch("electron_config.json")
+      .then(res => res.json())
+      .then(data => {
+        electronConfig = data;
+        initModel();
+      })
+      .catch(() => initModel());
 
-    // Hạt nhân (nucleus)
-    const nucleusGeometry = new THREE.SphereGeometry(0.6, 32, 32);
-    const nucleusMaterial = new THREE.MeshPhongMaterial({
-      color: 0xff3333,
-      emissive: 0xaa0000,
-      shininess: 100,
-      transparent: true,
-      opacity: 0.95
-    });
-    const nucleus = new THREE.Mesh(nucleusGeometry, nucleusMaterial);
-    atomGroup.add(nucleus);
-
-    // Electron
-    const electronGeometry = new THREE.SphereGeometry(0.12, 16, 16);
-    const electronMaterial = new THREE.MeshPhongMaterial({
-      color: 0x33aaff,
-      emissive: 0x0088ff,
-      shininess: 150
-    });
-    const electrons = [];
-
-    // Orbit rings
-    function createOrbit(radius) {
-      const curve = new THREE.EllipseCurve(0, 0, radius, radius);
-      const points = curve.getPoints(200);
-      const geometry = new THREE.BufferGeometry().setFromPoints(points);
-      const material = new THREE.LineBasicMaterial({ color: 0x8888ff, transparent: true, opacity: 0.25 });
-      const orbit = new THREE.LineLoop(geometry, material);
-      orbit.rotation.x = Math.PI / 2;
-      atomGroup.add(orbit);
-    }
-
-    // Phân bố electron
     function distributeElectrons(Z) {
       const shells = [];
       let remaining = Z;
-      let capacities = [2, 8, 18, 32];
+      const capacities = [2, 8, 18, 32];
       for (let i = 0; i < capacities.length && remaining > 0; i++) {
         let count = Math.min(remaining, capacities[i]);
         shells.push(count);
@@ -127,115 +68,89 @@
       return shells;
     }
 
-    const electronShells = distributeElectrons(number);
+    function initModel() {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
 
-    electronShells.forEach((count, shellIndex) => {
-      const radius = 1.5 + shellIndex * 1.2;
-      createOrbit(radius);
-      for (let i=0; i<count; i++) {
-        const e = new THREE.Mesh(electronGeometry, electronMaterial);
-        e.userData = {
-          radius: radius,
-          angle: i * (2 * Math.PI / count),
-          speed: 0.02
-        };
-        electrons.push(e);
-        atomGroup.add(e);
+      scene.add(new THREE.AmbientLight(0x404040, 2));
+      const light = new THREE.PointLight(0xffffff, 1.5, 100);
+      light.position.set(5, 5, 5);
+      scene.add(light);
+
+      const atomGroup = new THREE.Group();
+      scene.add(atomGroup);
+
+      const nucleus = new THREE.Mesh(
+        new THREE.SphereGeometry(0.6, 32, 32),
+        new THREE.MeshPhongMaterial({ color: 0xff3333, emissive: 0xaa0000, shininess: 100 })
+      );
+      atomGroup.add(nucleus);
+
+      const eGeo = new THREE.SphereGeometry(0.12, 16, 16);
+      const eMat = new THREE.MeshPhongMaterial({ color: 0x33aaff, emissive: 0x0088ff, shininess: 150 });
+      const electrons = [];
+
+      const electronShells = electronConfig[name] || distributeElectrons(number);
+
+      function createOrbit(radius) {
+        const curve = new THREE.EllipseCurve(0, 0, radius, radius);
+        const points = curve.getPoints(200);
+        const geometry = new THREE.BufferGeometry().setFromPoints(points);
+        const material = new THREE.LineBasicMaterial({ color: 0x8888ff, transparent: true, opacity: 0.25 });
+        const orbit = new THREE.LineLoop(geometry, material);
+        orbit.rotation.x = Math.PI / 2;
+        atomGroup.add(orbit);
       }
-    });
 
-    // ⭐ Background vũ trụ (sao lấp lánh)
-    function createStars() {
-      const starGeometry = new THREE.BufferGeometry();
-      const starCount = 2000;
-      const positions = [];
-      for (let i=0; i<starCount; i++) {
-        const x = (Math.random() - 0.5) * 200;
-        const y = (Math.random() - 0.5) * 200;
-        const z = (Math.random() - 0.5) * 200;
-        positions.push(x,y,z);
-      }
-      starGeometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
-      const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.6 });
-      const stars = new THREE.Points(starGeometry, starMaterial);
-      scene.add(stars);
-    }
-    createStars();
-
-    // Camera + OrbitControls
-    camera.position.z = 6;
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-    // Hiệu ứng Bloom
-    const composer = new THREE.EffectComposer(renderer);
-    const renderPass = new THREE.RenderPass(scene, camera);
-    composer.addPass(renderPass);
-
-    const bloomPass = new THREE.UnrealBloomPass(
-      new THREE.Vector2(window.innerWidth, window.innerHeight),
-      1.2,
-      0.4, 
-      0.85
-    );
-    composer.addPass(bloomPass);
-
-    // Animation
-    function animate() {
-      requestAnimationFrame(animate);
-
-      // electron bay vòng quanh
-      electrons.forEach(e => {
-        e.userData.angle += e.userData.speed;
-        e.position.x = e.userData.radius * Math.cos(e.userData.angle);
-        e.position.z = e.userData.radius * Math.sin(e.userData.angle);
+      electronShells.forEach((count, shellIndex) => {
+        const radius = 1.5 + shellIndex * 1.2;
+        createOrbit(radius);
+        for (let i = 0; i < count; i++) {
+          const e = new THREE.Mesh(eGeo, eMat);
+          e.userData = { radius, angle: i * (2 * Math.PI / count), speed: 0.02 };
+          electrons.push(e);
+          atomGroup.add(e);
+        }
       });
 
-      // xoay nguyên tử
-      atomGroup.rotation.y += 0.002;
-
-      controls.update();
-      composer.render();
-    }
-    animate();
-
-    // Resize
-    window.addEventListener("resize", () => {
-      camera.aspect = window.innerWidth/window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      composer.setSize(window.innerWidth, window.innerHeight);
-    });
-
-    // --- Load JSON info ---
-    async function loadElementInfo(name) {
-      try {
-        const res = await fetch("elements.json");
-        const data = await res.json();
-
-        if (data[name]) {
-          const el = data[name];
-          document.getElementById("info").innerHTML = `
-            <h2>${name} (${el.symbol})</h2>
-            <p><b>Số hiệu nguyên tử:</b> ${el.atomicNumber}</p>
-            <p><b>Nguyên tử khối:</b> ${el.atomicMass}</p>
-            <p><b>Người phát hiện:</b> ${el.discoverer}</p>
-            <p><b>Nhiệt độ nóng chảy:</b> ${el.meltingPoint}</p>
-            <p><b>Nhiệt độ sôi:</b> ${el.boilingPoint}</p>
-            <p><b>Ứng dụng:</b> ${el.applications}</p>
-            <p><b>Thông tin thú vị:</b> ${el.funFact}</p>
-          `;
-        } else {
-          document.getElementById("info").innerHTML =
-            `<p>Chưa có dữ liệu cho nguyên tố <b>${name}</b></p>`;
+      function createStars() {
+        const starGeo = new THREE.BufferGeometry();
+        const starCount = 2000;
+        const pos = [];
+        for (let i = 0; i < starCount; i++) {
+          pos.push((Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200);
         }
-      } catch (err) {
-        console.error("Lỗi load JSON:", err);
-        document.getElementById("info").innerHTML =
-          `<p>Không tải được dữ liệu nguyên tố.</p>`;
+        starGeo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+        const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.6 });
+        scene.add(new THREE.Points(starGeo, starMat));
       }
-    }
+      createStars();
 
-    loadElementInfo(name);
+      const controls = new THREE.OrbitControls(camera, renderer.domElement);
+      camera.position.z = 6;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        electrons.forEach(e => {
+          e.userData.angle += e.userData.speed;
+          e.position.x = e.userData.radius * Math.cos(e.userData.angle);
+          e.position.z = e.userData.radius * Math.sin(e.userData.angle);
+        });
+        atomGroup.rotation.y += 0.002;
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
   </script>
 </body>
 </html>
