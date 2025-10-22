@@ -16,6 +16,8 @@
       width: 240px;
     }
     #info h2 { margin: 0 0 8px; font-size: 20px; color: #00ffff; text-align: center; }
+
+    /* Nút quay lại */
     #exitBtn {
       position: absolute; top: 20px; right: 20px;
       padding: 10px 16px;
@@ -26,14 +28,31 @@
       transition: 0.2s;
     }
     #exitBtn:hover { background: rgba(255,0,0,1); transform: scale(1.05); }
+
+    /* Nút tạm dừng / tiếp tục */
+    #toggleBtn {
+      position: absolute; top: 70px; right: 20px;
+      padding: 10px 16px;
+      border: none; border-radius: 8px;
+      background: rgba(50,150,255,0.8);
+      color: white; font-size: 14px; font-weight: bold;
+      cursor: pointer; box-shadow: 0 0 10px rgba(0,150,255,0.7);
+      transition: 0.2s;
+    }
+    #toggleBtn:hover { background: rgba(0,150,255,1); transform: scale(1.05); }
   </style>
 </head>
 <body>
   <div id="info"></div>
   <button id="exitBtn" onclick="window.location.href='index.html'">⏎ Quay lại</button>
+  <button id="toggleBtn" onclick="toggleAnimation()">⏸ Tạm dừng</button>
 
+  <!-- Thư viện Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
+
   <script>
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name") || "Hydrogen";
@@ -44,16 +63,21 @@
       <h2>${name}</h2>
       <p><b>Số hiệu nguyên tử:</b> ${number}</p>
       <p><b>Khối lượng nguyên tử:</b> ${mass}</p>
+      <p><b>Khối lượng nguyên tử:</b> ${mass}</p>
     `;
+  
 
     let electronConfig = {};
+    let isPaused = false;
+
+    function toggleAnimation() {
+      isPaused = !isPaused;
+      document.getElementById("toggleBtn").innerText = isPaused ? "▶ Tiếp tục" : "⏸ Tạm dừng";
+    }
 
     fetch("electron_config.json")
       .then(res => res.json())
-      .then(data => {
-        electronConfig = data;
-        initModel();
-      })
+      .then(data => { electronConfig = data; initModel(); })
       .catch(() => initModel());
 
     function distributeElectrons(Z) {
@@ -83,16 +107,31 @@
       const atomGroup = new THREE.Group();
       scene.add(atomGroup);
 
+      // Hạt nhân
       const nucleus = new THREE.Mesh(
         new THREE.SphereGeometry(0.6, 32, 32),
         new THREE.MeshPhongMaterial({ color: 0xff3333, emissive: 0xaa0000, shininess: 100 })
       );
       atomGroup.add(nucleus);
 
+      // Điện tích hạt nhân +Z (chữ 3D xoay cùng hạt nhân)
+      const loader = new THREE.FontLoader();
+      loader.load('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/fonts/helvetiker_regular.typeface.json', font => {
+        const textGeo = new THREE.TextGeometry(`+${number}`, {
+          font: font,
+          size: 0.25,
+          height: 0.02,
+        });
+        const textMat = new THREE.MeshPhongMaterial({ color: 0x000ffff, emissive: 0x000000 });
+        const textMesh = new THREE.Mesh(textGeo, textMat);
+        textMesh.position.set(-0.34, 0, 0.589); // đặt gần tâm hạt nhân
+        atomGroup.add(textMesh);
+      });
+
+      // Electron
       const eGeo = new THREE.SphereGeometry(0.12, 16, 16);
       const eMat = new THREE.MeshPhongMaterial({ color: 0x33aaff, emissive: 0x0088ff, shininess: 150 });
       const electrons = [];
-
       const electronShells = electronConfig[name] || distributeElectrons(number);
 
       function createOrbit(radius) {
@@ -116,30 +155,33 @@
         }
       });
 
-      function createStars() {
-        const starGeo = new THREE.BufferGeometry();
-        const starCount = 2000;
-        const pos = [];
-        for (let i = 0; i < starCount; i++) {
-          pos.push((Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200);
-        }
-        starGeo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
-        const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.6 });
-        scene.add(new THREE.Points(starGeo, starMat));
+      // Nền sao
+      const starGeo = new THREE.BufferGeometry();
+      const starCount = 2000;
+      const pos = [];
+      for (let i = 0; i < starCount; i++) {
+        pos.push((Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200, (Math.random() - 0.5) * 200);
       }
-      createStars();
+      starGeo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+      const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.3 });
+      scene.add(new THREE.Points(starGeo, starMat));
 
       const controls = new THREE.OrbitControls(camera, renderer.domElement);
       camera.position.z = 6;
 
       function animate() {
         requestAnimationFrame(animate);
-        electrons.forEach(e => {
-          e.userData.angle += e.userData.speed;
-          e.position.x = e.userData.radius * Math.cos(e.userData.angle);
-          e.position.z = e.userData.radius * Math.sin(e.userData.angle);
-        });
-        atomGroup.rotation.y += 0.002;
+
+        if (!isPaused) {
+          electrons.forEach(e => {
+            e.userData.angle += e.userData.speed;
+            e.position.x = e.userData.radius * Math.cos(e.userData.angle);
+            e.position.z = e.userData.radius * Math.sin(e.userData.angle);
+          });
+
+          atomGroup.rotation.y += 0.002;
+        }
+
         controls.update();
         renderer.render(scene, camera);
       }
