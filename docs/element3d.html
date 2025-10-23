@@ -54,18 +54,49 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
 
   <script>
+    
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name") || "Hydrogen";
     const number = parseInt(params.get("number")) || 1;
     const mass = params.get("mass") || "?";
 
+   // --- Tải dữ liệu từ file JSON ---
+fetch("elements.json")
+  .then(res => res.json())
+  .then(data => {
+    const element = data[name];
+
+    if (element) {
+      document.getElementById("info").innerHTML = `
+        <h2>${name} (${element.symbol})</h2>
+        <p><b>Số hiệu nguyên tử:</b> ${element.atomicNumber}</p>
+        <p><b>Điện tích hạt nhân</b> +${element.atomicNumber}</p>
+        <p><b>Nguyên tử khối:</b> ${element.atomicMass}</p>
+        <p><b>Người phát hiện:</b> ${element.discoverer}</p>
+        <p><b>Nhiệt độ nóng chảy:</b> ${element.meltingPoint}</p>
+        <p><b>Nhiệt độ sôi:</b> ${element.boilingPoint}</p>
+        <p><b>Ứng dụng:</b> ${element.applications}</p>
+        <p><b>Thông tin thú vị:</b> ${element.funFact}</p>
+      `;
+    } else {
+      document.getElementById("info").innerHTML = `
+        <h2>${name}</h2>
+        <p><b>Không tìm thấy thông tin chi tiết trong cơ sở dữ liệu.</b></p>
+      `;
+    }
+
+    // Sau khi load xong dữ liệu, khởi tạo mô hình 3D
+    initModel();
+  })
+  .catch(err => {
+    console.error("Lỗi khi tải elements.json:", err);
     document.getElementById("info").innerHTML = `
       <h2>${name}</h2>
-      <p><b>Số hiệu nguyên tử:</b> ${number}</p>
-      <p><b>Khối lượng nguyên tử:</b> ${mass}</p>
-      <p><b>Khối lượng nguyên tử:</b> ${mass}</p>
+      <p><b>Không tải được dữ liệu nguyên tố.</b></p>
     `;
-  
+    initModel();
+  });
+
 
     let electronConfig = {};
     let isPaused = false;
@@ -114,19 +145,6 @@
       );
       atomGroup.add(nucleus);
 
-      // Điện tích hạt nhân +Z (chữ 3D xoay cùng hạt nhân)
-      const loader = new THREE.FontLoader();
-      loader.load('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/fonts/helvetiker_regular.typeface.json', font => {
-        const textGeo = new THREE.TextGeometry(`+${number}`, {
-          font: font,
-          size: 0.25,
-          height: 0.02,
-        });
-        const textMat = new THREE.MeshPhongMaterial({ color: 0x000ffff, emissive: 0x000000 });
-        const textMesh = new THREE.Mesh(textGeo, textMat);
-        textMesh.position.set(-0.34, 0, 0.589); // đặt gần tâm hạt nhân
-        atomGroup.add(textMesh);
-      });
 
       // Electron
       const eGeo = new THREE.SphereGeometry(0.12, 16, 16);
