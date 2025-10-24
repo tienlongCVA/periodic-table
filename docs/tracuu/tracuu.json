@@ -1,9 +1,9 @@
 {
-  "Nguyên tử": "Nguyên tử là đơn vị cơ bản của vật chất, gồm hạt nhân chứa proton (mang điện dương), neutron (không mang điện) và các electron (mang điện âm) chuyển động xung quanh. Ví dụ: Nguyên tử Hydro chỉ có 1 proton và 1 electron.",
+  "Nguyên tử": "Nguyên tử là đơn vị cơ bản của vật chất trung hòa về điện, gồm hạt nhân chứa proton (mang điện tích dương), neutron (không mang điện) và các electron (mang điện tích âm) chuyển động xung quanh. Ví dụ: Nguyên tử Hydro chỉ có 1 proton và 1 electron.",
   "Phân tử": "Phân tử là tập hợp hai hay nhiều nguyên tử liên kết với nhau bằng liên kết hóa học. Ví dụ: Phân tử nước (H2O) gồm 2 nguyên tử Hydro và 1 nguyên tử Oxy.",
   "Ion": "Ion là nguyên tử hoặc phân tử mang điện tích do mất hoặc nhận electron. Ví dụ: Na⁺ (mất 1 electron), Cl⁻ (nhận 1 electron).",
   "Liên kết ion": "Liên kết ion được hình thành do lực hút tĩnh điện giữa ion dương (cation) và ion âm (anion). Ví dụ: NaCl có liên kết ion giữa Na⁺ và Cl⁻.",
-  "Liên kết cộng hóa trị": "Liên kết cộng hóa trị là liên kết trong đó các nguyên tử cùng sử dụng chung một hay nhiều cặp electron. Ví dụ: H2, O2, H2O đều có liên kết cộng hóa trị.",
+  "Liên kết cộng hóa trị": "Liên kết cộng hóa trị là liên kết trong đó các  nguyên tử cùng sử dụng chung một hay nhiều cặp electron. Ví dụ: H2, O2, H2O đều có liên kết cộng hóa trị.",
   "Liên kết kim loại": "Liên kết kim loại là sự liên kết giữa các ion dương trong mạng tinh thể kim loại nhờ 'biển electron' tự do chuyển động. Nhờ liên kết này mà kim loại dẫn điện và dẫn nhiệt tốt.",
   "Nguyên tử khối": "Nguyên tử khối là khối lượng tương đối của một nguyên tử so với 1/12 khối lượng nguyên tử Cacbon-12. Ví dụ: Nguyên tử khối của Oxy là 16.",
   "Số khối": "Số khối (A) là tổng số proton (Z) và neutron (N) trong hạt nhân nguyên tử. A = Z + N. Ví dụ: Oxy-16 có số khối 16 (8 proton + 8 neutron).",

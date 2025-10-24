@@ -28,15 +28,15 @@
 <script>
   // Danh sách nguyên tố mẫu (bạn có thể tách ra file elements.js sau)
   const elements = {
-    H:  { name: "Hydrogen", symbol: "H", number: 1,  mass: 1.008 },
-    He: { name: "Helium",   symbol: "He", number: 2,  mass: 4.0026 },
-    Li: { name: "Lithium",  symbol: "Li", number: 3,  mass: 6.94 },
-    Be: { name: "Beryllium",symbol: "Be", number: 4,  mass: 9.0122 },
-    B:  { name: "Boron",    symbol: "B", number: 5,  mass: 10.81 },
-    C:  { name: "Carbon",   symbol: "C", number: 6,  mass: 12.011 },
-    N:  { name: "Nitrogen", symbol: "N", number: 7,  mass: 14.007 },
-    O:  { name: "Oxygen",   symbol: "O", number: 8,  mass: 15.999 },
-    Ne: { name: "Neon",     symbol: "Ne", number: 10, mass: 20.180 }
+    H:  { name: "Hydrogen", symbol: "H", number: 1,  mass: 1 },
+    He: { name: "Helium",   symbol: "He", number: 2,  mass: 4 },
+    Li: { name: "Lithium",  symbol: "Li", number: 3,  mass: 7 },
+    Be: { name: "Beryllium",symbol: "Be", number: 4,  mass: 9 },
+    B:  { name: "Boron",    symbol: "B", number: 5,  mass: 11 },
+    C:  { name: "Carbon",   symbol: "C", number: 6,  mass: 12 },
+    N:  { name: "Nitrogen", symbol: "N", number: 7,  mass: 14 },
+    O:  { name: "Oxygen",   symbol: "O", number: 8,  mass: 16 },
+    Ne: { name: "Neon",     symbol: "Ne", number: 10, mass: 20 }
   };
 
   function openElement(symbol) {
@@ -72,7 +72,7 @@
                 <span class="element-number">1</span>
                 <span class="element-symbol">H</span>
                 <span class="element-info">Hydrogen</span>
-                <span class="element-mass">1.008</span>
+                <span class="element-mass">1</span>
                 </div>
             </td>
             
@@ -98,7 +98,7 @@
                 <span class="element-number">2</span>
                 <span class="element-symbol">He</span>
                 <span class="element-info">Hellium</span>
-                <span class="element-mass">4.0026</span>    
+                <span class="element-mass">4</span>    
                 </div>
             </td>
         </tr>
@@ -109,7 +109,7 @@
                     <span class="element-number">3</span>
                     <span class="element-symbol">Li</span>
                     <span class="element-info">Lithium</span>
-                    <span class="element-mass">6.94</span>
+                    <span class="element-mass">7</span>
                 </div>
             </td>
             <td class="kim-loai-tho sheet-hover p-kim-loai-tho element" onclick="openElement('Be')">                
@@ -117,7 +117,7 @@
                 <span class="element-number">4</span>
                 <span class="element-symbol">Be</span>
                 <span class="element-info">Beryllium</span>
-                <span class="element-mass">9.0122</span>
+                <span class="element-mass">9</span>
                 </div>
             </td>
             <td class="tieu-de" colspan="10">Periodic table</td>
@@ -126,7 +126,7 @@
                 <span class="element-number">5</span>
                 <span class="element-symbol">B</span>
                 <span class="element-info">Boron</span>
-                <span class="element-mass">10.81</span>
+                <span class="element-mass">11</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="openElement('C')">
@@ -134,7 +134,7 @@
                 <span class="element-number">6</span>
                 <span class="element-symbol">C</span>
                 <span class="element-info">Carbon</span>
-                <span class="element-mass">12.011</span>
+                <span class="element-mass">12</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Nitrogen', 'N', 7, 14.007)">
@@ -142,7 +142,7 @@
                 <span class="element-number">7</span>
                 <span class="element-symbol">N</span>
                 <span class="element-info">Nitrogen</span>
-                <span class="element-mass">14.007</span>
+                <span class="element-mass">14</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Oxygen', 'O', 8, 15.999)">    
@@ -150,7 +150,7 @@
                 <span class="element-number">8</span>
                 <span class="element-symbol">O</span>
                 <span class="element-info">Oxygen</span>
-                <span class="element-mass">15.999</span>
+                <span class="element-mass">16</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Fluorine', 'F', 9, 18.998)">  
@@ -158,7 +158,7 @@
                 <span class="element-number">9</span>
                 <span class="element-symbol">F</span>
                 <span class="element-info">Fluorine</span>
-                <span class="element-mass">18.998</span>
+                <span class="element-mass">19</span>
                 </div>
             </td>
         </td>
@@ -167,7 +167,7 @@
                 <span class="element-number">10</span>
                 <span class="element-symbol">Ne</span>
                 <span class="element-info">Neon</span>
-                <span class="element-mass">20.180</span>
+                <span class="element-mass">20</span>
                 </div>
             </td></td>
         </tr>
@@ -178,7 +178,7 @@
                 <span class="element-number">11</span>
                 <span class="element-symbol">Na</span>
                 <span class="element-info">Sodium</span>
-                <span class="element-mass">22.990</span>
+                <span class="element-mass">23</span>
                 </div>
             </td>
             <td class="kim-loai-tho sheet-hover p-kim-loai-tho element" onclick="showElementDetails('Magnesium', 'Mg', 12, 24.305)">              
@@ -186,7 +186,7 @@
                 <span class="element-number">12</span>
                 <span class="element-symbol">Mg</span>
                 <span class="element-info">Magnesium</span>
-                <span class="element-mass">24.305</span>
+                <span class="element-mass">24</span>
                 </div>
             </td>
             <td colspan="10"></td>
@@ -195,7 +195,7 @@
                 <span class="element-number">13</span>
                 <span class="element-symbol">Al</span>
                 <span class="element-info">Aluminium</span>
-                <span class="element-mass">26.982</span>
+                <span class="element-mass">27</span>
                 </div>
             </td>
             <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Silicon', 'Si', 14, 28.085)"> 
@@ -203,7 +203,7 @@
                 <span class="element-number">14</span>
                 <span class="element-symbol">Si</span>
                 <span class="element-info">Silicon</span>
-                <span class="element-mass">28.085</span>
+                <span class="element-mass">28</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Phosphorus', 'P', 15, 30.974)">
@@ -211,7 +211,7 @@
                 <span class="element-number">15</span>
                 <span class="element-symbol">P</span>
                 <span class="element-info">Phosphorus</span>
-                <span class="element-mass">30.974</span>
+                <span class="element-mass">31</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Sulfur', 'S', 16, 32.06)">
@@ -219,7 +219,7 @@
                 <span class="element-number">16</span>
                 <span class="element-symbol">S</span>
                 <span class="element-info">Sulfur</span>
-                <span class="element-mass">32.06</span>
+                <span class="element-mass">32</span>
                 </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Chlorine', 'Cl', 17, 35.45)">
@@ -227,7 +227,7 @@
                 <span class="element-number">17</span>
                 <span class="element-symbol">Cl</span>
                 <span class="element-info">Chlorine</span>
-                <span class="element-mass">35.45</span>
+                <span class="element-mass">35.5</span>
                 </div>
             </td>
             <td class="khi-hiem sheet-hover p-khi-hiem element" onclick="showElementDetails('Argon', 'Ar', 18, 39.948)">
@@ -235,7 +235,7 @@
                 <span class="element-number">18</span>
                 <span class="element-symbol">Ar</span>
                 <span class="element-info">Argon</span>
-                <span class="element-mass">39.948</span>
+                <span class="element-mass">40</span>
                 </div>
             </td>
         </tr>
@@ -246,7 +246,7 @@
                 <span class="element-number">19</span>
                 <span class="element-symbol">K</span>
                 <span class="element-info">Potassium</span>
-                <span class="element-mass">39.098</span>
+                <span class="element-mass">39</span>
                 </div>
             </td>
             <td class="kim-loai-tho sheet-hover p-kim-loai-tho element  " onclick="showElementDetails('Calcium', 'Ca', 20, 40.078)">
@@ -254,7 +254,7 @@
                 <span class="element-number">20</span>
                 <span class="element-symbol">Ca</span>
                 <span class="element-info">Calcium</span>
-                <span class="element-mass">40.078</span>
+                <span class="element-mass">40</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Scandium', 'Sc', 21, 44.956)">
@@ -262,7 +262,7 @@
                 <span class="element-number">21</span>
                 <span class="element-symbol">Sc</span>
                 <span class="element-info">Scandium</span>
-                <span class="element-mass">44.956</span>
+                <span class="element-mass">45</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Titanium', 'Ti', 22, 47.867)">
@@ -270,7 +270,7 @@
                 <span class="element-number">22</span>
                 <span class="element-symbol">Ti</span>
                 <span class="element-info">Titanium</span>
-                <span class="element-mass">47.867</span>
+                <span class="element-mass">49</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Vanadium', 'V', 23, 50.942)">
@@ -278,7 +278,7 @@
                 <span class="element-number">23</span>
                 <span class="element-symbol">V</span>
                 <span class="element-info">Vanadium</span>
-                <span class="element-mass">50.942</span>
+                <span class="element-mass">51</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Chromium', 'Cr', 24, 51.996)">
@@ -286,7 +286,7 @@
                 <span class="element-number">24</span>
                 <span class="element-symbol">Cr</span>
                 <span class="element-info">Chromium</span>
-                <span class="element-mass">51.996</span>
+                <span class="element-mass">52</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Manganese', 'Mn', 25, 54.938)">
@@ -294,7 +294,7 @@
                 <span class="element-number">25</span>
                 <span class="element-symbol">Mn</span>
                 <span class="element-info">Manganese</span>
-                <span class="element-mass">54.938</span>
+                <span class="element-mass">55</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Iron', 'Fe', 26, 55.845)">
@@ -302,7 +302,7 @@
                 <span class="element-number">26</span>
                 <span class="element-symbol">Fe</span>
                 <span class="element-info">Iron</span>
-                <span class="element-mass">55.845</span>
+                <span class="element-mass">56</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Cobalt', 'Co', 27, 58.933)">
@@ -310,7 +310,7 @@
                 <span class="element-number">27</span>
                 <span class="element-symbol">Co</span>
                 <span class="element-info">Cobalt</span>
-                <span class="element-mass">58.933</span>
+                <span class="element-mass">59</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Nickel', 'Ni', 28, 58.693)">
@@ -318,7 +318,7 @@
                 <span class="element-number">28</span>
                 <span class="element-symbol">Ni</span>
                 <span class="element-info">Nickel</span>
-                <span class="element-mass">58.693</span>
+                <span class="element-mass">59</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Copper', 'Cu', 29, 63.546)">
@@ -326,7 +326,7 @@
                 <span class="element-number">29</span>
                 <span class="element-symbol">Cu</span>
                 <span class="element-info">Copper</span>
-                <span class="element-mass">63.546</span>
+                <span class="element-mass">64</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Zinc', 'Zn', 30, 65.38)">
@@ -334,7 +334,7 @@
                 <span class="element-number">30</span>
                 <span class="element-symbol">Zn</span>
                 <span class="element-info">Zinc</span>
-                <span class="element-mass">65.38</span>
+                <span class="element-mass">65</span>
                 </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Gallium', 'Ga', 31, 69.723)">
@@ -342,7 +342,7 @@
                 <span class="element-number">31</span>
                 <span class="element-symbol">Ga</span>
                 <span class="element-info">Gallium</span>
-                <span class="element-mass">69.723</span>
+                <span class="element-mass">70</span>
                 </div>
             </td>
             <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Germanium', 'Ge', 32, 72.630)">
@@ -350,7 +350,7 @@
                 <span class="element-number">32</span>
                 <span class="element-symbol">Ge</span>
                 <span class="element-info">Germanium</span>
-                <span class="element-mass">72.630</span>
+                <span class="element-mass">73</span>
                 </div>
             </td>
             <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Arsenic', 'As', 33, 74.922)">
@@ -358,7 +358,7 @@
                     <span class="element-number">33</span>
                     <span class="element-symbol">As</span>
                     <span class="element-info">Arsenic</span>
-                    <span class="element-mass">74.922</span>
+                    <span class="element-mass">75</span>
                     </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Selenium', 'Se', 34, 78.971)">
@@ -366,7 +366,7 @@
                     <span class="element-number">34</span>
                     <span class="element-symbol">Se</span>
                     <span class="element-info">Selenium</span>
-                    <span class="element-mass">78.971</span>
+                    <span class="element-mass">79</span>
                     </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Bromine', 'Br', 35, 79.904)">
@@ -374,7 +374,7 @@
                 <span class="element-number">35</span>
                 <span class="element-symbol">Br</span>
                 <span class="element-info">Bromine</span>
-                <span class="element-mass">79.904</span>
+                <span class="element-mass">80</span>
                 </div>
             </td>
             <td class="khi-hiem sheet-hover p-khi-hiem element" onclick="showElementDetails('Krypton', 'Kr', 36, 83.798)">
@@ -382,7 +382,7 @@
                     <span class="element-number">36</span>
                     <span class="element-symbol">Kr</span>
                     <span class="element-info">Krypton</span>
-                    <span class="element-mass">83.798</span>
+                    <span class="element-mass">84</span>
                     </div>
             </td>
         </tr>
@@ -393,7 +393,7 @@
                     <span class="element-number">37</span>
                     <span class="element-symbol">Rb</span>
                     <span class="element-info">Rubidium</span>
-                    <span class="element-mass">85.468</span>
+                    <span class="element-mass">85</span>
                     </div>
             </td>
             <td class="kim-loai-tho sheet-hover p-kim-loai-tho element" onclick="showElementDetails('Strontium', 'Sr', 38, 87.62)">
@@ -401,7 +401,7 @@
                     <span class="element-number">38</span>
                     <span class="element-symbol">Sr</span>
                     <span class="element-info">Strontium</span>
-                    <span class="element-mass">87.62</span>
+                    <span class="element-mass">86</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Yttrium', 'Y', 39, 88.906)">
@@ -409,7 +409,7 @@
                     <span class="element-number">39</span>
                     <span class="element-symbol">Y</span>
                     <span class="element-info">Yttrium</span>
-                    <span class="element-mass">88.906</span>
+                    <span class="element-mass">89</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Zirconium', 'Zr', 40, 91.224)">
@@ -417,7 +417,7 @@
                 <span class="element-number">40</span>
                 <span class="element-symbol">Zr</span>
                 <span class="element-info">Zirconium</span>
-                <span class="element-mass">91.224</span>
+                <span class="element-mass">91</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Niobium', 'Nb', 41, 92.906)">
@@ -425,7 +425,7 @@
                     <span class="element-number">41</span>
                     <span class="element-symbol">Nb</span>
                     <span class="element-info">Niobium</span>
-                    <span class="element-mass">92.906</span>
+                    <span class="element-mass">93</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Molybdenum', 'Mo', 42, 95.95)">
@@ -433,7 +433,7 @@
                 <span class="element-number">42</span>
                 <span class="element-symbol">Mo</span>
                 <span class="element-info">Molybdenum</span>
-                <span class="element-mass">95.95</span>
+                <span class="element-mass">96</span>
                 </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Technetium', 'Tc', 43, 98)">
@@ -441,7 +441,7 @@
                     <span class="element-number">42</span>
                     <span class="element-symbol">Tc</span>
                     <span class="element-info">Technetium</span>
-                    <span class="element-mass">(98)</span>
+                    <span class="element-mass">98</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Ruthenium', 'Ru', 44, 101.07)">
@@ -449,7 +449,7 @@
                     <span class="element-number">44</span>
                     <span class="element-symbol">Ru</span>
                     <span class="element-info">Ruthenium</span>
-                    <span class="element-mass">101.07</span>
+                    <span class="element-mass">101</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Rhodium', 'Rh', 45, 102.91)">
@@ -457,7 +457,7 @@
                     <span class="element-number">45</span>
                     <span class="element-symbol">Rh</span>
                     <span class="element-info">Rhodium</span>
-                    <span class="element-mass">102.91</span>
+                    <span class="element-mass">103</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Palladium', 'Pd', 46, 106.42)">
@@ -465,7 +465,7 @@
                     <span class="element-number">46</span>
                     <span class="element-symbol">Pd</span>
                     <span class="element-info">Palladium</span>
-                    <span class="element-mass">106.42</span>
+                    <span class="element-mass">106</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Silver', 'Ag', 47, 107.87)">
@@ -473,7 +473,7 @@
                     <span class="element-number">47</span>
                     <span class="element-symbol">Ag</span>
                     <span class="element-info">Silver</span>
-                    <span class="element-mass">107.87</span>
+                    <span class="element-mass">108</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Cadmium', 'Cd', 48, 112.41)">
@@ -481,7 +481,7 @@
                     <span class="element-number">48</span>
                     <span class="element-symbol">Cd</span>
                     <span class="element-info">Cadmium</span>
-                    <span class="element-mass">112.41</span>
+                    <span class="element-mass">112</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Indium', 'In', 49, 114.82)">
@@ -489,7 +489,7 @@
                     <span class="element-number">49</span>
                     <span class="element-symbol">In</span>
                     <span class="element-info">Indium</span>
-                    <span class="element-mass">114.82</span>
+                    <span class="element-mass">115</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Tin', 'Sn', 50, 118.71)">
@@ -497,7 +497,7 @@
                     <span class="element-number">50</span>
                     <span class="element-symbol">Sn</span>
                     <span class="element-info">Tin</span>
-                    <span class="element-mass">118.71</span>
+                    <span class="element-mass">119</span>
                     </div>
             </td>
             <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Antimony', 'Sb', 51, 121.76)">
@@ -505,7 +505,7 @@
                     <span class="element-number">51</span>
                     <span class="element-symbol">Sb</span>
                     <span class="element-info">Antimony</span>
-                    <span class="element-mass">121.76</span>
+                    <span class="element-mass">122</span>
                     </div>
             </td>
             <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Tellurium', 'Te', 52, 127.60)">
@@ -513,7 +513,7 @@
                     <span class="element-number">52</span>
                     <span class="element-symbol">Te</span>
                     <span class="element-info">Tellurium</span>
-                    <span class="element-mass">127.60</span>
+                    <span class="element-mass">128</span>
                     </div>
             </td>
             <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Iodine', 'I', 53, 126.90)">
@@ -521,7 +521,7 @@
                     <span class="element-number">53</span>
                     <span class="element-symbol">I</span>
                     <span class="element-info">Iodine</span>
-                    <span class="element-mass">126.90</span>
+                    <span class="element-mass">127</span>
                     </div>
             </td>
             <td class="khi-hiem sheet-hover p-khi-hiem element" onclick="showElementDetails('Xenon', 'Xe', 54, 131.29)">
@@ -529,7 +529,7 @@
                     <span class="element-number">54</span>
                     <span class="element-symbol">Xe</span>
                     <span class="element-info">Xenon</span>
-                    <span class="element-mass">131.29</span>
+                    <span class="element-mass">131</span>
                     </div>
             </td>
         </tr>
@@ -540,7 +540,7 @@
                     <span class="element-number">55</span>
                     <span class="element-symbol">Cs</span>
                     <span class="element-info">Caesium</span>
-                    <span class="element-mass">132.91</span>
+                    <span class="element-mass">133</span>
                     </div>
             </td>
             <td class="kim-loai-tho sheet-hover p-kim-loai-tho element" onclick="showElementDetails('Barium', 'Ba', 56, 137.33)">
@@ -548,7 +548,7 @@
                     <span class="element-number">56</span>
                     <span class="element-symbol">Ba</span>
                     <span class="element-info">Barium</span>
-                    <span class="element-mass">137.33</span>
+                    <span class="element-mass">137</span>
                     </div>
             </td>
             <td class="ho-actini p-ho-actini element"> 57-71 </td>
@@ -557,7 +557,7 @@
                     <span class="element-number">72</span>
                     <span class="element-symbol">Hf</span>
                     <span class="element-info">Hafnium</span>
-                    <span class="element-mass">178.49</span>
+                    <span class="element-mass">178</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Tantalum', 'Ta', 73, 180.95)">
@@ -565,7 +565,7 @@
                     <span class="element-number">73</span>
                     <span class="element-symbol">Ta</span>
                     <span class="element-info">Tantalum</span>
-                    <span class="element-mass">180.95</span>
+                    <span class="element-mass">181</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Tungsten', 'W', 74, 183.84)">
@@ -573,7 +573,7 @@
                     <span class="element-number">74</span>
                     <span class="element-symbol">W</span>
                     <span class="element-info">Tungsten</span>
-                    <span class="element-mass">183.84</span>
+                    <span class="element-mass">184</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Rhenium', 'Re', 75, 186.21)">
@@ -581,7 +581,7 @@
                     <span class="element-number">75</span>
                     <span class="element-symbol">Re</span>
                     <span class="element-info">Rhenium</span>
-                    <span class="element-mass">186.21</span>
+                    <span class="element-mass">186</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Osmium', 'Os', 76, 190.23)">
@@ -589,7 +589,7 @@
                     <span class="element-number">76</span>
                     <span class="element-symbol">Os</span>
                     <span class="element-info">Osmium</span>
-                    <span class="element-mass">190.23</span>
+                    <span class="element-mass">190</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Iridium', 'Ir', 77, 192.22)">
@@ -597,7 +597,7 @@
                     <span class="element-number">77</span>
                     <span class="element-symbol">Ir</span>
                     <span class="element-info">Iridium</span>
-                    <span class="element-mass">192.22</span>
+                    <span class="element-mass">192</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Platinum', 'Pt', 78, 195.08)">
@@ -605,7 +605,7 @@
                     <span class="element-number">78</span>
                     <span class="element-symbol">Pt</span>
                     <span class="element-info">Platinum</span>
-                    <span class="element-mass">195.08</span>
+                    <span class="element-mass">195</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Gold', 'Au', 79, 196.97)">
@@ -613,7 +613,7 @@
                     <span class="element-number">79</span>
                     <span class="element-symbol">Au</span>
                     <span class="element-info">Gold</span>
-                    <span class="element-mass">196.97</span>
+                    <span class="element-mass">197</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Mercury', 'Hg', 80, 200.59)">
@@ -621,7 +621,7 @@
                     <span class="element-number">80</span>
                     <span class="element-symbol">Hg</span>
                     <span class="element-info">Mercury</span>
-                    <span class="element-mass">200.59</span>
+                    <span class="element-mass">201</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Thallium', 'Tl', 81, 204.38)">
@@ -629,7 +629,7 @@
                     <span class="element-number">81</span>
                     <span class="element-symbol">Tl</span>
                     <span class="element-info">Thallium</span>
-                    <span class="element-mass">204.38</span>
+                    <span class="element-mass">204</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Lead', 'Pb', 82, 207.2)">
@@ -637,7 +637,7 @@
                     <span class="element-number">82</span>
                     <span class="element-symbol">Pb</span>
                     <span class="element-info">Lead</span>
-                    <span class="element-mass">207.2</span>
+                    <span class="element-mass">207</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Bismuth', 'Bi', 83, 208.98)">
@@ -645,7 +645,7 @@
                     <span class="element-number">83</span>
                     <span class="element-symbol">Bi</span>
                     <span class="element-info">Bismuth</span>
-                    <span class="element-mass">209.98</span>
+                    <span class="element-mass">210</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Polonium', 'Po', 84, 209)">
@@ -653,7 +653,7 @@
                     <span class="element-number">84</span>
                     <span class="element-symbol">Po</span>
                     <span class="element-info">Polonium</span>
-                    <span class="element-mass">(209)</span>
+                    <span class="element-mass">209</span>
                     </div>
             </td>
             <td class="a-kim sheet-hover p-a-kim element"    onclick="showElementDetails('Astatine', 'At', 85, 210)">
@@ -661,7 +661,7 @@
                     <span class="element-number">85</span>
                     <span class="element-symbol">At</span>
                     <span class="element-info">Astatine</span>
-                    <span class="element-mass">(210)</span>
+                    <span class="element-mass">210</span>
                     </div>
             </td>
             <td class="khi-hiem sheet-hover p-khi-hiem element" onclick="showElementDetails('Radon', 'Rn', 86, 222)">
@@ -669,7 +669,7 @@
                     <span class="element-number">86</span>
                     <span class="element-symbol">Rn</span>
                     <span class="element-info">Radon</span>
-                    <span class="element-mass">(222)</span>
+                    <span class="element-mass">222</span>
                     </div>
             </td>
         </tr>
@@ -680,7 +680,7 @@
                     <span class="element-number">87</span>
                     <span class="element-symbol">Fr</span>
                     <span class="element-info">Francium</span>
-                    <span class="element-mass">(223)</span>
+                    <span class="element-mass">223</span>
                     </div>
             </td>
             <td class="kim-loai-tho sheet-hover p-kim-loai-tho element" onclick="showElementDetails('Radium', 'Ra', 88, 226)">
@@ -688,7 +688,7 @@
                     <span class="element-number">88</span>
                     <span class="element-symbol">Ra</span>
                     <span class="element-info">Radium</span>
-                    <span class="element-mass">(226)</span>
+                    <span class="element-mass">226</span>
                     </div>
             </td>
             <td class="ho-lathan p-ho-lathan element">89-103</td>
@@ -697,7 +697,7 @@
                     <span class="element-number">104</span>
                     <span class="element-symbol">Rf</span>
                     <span class="element-info">Rutherfordium</span>
-                    <span class="element-mass">(267)</span>
+                    <span class="element-mass">267</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Dubnium', 'Db', 105, 268)">
@@ -705,7 +705,7 @@
                     <span class="element-number">105</span>
                     <span class="element-symbol">Db</span>
                     <span class="element-info">Dubnium</span>
-                    <span class="element-mass">(268)</span>
+                    <span class="element-mass">268</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Seaborgium', 'Sg', 106, 269)">
@@ -713,7 +713,7 @@
                     <span class="element-number">106</span>
                     <span class="element-symbol">Sg</span>
                     <span class="element-info">Seaborgium</span>
-                    <span class="element-mass">(269)</span>
+                    <span class="element-mass">269</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Bohrium', 'Bh', 107, 270)">
@@ -721,7 +721,7 @@
                     <span class="element-number">107</span>
                     <span class="element-symbol">Bh</span>
                     <span class="element-info">Bohrium</span>
-                    <span class="element-mass">(270)</span>
+                    <span class="element-mass">270</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Hassium', 'Hs', 108, 277)">
@@ -729,7 +729,7 @@
                     <span class="element-number">108</span>
                     <span class="element-symbol">Hs</span>
                     <span class="element-info">Hassium</span>
-                    <span class="element-mass">(277)</span>
+                    <span class="element-mass">277</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Meitnerium', 'Mt', 109, 278)">
@@ -737,7 +737,7 @@
                     <span class="element-number">109</span>
                     <span class="element-symbol">Mt</span>
                     <span class="element-info">Meitnerium</span>
-                    <span class="element-mass">(278)</span>
+                    <span class="element-mass">278</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Darmstadtium', 'Ds', 110, 281)">
@@ -745,7 +745,7 @@
                     <span class="element-number">110</span>
                     <span class="element-symbol">Ds</span>
                     <span class="element-info">Darmstadtium</span>
-                    <span class="element-mass">(281)</span>
+                    <span class="element-mass">281</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Roentgenium', 'Rg', 111, 282)">
@@ -753,7 +753,7 @@
                     <span class="element-number">111</span>
                     <span class="element-symbol">Rg</span>
                     <span class="element-info">Roentgenium</span>
-                    <span class="element-mass">(282)</span>
+                    <span class="element-mass">282</span>
                     </div>
             </td>
             <td class="kim-loai-chuyen-tiep sheet-hover p-kim-loai-chuyen-tiep element" onclick="showElementDetails('Copernicium', 'Cn', 112, 285)">
@@ -761,7 +761,7 @@
                     <span class="element-number">112</span>
                     <span class="element-symbol">Cn</span>
                     <span class="element-info">Copernicium</span>
-                    <span class="element-mass">(285)</span>
+                    <span class="element-mass">285</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Nihonium', 'Nh', 113, 286)">
@@ -769,7 +769,7 @@
                     <span class="element-number">113</span>
                     <span class="element-symbol">Nh</span>
                     <span class="element-info">Nihonium</span>
-                    <span class="element-mass">(286)</span>
+                    <span class="element-mass">286</span>
                     </div>
             </td>
             <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Flerovium', 'Fl', 114, 289)">
@@ -801,7 +801,7 @@
                     <span class="element-number">117</span>
                     <span class="element-symbol">Ts</span>
                     <span class="element-info">Tennessine</span>
-                    <span class="element-mass">(294)</span>
+                    <span class="element-mass">294</span>
                     </div>
             </td>
             <td class="khi-hiem sheet-hover p-khi-hiem element" onclick="showElementDetails('Oganesson', 'Og', 118, 294)">
@@ -809,7 +809,7 @@
                     <span class="element-number">118</span>
                     <span class="element-symbol">Og</span>
                     <span class="element-info">Oganesson</span>
-                    <span class="element-mass">(294)</span>
+                    <span class="element-mass">294</span>
                     </div>
             </td>
         </tr>
@@ -824,7 +824,7 @@
                 <span class="element-number">57</span>
                 <span class="element-symbol">La</span>
                 <span class="element-info">Lanthanum</span>
-                <span class="element-mass">138.91</span>
+                <span class="element-mass">139</span>
                 </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Cerium', 'Ce', 58, 140.12)">
@@ -832,7 +832,7 @@
                     <span class="element-number">58</span>
                     <span class="element-symbol">Ce</span>
                     <span class="element-info">Cerium</span>
-                    <span class="element-mass">140.12</span>
+                    <span class="element-mass">140</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Praseodymium', 'Pr', 59, 140.91)">
@@ -840,7 +840,7 @@
                     <span class="element-number">59</span>
                     <span class="element-symbol">Pr</span>
                     <span class="element-info">Praseodymium</span>
-                    <span class="element-mass">140.91</span>
+                    <span class="element-mass">141</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Neodymium', 'Nd', 60, 144.24)">
@@ -848,7 +848,7 @@
                     <span class="element-number">60</span>
                     <span class="element-symbol">Nd</span>
                     <span class="element-info">Neodymium</span>
-                    <span class="element-mass">144.24</span>
+                    <span class="element-mass">144</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Promethium', 'Pm', 61, 145)">
@@ -856,7 +856,7 @@
                     <span class="element-number">61</span>
                     <span class="element-symbol">Pm</span>
                     <span class="element-info">Promethium</span>
-                    <span class="element-mass">(145)</span>
+                    <span class="element-mass">145</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Samarium', 'Sm', 62, 150.36)">
@@ -864,7 +864,7 @@
                     <span class="element-number">62</span>
                     <span class="element-symbol">Sm</span>
                     <span class="element-info">Samarium</span>
-                    <span class="element-mass">150.36</span>
+                    <span class="element-mass">150</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Europium', 'Eu', 63, 151.96)">
@@ -872,7 +872,7 @@
                     <span class="element-number">63</span>
                     <span class="element-symbol">Eu</span>
                     <span class="element-info">Europium</span>
-                    <span class="element-mass">151.96</span>
+                    <span class="element-mass">152</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Gadolinium', 'Gd', 64, 157.25)">
@@ -880,7 +880,7 @@
                     <span class="element-number">64</span>
                     <span class="element-symbol">Gd</span>
                     <span class="element-info">Gadolinium</span>
-                    <span class="element-mass">157.25</span>
+                    <span class="element-mass">157</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Terbium', 'Tb', 65, 158.93)">
@@ -888,7 +888,7 @@
                     <span class="element-number">65</span>
                     <span class="element-symbol">Tb</span>
                     <span class="element-info">Terbium</span>
-                    <span class="element-mass">158.93</span>
+                    <span class="element-mass">159</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Dysprosium', 'Dy', 66, 162.50)">
@@ -896,7 +896,7 @@
                     <span class="element-number">66</span>
                     <span class="element-symbol">Dy</span>
                     <span class="element-info">Dysprosium</span>
-                    <span class="element-mass">162.50</span>
+                    <span class="element-mass">163</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Holmium', 'Ho', 67, 164.93)">
@@ -904,7 +904,7 @@
                     <span class="element-number">67</span>
                     <span class="element-symbol">Ho</span>
                     <span class="element-info">Holmium</span>
-                    <span class="element-mass">164.93</span>
+                    <span class="element-mass">165</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Erbium', 'Er', 68, 167.26)">
@@ -912,7 +912,7 @@
                     <span class="element-number">68</span>
                     <span class="element-symbol">Er</span>
                     <span class="element-info">Erbium</span>
-                    <span class="element-mass">167.26</span>
+                    <span class="element-mass">167</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Thulium', 'Tm', 69, 168.93)">
@@ -920,7 +920,7 @@
                     <span class="element-number">69</span>
                     <span class="element-symbol">Tm</span>
                     <span class="element-info">Thulium</span>
-                    <span class="element-mass">168.93</span>
+                    <span class="element-mass">169</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Ytterbium', 'Yb', 70, 173.04)">
@@ -928,7 +928,7 @@
                     <span class="element-number">70</span>
                     <span class="element-symbol">Yb</span>
                     <span class="element-info">Ytterbium</span>
-                    <span class="element-mass">173.04</span>
+                    <span class="element-mass">173</span>
                     </div>
             </td>
             <td class="ho-lathan sheet-hover p-ho-lathan element" onclick="showElementDetails('Lutetium', 'Lu', 71, 174.97)">
@@ -936,7 +936,7 @@
                     <span class="element-number">71</span>
                     <span class="element-symbol">Lu</span>
                     <span class="element-info">Lutetium</span>
-                    <span class="element-mass">174.97</span>
+                    <span class="element-mass">175</span>
                     </div>
             </td>
         </tr>
@@ -947,7 +947,7 @@
                     <span class="element-number">89</span>
                     <span class="element-symbol">Ac</span>
                     <span class="element-info">Actinium</span>
-                    <span class="element-mass">(227)</span>
+                    <span class="element-mass">227</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Thorium', 'Th', 90, 231.04)">
@@ -955,7 +955,7 @@
                     <span class="element-number">90</span>
                     <span class="element-symbol">Th</span>
                     <span class="element-info">Thorium</span>
-                    <span class="element-mass">231.04</span>
+                    <span class="element-mass">231</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Protactinium', 'Pa', 91, 231.04)">
@@ -963,7 +963,7 @@
                     <span class="element-number">91</span>
                     <span class="element-symbol">Pa</span>
                     <span class="element-info">Protactinium</span>
-                    <span class="element-mass">231.04</span>
+                    <span class="element-mass">231</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Uranium', 'U', 92, 238.03)">
@@ -971,7 +971,7 @@
                     <span class="element-number">92</span>
                     <span class="element-symbol">U</span>
                     <span class="element-info">Uranium</span>
-                    <span class="element-mass">238.03</span>
+                    <span class="element-mass">238</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Neptunium', 'Np', 93, 237)">
@@ -979,7 +979,7 @@
                     <span class="element-number">93</span>
                     <span class="element-symbol">Np</span>
                     <span class="element-info">Neptunium</span>
-                    <span class="element-mass">(237)</span>
+                    <span class="element-mass">237</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Plutonium', 'Pu', 94, 244)">
@@ -987,7 +987,7 @@
                     <span class="element-number">94</span>
                     <span class="element-symbol">Pu</span>
                     <span class="element-info">Plutonium</span>
-                    <span class="element-mass">(224)</span>
+                    <span class="element-mass">224</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Americium', 'Am', 95, 243)">
@@ -995,7 +995,7 @@
                     <span class="element-number">95</span>
                     <span class="element-symbol">Am</span>
                     <span class="element-info">Americium</span>
-                    <span class="element-mass">(243)</span>
+                    <span class="element-mass">243</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Curium', 'Cm', 96, 247)">
@@ -1003,7 +1003,7 @@
                     <span class="element-number">96</span>
                     <span class="element-symbol">Cm</span>
                     <span class="element-info">Curium</span>
-                    <span class="element-mass">(247)</span>
+                    <span class="element-mass">247</span>
                     </div>
             </td>
             <td  class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Berkelium', 'Bk', 97, 247)">
@@ -1011,7 +1011,7 @@
                     <span class="element-number">97</span>
                     <span class="element-symbol">Bk</span>
                     <span class="element-info">Berkelium</span>
-                    <span class="element-mass">(247)</span>
+                    <span class="element-mass">247</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Californium', 'Cf', 98, 251)">
@@ -1019,7 +1019,7 @@
                     <span class="element-number">98</span>
                     <span class="element-symbol">Cf</span>
                     <span class="element-info">Californium</span>
-                    <span class="element-mass">(251)</span>
+                    <span class="element-mass">251</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Einsteinium', 'Es', 99, 252)">
@@ -1027,7 +1027,7 @@
                 <span class="element-number">99</span>
                 <span class="element-symbol">Es</span>
                 <span class="element-info">Einsteinium</span>
-                <span class="element-mass">(252)</span>
+                <span class="element-mass">252</span>
                 </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Fermium', 'Fm', 100, 257)">
@@ -1035,7 +1035,7 @@
                     <span class="element-number">100</span>
                     <span class="element-symbol">Fm</span>
                     <span class="element-info">Fermium</span>
-                    <span class="element-mass">(257)</span>
+                    <span class="element-mass">257</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Mendelevium', 'Md', 101, 258)">
@@ -1043,7 +1043,7 @@
                     <span class="element-number">101</span>
                     <span class="element-symbol">Md</span>
                     <span class="element-info">Mandelevium</span>
-                    <span class="element-mass">(258)</span>
+                    <span class="element-mass">258</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Nobelium', 'No', 102, 259)">
@@ -1051,7 +1051,7 @@
                     <span class="element-number">102</span>
                     <span class="element-symbol">No</span>
                     <span class="element-info">Nobelium</span>
-                    <span class="element-mass">(259)</span>
+                    <span class="element-mass">259</span>
                     </div>
             </td>
             <td class="ho-actini sheet-hover p-ho-actini element " onclick="showElementDetails('Lawrencium', 'Lr', 103, 262)">
@@ -1059,7 +1059,7 @@
                     <span class="element-number">103</span>
                     <span class="element-symbol">Lr</span>
                     <span class="element-info">Lawrencium</span>
-                    <span class="element-mass">(262)</span>
+                    <span class="element-mass">262</span>
                     </div>
             </td>
         </tr>

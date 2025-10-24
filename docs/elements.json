@@ -2,7 +2,7 @@
   "Hydrogen": {
     "symbol": "H",
     "atomicNumber": 1,
-    "atomicMass": "1.008",
+    "atomicMass": "1",
     "discoverer": "Henry Cavendish (1766)",
     "meltingPoint": "-259.1 °C",
     "boilingPoint": "-252.9 °C",
@@ -12,7 +12,7 @@
   "Helium": {
     "symbol": "He",
     "atomicNumber": 2,
-    "atomicMass": "4.0026",
+    "atomicMass": "4",
     "discoverer": "Pierre Janssen và Norman Lockyer (1868)",
     "meltingPoint": "-272.2 °C",
     "boilingPoint": "-268.9 °C",
@@ -32,7 +32,7 @@
   "Beryllium": {
     "symbol": "Be",
     "atomicNumber": 4,
-    "atomicMass": "9.0122",
+    "atomicMass": "9",
     "discoverer": "Louis-Nicolas Vauquelin (1798)",
     "meltingPoint": "1287 °C",
     "boilingPoint": "2469 °C",
@@ -42,7 +42,7 @@
   "Boron": {
     "symbol": "B",
     "atomicNumber": 5,
-    "atomicMass": "10.81",
+    "atomicMass": "11",
     "discoverer": "Joseph Louis Gay-Lussac và Louis Jacques Thénard (1808)",
     "meltingPoint": "2076 °C",
     "boilingPoint": "3927 °C",
@@ -52,7 +52,7 @@
   "Carbon": {
     "symbol": "C",
     "atomicNumber": 6,
-    "atomicMass": "12.011",
+    "atomicMass": "12",
     "discoverer": "Được biết từ thời cổ đại",
     "meltingPoint": "3550 °C",
     "boilingPoint": "4027 °C",
@@ -62,7 +62,7 @@
   "Nitrogen": {
     "symbol": "N",
     "atomicNumber": 7,
-    "atomicMass": "14.007",
+    "atomicMass": "14",
     "discoverer": "Daniel Rutherford (1772)",
     "meltingPoint": "-210 °C",
     "boilingPoint": "-196 °C",
@@ -72,7 +72,7 @@
   "Oxygen": {
     "symbol": "O",
     "atomicNumber": 8,
-    "atomicMass": "15.999",
+    "atomicMass": "16",
     "discoverer": "Carl Wilhelm Scheele (1771)",
     "meltingPoint": "-218.8 °C",
     "boilingPoint": "-183 °C",
@@ -82,7 +82,7 @@
   "Fluorine": {
     "symbol": "F",
     "atomicNumber": 9,
-    "atomicMass": "18.998",
+    "atomicMass": "19",
     "discoverer": "Henri Moissan (1886)",
     "meltingPoint": "-219.6 °C",
     "boilingPoint": "-188.1 °C",
@@ -92,7 +92,7 @@
   "Neon": {
     "symbol": "Ne",
     "atomicNumber": 10,
-    "atomicMass": "20.180",
+    "atomicMass": "20",
     "discoverer": "William Ramsay và Morris Travers (1898)",
     "meltingPoint": "-248.6 °C",
     "boilingPoint": "-246.1 °C",
@@ -102,7 +102,7 @@
   "Sodium": {
     "symbol": "Na",
     "atomicNumber": 11,
-    "atomicMass": "22.990",
+    "atomicMass": "23",
     "discoverer": "Humphry Davy (1807)",
     "meltingPoint": "97.8 °C",
     "boilingPoint": "883 °C",
@@ -112,7 +112,7 @@
   "Magnesium": {
     "symbol": "Mg",
     "atomicNumber": 12,
-    "atomicMass": "24.305",
+    "atomicMass": "24",
     "discoverer": "Joseph Black (1755)",
     "meltingPoint": "650 °C",
     "boilingPoint": "1090 °C",
@@ -122,7 +122,7 @@
   "Aluminium": {
     "symbol": "Al",
     "atomicNumber": 13,
-    "atomicMass": "26.982",
+    "atomicMass": "27",
     "discoverer": "Hans Christian Ørsted (1825)",
     "meltingPoint": "660.3 °C",
     "boilingPoint": "2519 °C",
@@ -132,7 +132,7 @@
   "Silicon": {
     "symbol": "Si",
     "atomicNumber": 14,
-    "atomicMass": "28.085",
+    "atomicMass": "28",
     "discoverer": "Jöns Jacob Berzelius (1824)",
     "meltingPoint": "1414 °C",
     "boilingPoint": "3265 °C",
@@ -142,7 +142,7 @@
   "Phosphorus": {
     "symbol": "P",
     "atomicNumber": 15,
-    "atomicMass": "30.974",
+    "atomicMass": "31",
     "discoverer": "Hennig Brand (1669)",
     "meltingPoint": "44.1 °C",
     "boilingPoint": "280 °C",
@@ -152,7 +152,7 @@
   "Sulfur": {
     "symbol": "S",
     "atomicNumber": 16,
-    "atomicMass": "32.06",
+    "atomicMass": "32",
     "discoverer": "Được biết từ thời cổ đại",
     "meltingPoint": "115.2 °C",
     "boilingPoint": "444.6 °C",
@@ -162,7 +162,7 @@
   "Chlorine": {
     "symbol": "Cl",
     "atomicNumber": 17,
-    "atomicMass": "35.45",
+    "atomicMass": "35.5",
     "discoverer": "Carl Wilhelm Scheele (1774)",
     "meltingPoint": "-101.5 °C",
     "boilingPoint": "-34.0 °C",
@@ -172,7 +172,7 @@
   "Argon": {
     "symbol": "Ar",
     "atomicNumber": 18,
-    "atomicMass": "39.948",
+    "atomicMass": "40",
     "discoverer": "Lord Rayleigh và William Ramsay (1894)",
     "meltingPoint": "-189.3 °C",
     "boilingPoint": "-185.8 °C",
@@ -182,7 +182,7 @@
   "Potassium": {
     "symbol": "K",
     "atomicNumber": 19,
-    "atomicMass": "39.098",
+    "atomicMass": "39",
     "discoverer": "Humphry Davy (1807)",
     "meltingPoint": "63.5 °C",
     "boilingPoint": "759 °C",
@@ -192,7 +192,7 @@
   "Calcium": {
     "symbol": "Ca",
     "atomicNumber": 20,
-    "atomicMass": "40.078",
+    "atomicMass": "40",
     "discoverer": "Humphry Davy (1808)",
     "meltingPoint": "842 °C",
     "boilingPoint": "1484 °C",
@@ -202,7 +202,7 @@
   "Scandium": {
     "symbol": "Sc",
     "atomicNumber": 21,
-    "atomicMass": "44.956",
+    "atomicMass": "45",
     "discoverer": "Lars Fredrik Nilson (1879)",
     "meltingPoint": "1541 °C",
     "boilingPoint": "2836 °C",
@@ -212,7 +212,7 @@
   "Titanium": {
     "symbol": "Ti",
     "atomicNumber": 22,
-    "atomicMass": "47.867",
+    "atomicMass": "49",
     "discoverer": "William Gregor (1791)",
     "meltingPoint": "1668 °C",
     "boilingPoint": "3287 °C",
@@ -222,7 +222,7 @@
   "Vanadium": {
     "symbol": "V",
     "atomicNumber": 23,
-    "atomicMass": "50.942",
+    "atomicMass": "51",
     "discoverer": "Andrés Manuel del Río (1801)",
     "meltingPoint": "1910 °C",
     "boilingPoint": "3407 °C",
@@ -232,7 +232,7 @@
   "Chromium": {
     "symbol": "Cr",
     "atomicNumber": 24,
-    "atomicMass": "51.996",
+    "atomicMass": "52",
     "discoverer": "Louis Nicolas Vauquelin (1797)",
     "meltingPoint": "1907 °C",
     "boilingPoint": "2671 °C",
@@ -242,7 +242,7 @@
   "Manganese": {
     "symbol": "Mn",
     "atomicNumber": 25,
-    "atomicMass": "54.938",
+    "atomicMass": "55",
     "discoverer": "Johan Gottlieb Gahn (1774)",
     "meltingPoint": "1246 °C",
     "boilingPoint": "2061 °C",
@@ -252,7 +252,7 @@
   "Iron": {
     "symbol": "Fe",
     "atomicNumber": 26,
-    "atomicMass": "55.845",
+    "atomicMass": "56",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "1538 °C",
     "boilingPoint": "2862 °C",
@@ -262,7 +262,7 @@
   "Cobalt": {
     "symbol": "Co",
     "atomicNumber": 27,
-    "atomicMass": "58.933",
+    "atomicMass": "59",
     "discoverer": "Georg Brandt (1735)",
     "meltingPoint": "1495 °C",
     "boilingPoint": "2927 °C",
@@ -272,7 +272,7 @@
   "Nickel": {
     "symbol": "Ni",
     "atomicNumber": 28,
-    "atomicMass": "58.693",
+    "atomicMass": "59",
     "discoverer": "Axel Fredrik Cronstedt (1751)",
     "meltingPoint": "1455 °C",
     "boilingPoint": "2913 °C",
@@ -282,7 +282,7 @@
   "Copper": {
     "symbol": "Cu",
     "atomicNumber": 29,
-    "atomicMass": "63.546",
+    "atomicMass": "64",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "1085 °C",
     "boilingPoint": "2562 °C",
@@ -292,7 +292,7 @@
   "Zinc": {
     "symbol": "Zn",
     "atomicNumber": 30,
-    "atomicMass": "65.38",
+    "atomicMass": "65",
     "discoverer": "Đã biết từ thời cổ đại (luyện kim phổ biến thế kỷ 13–16)",
     "meltingPoint": "419.5 °C",
     "boilingPoint": "907 °C",
@@ -302,7 +302,7 @@
   "Gallium": {
     "symbol": "Ga",
     "atomicNumber": 31,
-    "atomicMass": "69.723",
+    "atomicMass": "70",
     "discoverer": "Paul-Émile Lecoq de Boisbaudran (1875)",
     "meltingPoint": "29.8 °C",
     "boilingPoint": "2400 °C",
@@ -312,7 +312,7 @@
   "Germanium": {
     "symbol": "Ge",
     "atomicNumber": 32,
-    "atomicMass": "72.630",
+    "atomicMass": "73",
     "discoverer": "Clemens Winkler (1886)",
     "meltingPoint": "938.3 °C",
     "boilingPoint": "2833 °C",
@@ -322,7 +322,7 @@
   "Arsenic": {
     "symbol": "As",
     "atomicNumber": 33,
-    "atomicMass": "74.922",
+    "atomicMass": "75",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "817 °C (dưới áp suất cao)",
     "boilingPoint": "614 °C (thăng hoa)",
@@ -332,7 +332,7 @@
   "Selenium": {
     "symbol": "Se",
     "atomicNumber": 34,
-    "atomicMass": "78.971",
+    "atomicMass": "79",
     "discoverer": "Jöns Jacob Berzelius (1817)",
     "meltingPoint": "221 °C",
     "boilingPoint": "685 °C",
@@ -342,7 +342,7 @@
   "Bromine": {
     "symbol": "Br",
     "atomicNumber": 35,
-    "atomicMass": "79.904",
+    "atomicMass": "80",
     "discoverer": "Antoine Jérôme Balard (1826)",
     "meltingPoint": "-7.2 °C",
     "boilingPoint": "58.8 °C",
@@ -352,7 +352,7 @@
   "Krypton": {
     "symbol": "Kr",
     "atomicNumber": 36,
-    "atomicMass": "83.798",
+    "atomicMass": "84",
     "discoverer": "William Ramsay & Morris Travers (1898)",
     "meltingPoint": "-157.4 °C",
     "boilingPoint": "-153.4 °C",
@@ -362,7 +362,7 @@
   "Rubidium": {
     "symbol": "Rb",
     "atomicNumber": 37,
-    "atomicMass": "85.468",
+    "atomicMass": "85",
     "discoverer": "Robert Bunsen & Gustav Kirchhoff (1861)",
     "meltingPoint": "39.3 °C",
     "boilingPoint": "688 °C",
@@ -372,7 +372,7 @@
   "Strontium": {
     "symbol": "Sr",
     "atomicNumber": 38,
-    "atomicMass": "87.62",
+    "atomicMass": "88",
     "discoverer": "Adair Crawford (1790)",
     "meltingPoint": "777 °C",
     "boilingPoint": "1377 °C",
@@ -382,7 +382,7 @@
   "Yttrium": {
     "symbol": "Y",
     "atomicNumber": 39,
-    "atomicMass": "88.906",
+    "atomicMass": "89",
     "discoverer": "Johan Gadolin (1794)",
     "meltingPoint": "1526 °C",
     "boilingPoint": "3336 °C",
@@ -392,7 +392,7 @@
   "Zirconium": {
     "symbol": "Zr",
     "atomicNumber": 40,
-    "atomicMass": "91.224",
+    "atomicMass": "91",
     "discoverer": "Martin Heinrich Klaproth (1789)",
     "meltingPoint": "1855 °C",
     "boilingPoint": "4409 °C",
@@ -402,7 +402,7 @@
    "Niobium": {
     "symbol": "Nb",
     "atomicNumber": 41,
-    "atomicMass": "92.906",
+    "atomicMass": "93",
     "discoverer": "Charles Hatchett (1801)",
     "meltingPoint": "2477 °C",
     "boilingPoint": "4744 °C",
@@ -412,7 +412,7 @@
   "Molybdenum": {
     "symbol": "Mo",
     "atomicNumber": 42,
-    "atomicMass": "95.95",
+    "atomicMass": "96",
     "discoverer": "Carl Wilhelm Scheele (1778, tách được bởi Peter Jacob Hjelm 1781)",
     "meltingPoint": "2623 °C",
     "boilingPoint": "4639 °C",
@@ -432,7 +432,7 @@
   "Ruthenium": {
     "symbol": "Ru",
     "atomicNumber": 44,
-    "atomicMass": "101.07",
+    "atomicMass": "101",
     "discoverer": "Karl Ernst Claus (1844)",
     "meltingPoint": "2334 °C",
     "boilingPoint": "4150 °C",
@@ -442,7 +442,7 @@
   "Rhodium": {
     "symbol": "Rh",
     "atomicNumber": 45,
-    "atomicMass": "102.91",
+    "atomicMass": "103",
     "discoverer": "William Hyde Wollaston (1803)",
     "meltingPoint": "1964 °C",
     "boilingPoint": "3695 °C",
@@ -452,7 +452,7 @@
   "Palladium": {
     "symbol": "Pd",
     "atomicNumber": 46,
-    "atomicMass": "106.42",
+    "atomicMass": "106",
     "discoverer": "William Hyde Wollaston (1803)",
     "meltingPoint": "1554 °C",
     "boilingPoint": "2963 °C",
@@ -462,7 +462,7 @@
   "Silver": {
     "symbol": "Ag",
     "atomicNumber": 47,
-    "atomicMass": "107.87",
+    "atomicMass": "108",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "961.8 °C",
     "boilingPoint": "2162 °C",
@@ -472,7 +472,7 @@
   "Cadmium": {
     "symbol": "Cd",
     "atomicNumber": 48,
-    "atomicMass": "112.41",
+    "atomicMass": "112",
     "discoverer": "Friedrich Stromeyer (1817)",
     "meltingPoint": "321.1 °C",
     "boilingPoint": "767 °C",
@@ -482,7 +482,7 @@
   "Indium": {
     "symbol": "In",
     "atomicNumber": 49,
-    "atomicMass": "114.82",
+    "atomicMass": "115",
     "discoverer": "Ferdinand Reich & Hieronymous Richter (1863)",
     "meltingPoint": "156.6 °C",
     "boilingPoint": "2072 °C",
@@ -492,7 +492,7 @@
   "Tin": {
     "symbol": "Sn",
     "atomicNumber": 50,
-    "atomicMass": "118.71",
+    "atomicMass": "119",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "231.9 °C",
     "boilingPoint": "2602 °C",
@@ -502,7 +502,7 @@
   "Antimony": {
     "symbol": "Sb",
     "atomicNumber": 51,
-    "atomicMass": "121.76",
+    "atomicMass": "122",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "630.6 °C",
     "boilingPoint": "1587 °C",
@@ -512,7 +512,7 @@
   "Tellurium": {
     "symbol": "Te",
     "atomicNumber": 52,
-    "atomicMass": "127.60",
+    "atomicMass": "128",
     "discoverer": "Franz-Joseph Müller von Reichenstein (1782)",
     "meltingPoint": "449.5 °C",
     "boilingPoint": "988 °C",
@@ -522,7 +522,7 @@
   "Iodine": {
     "symbol": "I",
     "atomicNumber": 53,
-    "atomicMass": "126.90",
+    "atomicMass": "127",
     "discoverer": "Bernard Courtois (1811)",
     "meltingPoint": "113.7 °C",
     "boilingPoint": "184.3 °C",
@@ -532,7 +532,7 @@
   "Xenon": {
     "symbol": "Xe",
     "atomicNumber": 54,
-    "atomicMass": "131.29",
+    "atomicMass": "131",
     "discoverer": "William Ramsay & Morris Travers (1898)",
     "meltingPoint": "-111.8 °C",
     "boilingPoint": "-108.1 °C",
@@ -542,7 +542,7 @@
   "Cesium": {
     "symbol": "Cs",
     "atomicNumber": 55,
-    "atomicMass": "132.91",
+    "atomicMass": "133",
     "discoverer": "Robert Bunsen & Gustav Kirchhoff (1860)",
     "meltingPoint": "28.5 °C",
     "boilingPoint": "671 °C",
@@ -552,7 +552,7 @@
   "Barium": {
     "symbol": "Ba",
     "atomicNumber": 56,
-    "atomicMass": "137.33",
+    "atomicMass": "137",
     "discoverer": "Carl Wilhelm Scheele (1774, tách được bởi Humphry Davy 1808)",
     "meltingPoint": "727 °C",
     "boilingPoint": "1897 °C",
@@ -562,7 +562,7 @@
   "Lanthanum": {
     "symbol": "La",
     "atomicNumber": 57,
-    "atomicMass": "138.91",
+    "atomicMass": "139",
     "discoverer": "Carl Gustaf Mosander (1839)",
     "meltingPoint": "920 °C",
     "boilingPoint": "3464 °C",
@@ -572,7 +572,7 @@
   "Cerium": {
     "symbol": "Ce",
     "atomicNumber": 58,
-    "atomicMass": "140.12",
+    "atomicMass": "140",
     "discoverer": "Jöns Jacob Berzelius & Wilhelm Hisinger (1803)",
     "meltingPoint": "798 °C",
     "boilingPoint": "3443 °C",
@@ -582,7 +582,7 @@
   "Praseodymium": {
     "symbol": "Pr",
     "atomicNumber": 59,
-    "atomicMass": "140.91",
+    "atomicMass": "141",
     "discoverer": "Carl Auer von Welsbach (1885)",
     "meltingPoint": "931 °C",
     "boilingPoint": "3520 °C",
@@ -592,7 +592,7 @@
   "Neodymium": {
     "symbol": "Nd",
     "atomicNumber": 60,
-    "atomicMass": "144.24",
+    "atomicMass": "145",
     "discoverer": "Carl Auer von Welsbach (1885)",
     "meltingPoint": "1024 °C",
     "boilingPoint": "3074 °C",
@@ -612,7 +612,7 @@
   "Samarium": {
     "symbol": "Sm",
     "atomicNumber": 62,
-    "atomicMass": "150.36",
+    "atomicMass": "150",
     "discoverer": "Paul Émile Lecoq de Boisbaudran (1879)",
     "meltingPoint": "1072 °C",
     "boilingPoint": "1794 °C",
@@ -622,7 +622,7 @@
   "Europium": {
     "symbol": "Eu",
     "atomicNumber": 63,
-    "atomicMass": "151.96",
+    "atomicMass": "152",
     "discoverer": "Eugène-Anatole Demarçay (1901)",
     "meltingPoint": "822 °C",
     "boilingPoint": "1527 °C",
@@ -632,7 +632,7 @@
   "Gadolinium": {
     "symbol": "Gd",
     "atomicNumber": 64,
-    "atomicMass": "157.25",
+    "atomicMass": "153",
     "discoverer": "Jean Charles Galissard de Marignac (1880)",
     "meltingPoint": "1313 °C",
     "boilingPoint": "3273 °C",
@@ -642,7 +642,7 @@
   "Terbium": {
     "symbol": "Tb",
     "atomicNumber": 65,
-    "atomicMass": "158.93",
+    "atomicMass": "159",
     "discoverer": "Carl Gustaf Mosander (1843)",
     "meltingPoint": "1356 °C",
     "boilingPoint": "3230 °C",
@@ -652,7 +652,7 @@
   "Dysprosium": {
     "symbol": "Dy",
     "atomicNumber": 66,
-    "atomicMass": "162.50",
+    "atomicMass": "163",
     "discoverer": "Paul Émile Lecoq de Boisbaudran (1886)",
     "meltingPoint": "1412 °C",
     "boilingPoint": "2567 °C",
@@ -662,7 +662,7 @@
   "Holmium": {
     "symbol": "Ho",
     "atomicNumber": 67,
-    "atomicMass": "164.93",
+    "atomicMass": "165",
     "discoverer": "Marc Delafontaine & Jacques-Louis Soret (1878)",
     "meltingPoint": "1474 °C",
     "boilingPoint": "2700 °C",
@@ -672,7 +672,7 @@
   "Erbium": {
     "symbol": "Er",
     "atomicNumber": 68,
-    "atomicMass": "167.26",
+    "atomicMass": "167",
     "discoverer": "Carl Gustaf Mosander (1843)",
     "meltingPoint": "1529 °C",
     "boilingPoint": "2868 °C",
@@ -682,7 +682,7 @@
   "Thulium": {
     "symbol": "Tm",
     "atomicNumber": 69,
-    "atomicMass": "168.93",
+    "atomicMass": "169",
     "discoverer": "Per Teodor Cleve (1879)",
     "meltingPoint": "1545 °C",
     "boilingPoint": "1950 °C",
@@ -692,7 +692,7 @@
   "Ytterbium": {
     "symbol": "Yb",
     "atomicNumber": 70,
-    "atomicMass": "173.05",
+    "atomicMass": "173",
     "discoverer": "Jean Charles Galissard de Marignac (1878)",
     "meltingPoint": "824 °C",
     "boilingPoint": "1196 °C",
@@ -702,7 +702,7 @@
   "Lutetium": {
     "symbol": "Lu",
     "atomicNumber": 71,
-    "atomicMass": "174.97",
+    "atomicMass": "175",
     "discoverer": "Georges Urbain (1907)",
     "meltingPoint": "1663 °C",
     "boilingPoint": "3402 °C",
@@ -712,7 +712,7 @@
   "Hafnium": {
     "symbol": "Hf",
     "atomicNumber": 72,
-    "atomicMass": "178.49",
+    "atomicMass": "178",
     "discoverer": "Dirk Coster & George de Hevesy (1923)",
     "meltingPoint": "2233 °C",
     "boilingPoint": "4603 °C",
@@ -722,7 +722,7 @@
   "Tantalum": {
     "symbol": "Ta",
     "atomicNumber": 73,
-    "atomicMass": "180.95",
+    "atomicMass": "181",
     "discoverer": "Anders Gustaf Ekeberg (1802)",
     "meltingPoint": "3017 °C",
     "boilingPoint": "5458 °C",
@@ -732,7 +732,7 @@
   "Tungsten": {
     "symbol": "W",
     "atomicNumber": 74,
-    "atomicMass": "183.84",
+    "atomicMass": "184",
     "discoverer": "Juan José & Fausto Elhuyar (1783)",
     "meltingPoint": "3422 °C",
     "boilingPoint": "5555 °C",
@@ -742,7 +742,7 @@
   "Rhenium": {
     "symbol": "Re",
     "atomicNumber": 75,
-    "atomicMass": "186.21",
+    "atomicMass": "186",
     "discoverer": "Ida Noddack, Walter Noddack & Otto Berg (1925)",
     "meltingPoint": "3186 °C",
     "boilingPoint": "5596 °C",
@@ -752,7 +752,7 @@
   "Osmium": {
     "symbol": "Os",
     "atomicNumber": 76,
-    "atomicMass": "190.23",
+    "atomicMass": "190",
     "discoverer": "Smithson Tennant (1803)",
     "meltingPoint": "3033 °C",
     "boilingPoint": "5012 °C",
@@ -762,7 +762,7 @@
   "Iridium": {
     "symbol": "Ir",
     "atomicNumber": 77,
-    "atomicMass": "192.22",
+    "atomicMass": "192",
     "discoverer": "Smithson Tennant (1803)",
     "meltingPoint": "2446 °C",
     "boilingPoint": "4428 °C",
@@ -772,7 +772,7 @@
   "Platinum": {
     "symbol": "Pt",
     "atomicNumber": 78,
-    "atomicMass": "195.08",
+    "atomicMass": "195",
     "discoverer": "Đã biết từ thời cổ đại Nam Mỹ",
     "meltingPoint": "1768 °C",
     "boilingPoint": "3825 °C",
@@ -782,7 +782,7 @@
   "Gold": {
     "symbol": "Au",
     "atomicNumber": 79,
-    "atomicMass": "196.97",
+    "atomicMass": "197",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "1064 °C",
     "boilingPoint": "2856 °C",
@@ -792,7 +792,7 @@
   "Mercury": {
     "symbol": "Hg",
     "atomicNumber": 80,
-    "atomicMass": "200.59",
+    "atomicMass": "201",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "-38.8 °C",
     "boilingPoint": "356.7 °C",
@@ -802,7 +802,7 @@
   "Thallium": {
     "symbol": "Tl",
     "atomicNumber": 81,
-    "atomicMass": "204.38",
+    "atomicMass": "205",
     "discoverer": "William Crookes (1861)",
     "meltingPoint": "304 °C",
     "boilingPoint": "1473 °C",
@@ -812,7 +812,7 @@
   "Lead": {
     "symbol": "Pb",
     "atomicNumber": 82,
-    "atomicMass": "207.2",
+    "atomicMass": "207",
     "discoverer": "Đã biết từ thời cổ đại",
     "meltingPoint": "327.5 °C",
     "boilingPoint": "1749 °C",
@@ -822,7 +822,7 @@
   "Bismuth": {
     "symbol": "Bi",
     "atomicNumber": 83,
-    "atomicMass": "208.98",
+    "atomicMass": "209",
     "discoverer": "Đã biết từ thời Trung cổ",
     "meltingPoint": "271.4 °C",
     "boilingPoint": "1564 °C",
@@ -892,7 +892,7 @@
   "Thorium": {
     "symbol": "Th",
     "atomicNumber": 90,
-    "atomicMass": "232.04",
+    "atomicMass": "232",
     "discoverer": "Jöns Jacob Berzelius (1828)",
     "meltingPoint": "1750 °C",
     "boilingPoint": "4788 °C",
@@ -902,7 +902,7 @@
   "Protactinium": {
     "symbol": "Pa",
     "atomicNumber": 91,
-    "atomicMass": "231.04",
+    "atomicMass": "231",
     "discoverer": "Kasimir Fajans & Oswald Helmuth Göhring (1913)",
     "meltingPoint": "1572 °C",
     "boilingPoint": "4000 °C",
@@ -912,7 +912,7 @@
   "Uranium": {
     "symbol": "U",
     "atomicNumber": 92,
-    "atomicMass": "238.03",
+    "atomicMass": "238",
     "discoverer": "Martin Heinrich Klaproth (1789)",
     "meltingPoint": "1135 °C",
     "boilingPoint": "4131 °C",
