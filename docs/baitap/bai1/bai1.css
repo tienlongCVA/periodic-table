@@ -46,29 +46,34 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* đổ bóng nhẹ */
 }
 
-.option {
-  background: #f1f1f1;
-  padding: 25px;           /* tăng chiều cao đáp án */
-  font-size: 1.1rem;       /* chữ to hơn */
-  border-radius: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 600;
+/* Vùng chứa các đáp án */
+.options {
+  display: flex;
+  flex-direction: column; /* xếp dọc thay vì 2 cột */
+  gap: 20px; /* khoảng cách giữa các ô */
+  width: 100%;
+  align-items: stretch; /* cho các ô chiếm hết chiều ngang */
 }
 
-
+/* Ô đáp án */
 .option {
-  background: #f1f1f1;
-  padding: 15px;
-  border-radius: 12px;
+  background: #ffffff;
+  color: #2d3436;
+  padding: 25px 30px;     /* cao và rộng hơn */
+  border-radius: 20px;
   cursor: pointer;
-  transition: 0.3s;
-  font-weight: 500;
+  transition: all 0.25s ease;
+  font-size: 1.3rem;       /* chữ to hơn */
+  font-weight: 600;
+  width: 100%;             /* full chiều ngang */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;        /* căn chữ bên trái */
 }
 
 .option:hover {
-  background: #ffeaa7;
-  transform: scale(1.05);
+  transform: scale(1.02);
+  background: #74b9ff;
+  color: white;
 }
 
 .option.correct {

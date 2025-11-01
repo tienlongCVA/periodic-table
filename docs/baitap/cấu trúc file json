@@ -1,0 +1,22 @@
+Dạng sắp xếp kéo thả
+{
+  "type": "drag", *kiểu loại kéo thả
+  "question": "Sắp xếp các bước thí nghiệm", *Câu hỏi
+  "items": ["Chuẩn bị dụng cụ", "Tiến hành thí nghiệm", "Quan sát kết quả", "Kết luận"], *Đáp án chưa được sắp xếp
+  "correct": ["Chuẩn bị dụng cụ", "Tiến hành thí nghiệm", "Quan sát kết quả", "Kết luận"] *Đáp án đã được sắp xếp (đáp án đúng)
+}
+
+Dạng trắc nghiệm nhiều phương án lựa chọn
+{ 
+  "type": "multiple", *kiểu loại trắc nghiệm nhiều phương án
+  "question": "Các nguyên tố khí hiếm nằm ở nhóm", *Câu hỏi
+  "options": ["IA.", "IIA.", "VIIA.","VIIIA."], *Các phương án
+  "answer": 3 *Đáp án đúng (0,1,2,3)
+},
+
+Dạng điền khuyết
+{
+  "type": "fill", *kiểu loại điền khuyết
+  "question": "Sodium nằm ở nhóm IA. Số electron lớp ngoài cùng của sodium là", *Câu hỏi
+  "answer": ["1", "1 lớp"] *Các đáp án được chấp nhận
+},

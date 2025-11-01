@@ -2,21 +2,93 @@
 [
   {
     "type": "multiple",
-    "question": "Trái tim có bao nhiêu ngăn?",
-    "options": ["2", "3", "4", "5"],
+    "question": "Bảng tuần hoàn các nguyên tố hóa học được sắp xếp theo:",
+    "options": ["Chiều tăng dần của số electron lớp ngoài cùng của nguyên tử", "Chiều tăng dần của điện tích hạt nhân của nguyên tử", "Chiều tăng dần của nguyên tử khối", "Chiều giảm dần của điện tích hạt nhân nguyên tử"],
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Các nguyên tố trong bảng tuần hoàn các nguyên tố hóa học của Mendeleev được sắp xếp theo thứ tự tăng dần của:",
+    "options": ["khối lượng.", "số proton.", "tỉ trọng.", "số neutron."],
+    "answer": 0
+  },
+  {
+    "type": "multiple",
+    "question": "Bảng tuần hoàn các nguyên tố hoá học được cấu tạo từ",
+    "options": ["chu kì, nhóm.", "ô nguyên tố.", "chu kì.", "ô nguyên tố, chu kì, nhóm."],
+    "answer": 3
+  },
+  {
+    "type": "multiple",
+    "question": "Phát biểu nào sau đây là đúng?",
+    "options": ["Bảng tuần hoàn gồm 116 nguyên tố hóa học.", "Bảng tuần hoàn gồm 6 chu kì.", "Bảng tuần hoàn gồm 8 nhóm A và 8 nhóm B.","Các nguyên tố trong bảng tuần hoàn được sắp xếp theo chiều tăng dần khối lượng nguyên tử."],
     "answer": 2
   },
   {
-    "type": "fill",
-    "question": "Thủ đô của Việt Nam là ____.",
-    "answer": "Hà Nội"
+    "type": "multiple",
+    "question": "Chu kì là tập hợp các nguyên tố mà các nguyên tử",
+    "options": ["có số electron lớp ngoài cùng bằng nhau.", "có số lớp electron bằng nhau.", "có điện tích hạt nhân bằng nhau.","có số hạt trong nguyên tử bằng nhau."],
+    "answer": 1
   },
   {
-    "type": "drag",
-    "question": "Sắp xếp các bước thí nghiệm",
-    "order": ["Bước 1","Bước 2","Bước 3"]
+    "type": "fill",
+    "question": "Các nguyên tố xếp ở chu kì 5 có số lớp electron trong nguyên tử là?",
+    "answer": ["5", "5 lớp"]
+  },
+  {
+    "type": "fill",
+    "question": "Hiện nay có bao nhiêu chu kì trong bảng tuần hoàn các nguyên tố hóa học?",
+    "answer": ["7", "7 chu kỳ"]
+  },
+  {
+    "type": "fill",
+    "question": "Sodium nằm ở nhóm IA. Số electron lớp ngoài cùng của sodium là",
+    "answer": ["1", "1 lớp"]
+  },
+  {
+    "type": "multiple",
+    "question": "Các nguyên tố khí hiếm nằm ở nhóm",
+    "options": ["IA.", "IIA.", "VIIA.","VIIIA."],
+    "answer": 3
+  },
+  {
+    "type": "fill",
+    "question": "Khối lượng của một nguyên tử bằng tổng số proton của nguyên tử đó.(Đúng/Sai)",
+    "answer": "Sai"
+  },
+  {
+    "type": "fill",
+    "question": "Tất cả nguyên tử của các nguyên tố nhóm VA đều có 5 electron ở lớp ngoài cùng.(Đúng/Sai)",
+    "answer": "Đúng"
+  },
+  {
+    "type": "fill",
+    "question": "Tất cả nguyên tử của các nguyên tố ở chu kì II đều có 2 electron ở lớp ngoài cùng.(Đúng/Sai)",
+    "answer": "Sai"
+  },
+  {
+    "type": "fill",
+    "question": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.(Đúng/Sai)",
+    "answer": "Đúng"
+  },
+  {
+    "type": "fill",
+    "question": "Số thứ tự của nhóm bằng số lớp electron trong nguyên tử của các nguyên tố thuộc nhóm đó.(Đúng/Sai)",
+    "answer": "Sai"
+  },
+  {
+    "type": "fill",
+    "question": "Số thứ tự của chu kì bằng số lớp electron trong nguyên tử của các nguyên tố  chu kì đó.(Đúng/Sai)",
+    "answer": "Đúng"
+  },
+  {
+    "type": "multiple",
+    "question": "Phát biểu nào sau đây là đúng?",
+    "options": ["Nhóm gồm các nguyên tố mà nguyên tử của chúng có số electron lớp ngoài cùng bằng nhau và được xếp vào cùng một hàng.", "Các nguyên tố thuộc cùng một nhóm có tính chất gần giống nhau.", "Bảng tuần hoàn gồm 8 nhóm được kí hiệu từ 1 đến 8.","Các nguyên tố trong nhóm được xếp thành một cột theo chiều khối lượng nguyên tử tăng dần."],
+    "answer": 1
   }
 ]
 
   
 
+  
