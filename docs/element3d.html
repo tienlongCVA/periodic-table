@@ -167,7 +167,7 @@ fetch("elements.json")
         createOrbit(radius);
         for (let i = 0; i < count; i++) {
           const e = new THREE.Mesh(eGeo, eMat);
-          e.userData = { radius, angle: i * (2 * Math.PI / count), speed: 0.02 };
+          e.userData = { radius, angle: i * (2 * Math.PI / count), speed: 0.013 };
           electrons.push(e);
           atomGroup.add(e);
         }
