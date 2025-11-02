@@ -5,6 +5,7 @@ body {
   color: #fff;
 }
 
+/* Header */
 header {
   background: #222;
   padding: 15px 20px;
@@ -16,6 +17,7 @@ header {
   position: relative;
 }
 
+/* Nút Trang chủ */
 #Home {
   position: absolute;
   top: 15px;
@@ -35,6 +37,30 @@ header {
   transform: scale(1.05);
 }
 
+/* Nút chọn loại video */
+.filter-buttons {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+.filter-buttons button {
+  margin: 0 10px;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: rgba(0,255,255,0.15);
+  color: #00ffff;
+  transition: 0.2s;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+.filter-buttons button:hover {
+  background: rgba(0,255,255,0.4);
+  transform: scale(1.05);
+}
+
+/* Video grid */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -42,6 +68,7 @@ header {
   padding: 20px;
 }
 
+/* Video card */
 .video-card {
   background: #1c1c1c;
   padding: 10px;
@@ -53,25 +80,20 @@ header {
   transform: scale(1.03);
   box-shadow: 0 0 15px rgba(0,255,255,0.5);
 }
-
-.video-card iframe, 
-.video-card video {
+.video-card iframe {
   width: 100%;
   height: 180px;
   border-radius: 8px;
 }
-
 .video-title {
   margin-top: 8px;
   font-size: 16px;
   color: #00ffff;
   text-align: center;
 }
+
+/* Nền sao */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #fff;
   background: url("https://www.transparenttextures.com/patterns/stardust.png"), #000;
   background-size: cover;
 }
@@ -81,5 +103,5 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* để nền sao ở sau */
+  z-index: -1;
 }

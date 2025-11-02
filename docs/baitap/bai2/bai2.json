@@ -5,6 +5,30 @@
   "question": "Sodium ở chu kì 3, số lớp electron trong nguyên tử sodium là ", 
   "answer": "3"
   },
+  { 
+  "type": "multiple",
+  "question": "Sulfur (S) là nguyên tố", 
+  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "answer": 1
+  },
+  { 
+  "type": "multiple",
+  "question": "Carbon (C) là nguyên tố", 
+  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "answer": 1 
+  },
+  { 
+  "type": "multiple",
+  "question": "Potassium (K) là nguyên tố", 
+  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "answer": 1
+  },
+  { 
+  "type": "multiple",
+  "question": "Vàng (Au) là nguyên tố", 
+  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "answer": 3 
+  },
   {
   "type": "fill",
   "question": "Oxygen nằm ở nhóm A và có 6 electron lớp ngoài cùng. Oxygen thuộc nhóm __A  ", 
