@@ -60,26 +60,31 @@
   {
     "type": "multiple",
     "question": "Tất cả nguyên tử của các nguyên tố nhóm VA đều có 5 electron ở lớp ngoài cùng.",
+    "options": ["Đúng","Sai"],
     "answer": 0
   },
   {
     "type": "multiple",
     "question": "Tất cả nguyên tử của các nguyên tố ở chu kì II đều có 2 electron ở lớp ngoài cùng.",
+    "options": ["Đúng","Sai"],
     "answer": 1
   },
   {
     "type": "multiple",
     "question": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.(Đúng/Sai)",
+    "options": ["Đúng","Sai"],
     "answer": 0
   },
   {
     "type": "multiple",
     "question": "Số thứ tự của nhóm bằng số lớp electron trong nguyên tử của các nguyên tố thuộc nhóm đó.",
+    "options": ["Đúng","Sai"],
     "answer": 1
   },
   {
     "type": "multiple",
     "question": "Số thứ tự của chu kì bằng số lớp electron trong nguyên tử của các nguyên tố  chu kì đó.",
+    "options": ["Đúng","Sai"],
     "answer": 0
   },
   {

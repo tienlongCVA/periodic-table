@@ -54,7 +54,7 @@ header {
 #Home {
   position: absolute;
   top: 15px;
-  right: 20px;
+  left: 20px;
   padding: 8px 14px;
   border: none;
   border-radius: 6px;

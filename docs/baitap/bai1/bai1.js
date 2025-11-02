@@ -9,7 +9,8 @@ let questions = [];
 let index = 0;
 let score = 0;
 let timer = null;
-let timeLeft = 0; // globale để start/clear giữa các hàm
+let timeLeft = 0;
+let summary = []; // Lưu lại kết quả từng câu
 
 const questionEl = document.querySelector(".question");
 const optionsEl = document.querySelector(".options");
@@ -27,11 +28,34 @@ fetch("bai1.json")
   .then(data => {
     questions = shuffleArray(data || []);
     startQuiz();
+    document.body.classList.remove("quiz-finished");
   })
   .catch(err => {
     console.error("Lỗi tải JSON:", err);
     questionEl.textContent = "Lỗi tải dữ liệu câu hỏi.";
   });
+
+const startScreen = document.getElementById("start-screen");
+const startBtn = document.getElementById("start-btn");
+const countdownEl = document.getElementById("countdown");
+
+startBtn.addEventListener("click", () => {
+  startBtn.style.display = "none";
+  let count = 3;
+  countdownEl.style.display = "block";
+  countdownEl.textContent = count;
+
+  const countdown = setInterval(() => {
+    count--;
+    if (count > 0) {
+      countdownEl.textContent = count;
+    } else {
+      clearInterval(countdown);
+      startScreen.style.display = "none";
+      startQuiz();
+    }
+  }, 1000);
+});
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -48,6 +72,7 @@ function shuffleArray(arr) {
 function startQuiz() {
   index = 0;
   score = 0;
+  summary = [];
   scoreEl.textContent = `Điểm: ${score}`;
   endScreen.style.display = "none";
   document.querySelector(".timer-bar").style.display = "block";
@@ -55,7 +80,6 @@ function startQuiz() {
 }
 
 function showQuestion() {
-  // Dọn dẹp interval trước khi render
   clearInterval(timer);
   interactiveEl.innerHTML = "";
   optionsEl.innerHTML = "";
@@ -69,20 +93,17 @@ function showQuestion() {
   questionEl.textContent = q.question || "—";
 
   // Hiển thị hình ảnh nếu có
-const oldImg = document.querySelector(".question-image");
-if (oldImg) oldImg.remove(); // Xóa ảnh cũ nếu có
+  const oldImg = document.querySelector(".question-image");
+  if (oldImg) oldImg.remove();
 
-if (q.image) {
-  const img = document.createElement("img");
-  img.src = q.image;
-  img.className = "question-image";
-  img.alt = "minh họa";
-  // Chèn ảnh sau phần câu hỏi
-  questionEl.insertAdjacentElement("afterend", img);
-}
+  if (q.image) {
+    const img = document.createElement("img");
+    img.src = q.image;
+    img.className = "question-image";
+    img.alt = "minh họa";
+    questionEl.insertAdjacentElement("afterend", img);
+  }
 
-
-  // đảm bảo hiển thị/ẩn vùng option hoặc interactive đúng
   optionsEl.style.display = q.type === "multiple" ? "flex" : "none";
   interactiveEl.style.display = q.type !== "multiple" ? "block" : "none";
 
@@ -107,36 +128,39 @@ if (q.image) {
     btn.className = "blank-btn";
     btn.textContent = "Nộp";
     btn.onclick = () => {
-      // Dừng timer khi nộp
-      clearInterval(timer);
+  // ✅ Vô hiệu hoá nút ngay lập tức
+  btn.disabled = true;
+  btn.style.opacity = "0.6";
+  btn.style.cursor = "not-allowed";
 
-      const given = input.value.trim();
-      const correctAns = (q.answer || "").toString();
+  // Dừng timer khi nộp
+  clearInterval(timer);
 
-      if (given.toLowerCase() === correctAns.toLowerCase()) {
-        input.classList.add("correct");
-        score += 10;
-      } else {
-        input.classList.add("wrong");
-        // hiển thị đáp án đúng
-        const ct = document.createElement("div");
-        ct.className = "correct-answer";
-        ct.textContent = `Đáp án đúng: ${correctAns}`;
-        interactiveEl.appendChild(ct);
-      }
-      scoreEl.textContent = `Điểm: ${score}`;
-      setTimeout(nextQuestion, 3000);
-    };
+  const given = input.value.trim();
+  const correctAns = (q.answer || "").toString();
+
+  if (given.toLowerCase() === correctAns.toLowerCase()) {
+    input.classList.add("correct");
+    score += 10;
+  } else {
+    input.classList.add("wrong");
+    const ct = document.createElement("div");
+    ct.className = "correct-answer";
+    ct.textContent = `Đáp án đúng: ${correctAns}`;
+    interactiveEl.appendChild(ct);
+  }
+
+  scoreEl.textContent = `Điểm: ${score}`;
+  setTimeout(nextQuestion, 3000);
+};
+
     interactiveEl.appendChild(input);
     interactiveEl.appendChild(btn);
   }
 
   // DRAG ORDER
   else if (q.type === "drag") {
-    // q.items là mảng ban đầu (trộn nếu muốn)
-    // q.correct là mảng thứ tự đúng
     const items = Array.isArray(q.items) ? q.items.slice() : [];
-    // nếu muốn hiển thị shuffled order to user, shuffle items copy:
     const shuffledItems = shuffleArray(items);
 
     const ul = document.createElement("ul");
@@ -167,74 +191,50 @@ if (q.image) {
     const btn = document.createElement("button");
     btn.className = "blank-btn";
     btn.textContent = "Nộp";
-   btn.onclick = () => {
-  // dừng timer và vô hiệu hoá thao tác
-  clearInterval(timer);
+    btn.onclick = () => {
+      clearInterval(timer);
+      const lis = [...ul.children];
+      const correctArr =
+        q.correct || q.order || q.itemsCorrect || q.items || [];
+      let ok = true;
+      lis.forEach((li, i) => {
+        const expected = (correctArr[i] || "").toString();
+        if (li.textContent.toString() === expected.toString()) {
+          li.classList.add("correct");
+        } else {
+          li.classList.add("wrong");
+          ok = false;
+        }
+      });
+      if (ok) score += 10;
+      else {
+        const ct = document.createElement("div");
+        ct.className = "correct-answer";
+        ct.textContent = `Thứ tự đúng: ${correctArr.join(", ")}`;
+        interactiveEl.appendChild(ct);
+      }
 
-  const ulChildren = [...ul.children];
-  // lấy mảng đáp án đúng: ưu tiên q.correct, q.order, q.itemsCorrect
-  const correctArr = (q.correct || q.order || q.itemsCorrect || q.items || []).map(x => String(x).trim());
-  
-  // bảo vệ: nếu không có correctArr thì báo lỗi ra console và hiển thị
-  if (!correctArr.length) {
-    console.warn("Không tìm thấy mảng đáp án đúng (correct/order/itemsCorrect) trong câu:", q);
-    const ct = document.createElement("div");
-    ct.className = "correct-answer";
-    ct.textContent = `Không có đáp án đúng trong dữ liệu (kiểm tra JSON).`;
-    interactiveEl.appendChild(ct);
-    setTimeout(nextQuestion, 3000);
-    return;
-  }
+      summary.push({
+        question: q.question,
+        correct: ok,
+        knowledge: q.knowledge || "Không có ghi chú.",
+      });
 
-  // disable drag và nút sau khi nộp
-  ulChildren.forEach(li => {
-    li.draggable = false;
-    li.style.cursor = "default";
-  });
-  btn.disabled = true;
-  btn.style.opacity = "0.6";
-
-  let ok = true;
-  ulChildren.forEach((li, idx) => {
-    const shown = String(li.textContent || "").trim();
-    const expected = String(correctArr[idx] || "").trim();
-    // so sánh chuẩn hoá (không phân biệt hoa thường)
-    if (shown.toLowerCase() === expected.toLowerCase()) {
-      li.classList.add("correct");
-    } else {
-      li.classList.add("wrong");
-      ok = false;
-    }
-  });
-
-  if (ok) {
-    score += 10;
-  } else {
-    const ct = document.createElement("div");
-    ct.className = "correct-answer";
-    ct.textContent = `Thứ tự đúng: ${correctArr.join(" → ")}`;
-    interactiveEl.appendChild(ct);
-  }
-
-  scoreEl.textContent = `Điểm: ${score}`;
-  setTimeout(nextQuestion, 3000);
-};
-
+      scoreEl.textContent = `Điểm: ${score}`;
+      setTimeout(nextQuestion, 3000);
+    };
 
     interactiveEl.appendChild(ul);
     interactiveEl.appendChild(btn);
   }
 
-  // Bắt đầu timer cho câu này
   startTimerForQuestion();
 }
 
 /* ---------------------
-   Timer (global timeLeft)
-   --------------------- */ 
-  //  Thời gian làm bài
-function startTimerForQuestion(duration = 15) {  
-  // xóa interval cũ (phòng trường hợp)
+   Timer
+   --------------------- */
+function startTimerForQuestion(duration = 15) {
   clearInterval(timer);
   timeLeft = duration;
   timerFill.style.width = "100%";
@@ -246,19 +246,20 @@ function startTimerForQuestion(duration = 15) {
     const percent = (timeLeft / duration) * 100;
     timerFill.style.width = percent + "%";
 
-    if (percent < 30) timerFill.style.background = "linear-gradient(90deg,#d63031,#ff7675)";
-    else if (percent < 60) timerFill.style.background = "linear-gradient(90deg,#fdcb6e,#ffeaa7)";
-    else timerFill.style.background = "linear-gradient(90deg,#00b894,#55efc4)";
+    if (percent < 30)
+      timerFill.style.background = "linear-gradient(90deg,#d63031,#ff7675)";
+    else if (percent < 60)
+      timerFill.style.background = "linear-gradient(90deg,#fdcb6e,#ffeaa7)";
+    else
+      timerFill.style.background = "linear-gradient(90deg,#00b894,#55efc4)";
 
     if (timeLeft <= 0) {
       clearInterval(timer);
-      // khi hết giờ: hiển thị đáp án đúng tùy theo loại câu
       const q = questions[index];
 
       if (q.type === "multiple") {
         const opts = document.querySelectorAll(".option");
         if (opts && opts[q.answer]) opts[q.answer].classList.add("correct");
-        // disable click
         opts.forEach(o => (o.style.pointerEvents = "none"));
       } else if (q.type === "fill") {
         const correctAns = q.answer || "";
@@ -272,18 +273,13 @@ function startTimerForQuestion(duration = 15) {
         ct.className = "correct-answer";
         ct.textContent = `Thứ tự đúng: ${correctArr.join(", ")}`;
         interactiveEl.appendChild(ct);
-
-        // highlight li (nếu có ul)
-        const ul = interactiveEl.querySelector(".drag-list");
-        if (ul) {
-          const lis = [...ul.children];
-          lis.forEach((li, i) => {
-            const expected = (correctArr[i] || "").toString();
-            if (li.textContent.toString() === expected.toString()) li.classList.add("correct");
-            else li.classList.add("wrong");
-          });
-        }
       }
+
+      summary.push({
+        question: q.question,
+        correct: false,
+        knowledge: q.knowledge || "Không có ghi chú.",
+      });
 
       setTimeout(nextQuestion, 3000);
     }
@@ -291,21 +287,29 @@ function startTimerForQuestion(duration = 15) {
 }
 
 /* ---------------------
-   Multiple select handler
+   Multiple handler
    --------------------- */
 function selectAnswer(i, btn) {
   clearInterval(timer);
   const q = questions[index];
   const opts = document.querySelectorAll(".option");
   opts.forEach(o => (o.style.pointerEvents = "none"));
-
+  let correct = false;
   if (i === q.answer) {
     btn.classList.add("correct");
     score += 10;
+    correct = true;
   } else {
     btn.classList.add("wrong");
     if (opts && opts[q.answer]) opts[q.answer].classList.add("correct");
   }
+
+  summary.push({
+    question: q.question,
+    correct,
+    knowledge: q.knowledge || "Không có ghi chú.",
+  });
+
   scoreEl.textContent = `Điểm: ${score}`;
   setTimeout(nextQuestion, 3000);
 }
@@ -319,11 +323,8 @@ function getDragAfterElement(container, y) {
     (closest, child) => {
       const box = child.getBoundingClientRect();
       const offset = y - (box.top + box.height / 2);
-      if (offset < 0 && offset > closest.offset) {
-        return { offset, element: child };
-      } else {
-        return closest;
-      }
+      if (offset < 0 && offset > closest.offset) return { offset, element: child };
+      else return closest;
     },
     { offset: Number.NEGATIVE_INFINITY }
   ).element;
@@ -334,19 +335,61 @@ function getDragAfterElement(container, y) {
    --------------------- */
 function nextQuestion() {
   index++;
-  if (index < questions.length) {
-    showQuestion();
-  } else {
-    endQuiz();
-  }
+  if (index < questions.length) showQuestion();
+  else endQuiz();
 }
 
+/* ---------------------
+   End Quiz
+   --------------------- */
 function endQuiz() {
   clearInterval(timer);
+  document.querySelector(".timer-bar").style.display = "none";
   questionEl.style.display = "none";
   optionsEl.style.display = "none";
   interactiveEl.style.display = "none";
-  document.querySelector(".timer-bar").style.display = "none";
-  endScreen.style.display = "flex";
-  finalScoreEl.textContent = `Tổng điểm: ${score} / ${questions.length * 10}`;
+  endScreen.style.display = "none";
+  document.body.classList.add("quiz-finished");
+
+
+  const correctCount = summary.filter(s => s.correct).length;
+  const wrongCount = summary.length - correctCount;
+
+  const container = document.createElement("div");
+  container.className = "final-knowledge";
+  container.innerHTML = `
+    <h2>🎯 KẾT QUẢ CUỐI CÙNG</h2>
+    <p><b>Tổng điểm:</b> ${score} / ${questions.length * 10}</p>
+    <p>✅ <b>Số câu đúng:</b> ${correctCount}</p>
+    <p>❌ <b>Số câu sai:</b> ${wrongCount}</p>
+    <hr>
+    <h3>📘 Kiến thức cần ôn lại:</h3>
+  `;
+
+  const wrongList = summary.filter(s => !s.correct);
+  if (wrongList.length === 0) {
+    const p = document.createElement("p");
+    p.textContent = "Tuyệt vời! Bạn đã làm đúng tất cả 🎉";
+    container.appendChild(p);
+  } else {
+    wrongList.forEach((s, i) => {
+      const item = document.createElement("div");
+      item.className = "review-item";
+      item.innerHTML = `
+        <p><b>Câu ${i + 1}:</b> ${s.question}</p>
+        <p class="knowledge">💡 ${s.knowledge}</p>
+        <hr>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  const retry = document.createElement("button");
+  retry.textContent = "🔁 Làm lại bài";
+  retry.className = "retry-btn";
+  retry.onclick = () => location.reload();
+  container.appendChild(retry);
+
+  document.body.innerHTML = "";
+  document.body.appendChild(container);
 }
