@@ -1,22 +1,25 @@
-Dạng sắp xếp kéo thả
-{
-  "type": "drag", *kiểu loại kéo thả
-  "question": "Sắp xếp các bước thí nghiệm", *Câu hỏi
-  "items": ["Chuẩn bị dụng cụ", "Tiến hành thí nghiệm", "Quan sát kết quả", "Kết luận"], *Đáp án chưa được sắp xếp
-  "correct": ["Chuẩn bị dụng cụ", "Tiến hành thí nghiệm", "Quan sát kết quả", "Kết luận"] *Đáp án đã được sắp xếp (đáp án đúng)
-}
-
-Dạng trắc nghiệm nhiều phương án lựa chọn
-{ 
-  "type": "multiple", *kiểu loại trắc nghiệm nhiều phương án
-  "question": "Các nguyên tố khí hiếm nằm ở nhóm", *Câu hỏi
-  "options": ["IA.", "IIA.", "VIIA.","VIIIA."], *Các phương án
-  "answer": 3 *Đáp án đúng (0,1,2,3)
-},
-
-Dạng điền khuyết
-{
-  "type": "fill", *kiểu loại điền khuyết
-  "question": "Sodium nằm ở nhóm IA. Số electron lớp ngoài cùng của sodium là", *Câu hỏi
-  "answer": ["1", "1 lớp"] *Các đáp án được chấp nhận
-},
+[
+  {
+    "type": "multiple", //câu hỏi chọn ABCD
+    "question": "Nguyên tố nào sau đây là kim loại kiềm?", //Câu hỏi
+    "options": ["Oxi", "Natri", "Nitơ", "Clo"], //Phương án
+    "answer": 1, //Đáp án đúng
+    "image": "images/sodium.png", //Hình ảnh (nếu có)
+    "knowledge": "Kim loại kiềm thuộc nhóm IA trong bảng tuần hoàn, bao gồm Li, Na, K, Rb, Cs, Fr." //kiến thức cần nhớ
+  },
+  {
+    "type": "fill", //câu hỏi điền khuyết
+    "question": "Kí hiệu hóa học của Oxi là gì?", //Câu hỏi
+    "answer": "O", //Đáp án đúng 
+    "image": "images/oxygen.png", //Hình ảnh (nếu có)
+    "knowledge": "Oxi là nguyên tố phi kim thuộc nhóm VIA, kí hiệu là O, số hiệu nguyên tử là 8." //kiến thức cần nhớ
+  },
+  {
+    "type": "drag", //câu hỏi kéo thả
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.", //Câu hỏi
+    "items": ["H", "Li", "He", "Be"], //thứ tự chưa sắp xếp
+    "correct": ["H", "He", "Li", "Be"], //Đáp án đúng
+    "image": "images/periodic_order.png", //Hình ảnh (nếu có)
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)." //kiến thức cần nhớ
+  }
+]

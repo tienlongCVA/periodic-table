@@ -21,13 +21,67 @@
   "type": "multiple",
   "question": "Potassium (K) là nguyên tố", 
   "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
-  "answer": 1
+  "answer": 0
   },
   { 
   "type": "multiple",
   "question": "Vàng (Au) là nguyên tố", 
   "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
-  "answer": 3 
+  "answer": 0
+  },
+  { 
+  "type": "multiple",
+  "question": "Nguyên tử silicon có 14 electron. Số lớp electron và số electron lớp ngoài cùng của nguyên tử này lần lượt là", 
+  "options": ["3 lớp electron, 3 electron lớp ngoài cùng.", "3 lớp electron, 5 electron lớp ngoài cùng.", "2 lớp electron, 5 electron lớp ngoài cùng.","3 lớp electron, 4 electron lớp ngoài cùng."], 
+  "answer": 3
+  },
+  { 
+  "type": "multiple",
+  "question": "Ở điều kiện thường, các phi kim có thể tồn tại ở trạng thái nào?", 
+  "options": ["Lỏng và khí.", "Rắn và lỏng.", "Rắn và khí.","Rắn, lỏng và khí."], 
+  "answer": 3
+  },
+  { 
+  "type": "multiple",
+  "question": "Đặc điểm nào sau đây là đặc điểm chung của nhóm nguyên tố halogen?", 
+  "options": ["Đều thuộc nhóm VIIIA.", "Chỉ tồn tại ở thể rắn.", "Có màu sắc đậm dần từ fluorine tới iodine.","Có lợi đối với các sinh vật."], 
+  "answer": 2
+  },
+  { 
+  "type": "multiple",
+  "question": "Đặc điểm nào sau đây không phải là đặc điểm chung của nhóm nguyên tố khí hiếm ở điều kiện thường?", 
+  "options": ["Chất lỏng, không màu.", "Chất khí, không màu.", "Kém hoạt động, hầu như không phản ứng với nhau và với các chất khác.","Tồn tại dưới dạng đơn nguyên tử."], 
+  "answer": 0
+  },
+   { 
+  "type": "multiple",
+  "question": "Hãy cho biết kim loại nào có thể cắt bằng dao?", 
+  "options": ["Magnesium (Mg).", "Iron (Fe).", "Mercury (Hg).","Sodium (Na)."], 
+  "answer": 3
+  },
+  { 
+  "type": "multiple",
+  "question": "Nguyên tố nào được sử dụng trong việc chế tạo con chip máy tính?", 
+  "options": ["Neon (Ne).", "Bromine (Br).", "Silver (Ag).","Silicon (Si)."], 
+  "answer": 3
+  },
+  { 
+  "type": "multiple",
+  "question": "Nguyên tố phi kim nào tồn tại ở dạng lỏng ở nhiệt độ phòng?", 
+  "options": ["Nitrogen (N).", "Bromine (Br).", "Argon (Ar).","Mercury (Hg)."], 
+  "answer": 1
+  },
+  { 
+  "type": "multiple",
+  "question": "Aluminium (Al) là nguyên tố", 
+  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "answer": 1
+  },
+  { 
+  "type": "multiple",
+  "question": "Nguyên tử boron có 5 electron. Số lớp electron và số electron lớp ngoài cùng của nguyên tử này lần lượt là", 
+  "options": ["3 lớp electron, 3 electron lớp ngoài cùng.", "2 lớp electron, 5 electron lớp ngoài cùng.", "3 lớp electron, 8 electron lớp ngoài cùng.","2 lớp electron, 3 electron lớp ngoài cùng."], 
+  "answer": 3
   },
   {
   "type": "fill",
