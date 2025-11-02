@@ -73,12 +73,9 @@ header {
     border: 2px solid rgb(255, 51, 0);
     border-radius: 5px;
 }
+/* kim loai khac = kim loai */
 .vien-kim-loai-khac:hover{
     border: 2px solid rgb(0, 195, 255);
-    border-radius: 5px;
-}
-.vien-a-kim:hover{
-    border: 2px solid rgb(0, 255, 191);
     border-radius: 5px;
 }
 .vien-phi-kim:hover{
@@ -162,7 +159,7 @@ h1 {
     color: rgb(255, 51, 0);
     border: 2px solid  rgb(255, 51, 0);
 }
-/* Màu của nguyên tố kim loại khác */
+/* Màu của nguyên tố kim loại*/
 .kim-loai-khac {
     color: rgb(0, 195, 255);
     border: 2px solid  rgb(0, 195, 255);
@@ -172,11 +169,6 @@ h1 {
     color: rgb(62, 250, 77);
     border: 2px solid  rgb(62, 250, 77);
     }
-/* Màu của nguyên tố Á kim */
-.a-kim {
-    color: rgb(0, 255, 191);
-    border: 2px solid  rgb(0, 255, 191);
-}
 /* Màu của nguyên tố Khí hiếm */
 .khi-hiem {
     color: rgb(17, 0, 255);

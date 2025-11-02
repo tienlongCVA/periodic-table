@@ -80,13 +80,13 @@
                 <nav>
                     <ul class="menu">
                         <!-- Add class vào thẻ a để đổi màu viền từng cái -->
+                         <!-- Kim loại yếu = kim loại -->
                         <li><a class="vien-kim-loai-kiem" onclick="filterElements('p-alkali-metal')" href="#">Kim loại kiềm</a></li>
-                        <li><a class="vien-kim-loai-tho" onclick="filterElements('p-kim-loai-tho')" href="#">Kim loại thổ</a></li>
+                        <li><a class="vien-kim-loai-tho" onclick="filterElements('p-kim-loai-tho')" href="#">Kim loại kiềm thổ</a></li>
                         <li><a class="vien-ho-lathan" onclick="filterElements('p-ho-lathan')" href="#">Họ Lathanide</a></li>
                         <li><a class="vien-ho-actini" onclick="filterElements('p-ho-actini')" href="#">Họ Actinide</a></li>
                         <li><a class="vien-kim-loai-chuyen-tiep" onclick="filterElements('p-kim-loai-chuyen-tiep')" href="#">Kim loại chuyển tiếp</a></li>
-                        <li><a class="vien-kim-loai-khac" onclick="filterElements('p-kim-loai-khac')" href="#">Kim loại yếu</a></li>
-                        <li><a class="vien-a-kim" onclick="filterElements('p-a-kim')" href="#">Á kim</a></li>
+                        <li><a class="vien-kim-loai-khac" onclick="filterElements('p-kim-loai-khac')" href="#">Kim loại</a></li>
                         <li><a class="vien-phi-kim" onclick="filterElements('p-phi-kim')" href="#">Phi kim</a></li>
                         <li><a class="vien-khi-hiem" onclick="filterElements('p-khi-hiem')" href="#">Khí hiếm</a></li>
                         <li><a class="vien-unknow" onclick="filterElements('all')" href="#">All</a></li>
@@ -121,7 +121,7 @@
                 </div>
             </td>
             <td class="tieu-de" colspan="10">Periodic table</td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Boron', 'B', 5, 10.81)"> 
+            <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Boron', 'B', 5, 10.81)"> 
                 <div class="element-content">
                 <span class="element-number">5</span>
                 <span class="element-symbol">B</span>
@@ -198,7 +198,7 @@
                 <span class="element-mass">27</span>
                 </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Silicon', 'Si', 14, 28.085)"> 
+            <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Silicon', 'Si', 14, 28.085)"> 
                 <div class="element-content">
                 <span class="element-number">14</span>
                 <span class="element-symbol">Si</span>
@@ -345,7 +345,7 @@
                 <span class="element-mass">70</span>
                 </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Germanium', 'Ge', 32, 72.630)">
+            <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Germanium', 'Ge', 32, 72.630)">
                 <div class="element-content">
                 <span class="element-number">32</span>
                 <span class="element-symbol">Ge</span>
@@ -353,7 +353,7 @@
                 <span class="element-mass">73</span>
                 </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Arsenic', 'As', 33, 74.922)">
+            <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Arsenic', 'As', 33, 74.922)">
                 <div class="element-content">
                     <span class="element-number">33</span>
                     <span class="element-symbol">As</span>
@@ -500,7 +500,7 @@
                     <span class="element-mass">119</span>
                     </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Antimony', 'Sb', 51, 121.76)">
+            <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Antimony', 'Sb', 51, 121.76)">
                 <div class="element-content">
                     <span class="element-number">51</span>
                     <span class="element-symbol">Sb</span>
@@ -508,7 +508,7 @@
                     <span class="element-mass">122</span>
                     </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Tellurium', 'Te', 52, 127.60)">
+            <td class="phi-kim sheet-hover p-phi-kim element" onclick="showElementDetails('Tellurium', 'Te', 52, 127.60)">
                 <div class="element-content">
                     <span class="element-number">52</span>
                     <span class="element-symbol">Te</span>
@@ -656,7 +656,7 @@
                     <span class="element-mass">209</span>
                     </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element"    onclick="showElementDetails('Astatine', 'At', 85, 210)">
+            <td class="kim-loai-khac sheet-hover p-kim-loai-khac element"    onclick="showElementDetails('Astatine', 'At', 85, 210)">
                 <div class="element-content">
                     <span class="element-number">85</span>
                     <span class="element-symbol">At</span>
@@ -780,7 +780,7 @@
                     <span class="element-mass">(289)</span>
                     </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Moscovium', 'Mc', 115, 290)">
+            <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Moscovium', 'Mc', 115, 290)">
                 <div class="element-content">
                     <span class="element-number">115</span>
                     <span class="element-symbol">Mc</span>
@@ -788,7 +788,7 @@
                     <span class="element-mass">(209)</span>
                     </div>
             </td>
-            <td class="a-kim sheet-hover p-a-kim element" onclick="showElementDetails('Livermorium', 'Lv', 116, 293)">
+            <td class="kim-loai-khac sheet-hover p-kim-loai-khac element" onclick="showElementDetails('Livermorium', 'Lv', 116, 293)">
                 <div class="element-content">
                     <span class="element-number">116</span>
                     <span class="element-symbol">Lv</span>
