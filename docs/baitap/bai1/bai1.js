@@ -231,8 +231,9 @@ if (q.image) {
 
 /* ---------------------
    Timer (global timeLeft)
-   --------------------- */
-function startTimerForQuestion(duration = 10) {
+   --------------------- */ 
+  //  Thời gian làm bài
+function startTimerForQuestion(duration = 15) {  
   // xóa interval cũ (phòng trường hợp)
   clearInterval(timer);
   timeLeft = duration;
