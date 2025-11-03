@@ -4,86 +4,101 @@
     "type": "multiple",
     "question": "Bảng tuần hoàn các nguyên tố hóa học được sắp xếp theo:",
     "options": ["Chiều tăng dần của số electron lớp ngoài cùng của nguyên tử", "Chiều tăng dần của điện tích hạt nhân của nguyên tử", "Chiều tăng dần của nguyên tử khối", "Chiều giảm dần của điện tích hạt nhân nguyên tử"],
+    "knowledge": "Bảng tuần hoàn hóa học của Mendeleev được sắp xếp theo chiều tăng dần điện tích hạt nhân nguyên tử.",
     "answer": 1
   },
   {
     "type": "multiple",
     "question": "Các nguyên tố trong bảng tuần hoàn các nguyên tố hóa học của Mendeleev được sắp xếp theo thứ tự tăng dần của:",
     "options": ["khối lượng.", "số proton.", "tỉ trọng.", "số neutron."],
+    "knowledge": "Các nguyên tố trong bảng tuần hoàn các nguyên tố hóa học của Mendeleec được sắp xếp theo thứ tự tăng dần của hạt Pronton (P).",
     "answer": 0
   },
   {
     "type": "multiple",
     "question": "Bảng tuần hoàn các nguyên tố hoá học được cấu tạo từ",
     "options": ["chu kì, nhóm.", "ô nguyên tố.", "chu kì.", "ô nguyên tố, chu kì, nhóm."],
+    "knowledge": "Bảng tuần hoàn các nguyên tố hóa học được cấu tạo từ ô nguyên tố, chu kì và nhóm.",
     "answer": 3
   },
   {
     "type": "multiple",
     "question": "Phát biểu nào sau đây là đúng?",
     "options": ["Bảng tuần hoàn gồm 116 nguyên tố hóa học.", "Bảng tuần hoàn gồm 6 chu kì.", "Bảng tuần hoàn gồm 8 nhóm A và 8 nhóm B.","Các nguyên tố trong bảng tuần hoàn được sắp xếp theo chiều tăng dần khối lượng nguyên tử."],
+    "knowledge": "Bảng tuần hoàn các nguyên tố hóa học gồm 118 các nguyên tố hóa học, 7 chu kì, 8 nhóm A và 8 nhóm B, các nguyên tố hóa học được sắp xếp theo chiều tăng dần điên tích hạt nhân nguyên tử.",
     "answer": 2
   },
   {
     "type": "multiple",
     "question": "Chu kì là tập hợp các nguyên tố mà các nguyên tử",
     "options": ["có số electron lớp ngoài cùng bằng nhau.", "có số lớp electron bằng nhau.", "có điện tích hạt nhân bằng nhau.","có số hạt trong nguyên tử bằng nhau."],
+    "knowledge": "Chu kì là tập hơn các nguyên tố mà các nguyên tử có số lớp electron bằng nhau.",
     "answer": 1
   },
   {
     "type": "fill",
     "question": "Các nguyên tố xếp ở chu kì 5 có số lớp electron trong nguyên tử là?",
+    "knowledge": "Các nguyên tố xếp ở chu kì 5 có số electron trong nguyên tử là 5.",
     "answer": "5"
   },
   {
     "type": "fill",
     "question": "Hiện nay có bao nhiêu chu kì trong bảng tuần hoàn các nguyên tố hóa học?",
+    "knowledge": "Hiện nay bản tuần hoàn các nguyên tố hóa học có tổng cộng là 7 chu kỳ.",
     "answer": "7"
   },
   {
     "type": "fill",
     "question": "Sodium nằm ở nhóm IA. Số electron lớp ngoài cùng của sodium là",
+    "knowledge": "Số electron của các nguyên tố hóa học trong nhóm IA là 1.",
     "answer": "1"
   },
   {
     "type": "multiple",
     "question": "Các nguyên tố khí hiếm nằm ở nhóm",
     "options": ["IA.", "IIA.", "VIIA.","VIIIA."],
+    "knowledge": "Các nguyên tố khí hiếm nằm ở nhóm VIIIA.",
     "answer": 3
   },
   {
     "type": "multiple",
     "question": "Khối lượng của một nguyên tử bằng tổng số proton của nguyên tử đó.",
     "options": ["Đúng","Sai"],
+    "knowledge": "Khối lượng của một nguyên tử bằng tổng khối lượng hạt proton và neutron của nguyên tử đó.",
     "answer": 1
   },
   {
     "type": "multiple",
     "question": "Tất cả nguyên tử của các nguyên tố nhóm VA đều có 5 electron ở lớp ngoài cùng.",
     "options": ["Đúng","Sai"],
+    "knowledge": "Các nguyên tử của các nguyên tố trong nhóm VA đều có 5 eletron ở lớp ngoài cùng. ",
     "answer": 0
   },
   {
     "type": "multiple",
     "question": "Tất cả nguyên tử của các nguyên tố ở chu kì II đều có 2 electron ở lớp ngoài cùng.",
     "options": ["Đúng","Sai"],
+    "knowledge": "Tất cả các nguyên tử của các nguyên tố ở chu kì II đều có 2 lớp electron. Các nguyên tử của các nguyên tố nằm trong nhóm IIA để có 2 electron ở lớp ngoài cùng.",
     "answer": 1
   },
   {
     "type": "multiple",
-    "question": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.(Đúng/Sai)",
+    "question": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.",
     "options": ["Đúng","Sai"],
+    "knowledge": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.",
     "answer": 0
   },
   {
     "type": "multiple",
     "question": "Số thứ tự của nhóm bằng số lớp electron trong nguyên tử của các nguyên tố thuộc nhóm đó.",
     "options": ["Đúng","Sai"],
+    "knowledge": "Số thứ tự của nhóm bằng số electron lớp ngoài cùng của các nguyên tử của các nguyên tố thuộc nhóm đó.",
     "answer": 1
   },
   {
     "type": "multiple",
     "question": "Số thứ tự của chu kì bằng số lớp electron trong nguyên tử của các nguyên tố  chu kì đó.",
+    "knowledge": "Số thứ tự của chu kì bằng số lớp electron trong nguyên tử của các nguyên tố chu kì đó.",
     "options": ["Đúng","Sai"],
     "answer": 0
   },
@@ -91,6 +106,7 @@
     "type": "multiple",
     "question": "Phát biểu nào sau đây là đúng?",
     "options": ["Nhóm gồm các nguyên tố mà nguyên tử của chúng có số electron lớp ngoài cùng bằng nhau và được xếp vào cùng một hàng.", "Các nguyên tố thuộc cùng một nhóm có tính chất gần giống nhau.", "Bảng tuần hoàn gồm 8 nhóm được kí hiệu từ 1 đến 8.","Các nguyên tố trong nhóm được xếp thành một cột theo chiều khối lượng nguyên tử tăng dần."],
+    "knowledge": "Các nguyên tố trong cùng một nhóm có tính chất GẦN giống nhau.",
     "answer": 1
   }
 ]
