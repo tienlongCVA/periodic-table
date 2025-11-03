@@ -3,89 +3,104 @@
   {
   "type": "fill",
   "question": "Sodium ở chu kì 3, số lớp electron trong nguyên tử sodium là ", 
+  "knowledge": "Các nguyên tử của các nguyên tố nằm trong chu kì 3 có số lớp electron là 3.",
   "answer": "3"
   },
   { 
   "type": "multiple",
   "question": "Sulfur (S) là nguyên tố", 
-  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."],
+  "knowledge": "Sulfur (F) là nguyên tố phi kim.", 
   "answer": 1
   },
   { 
   "type": "multiple",
   "question": "Carbon (C) là nguyên tố", 
   "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "knowledge": "Carbon (C) là nguyên tố phi kim.",
   "answer": 1 
   },
   { 
   "type": "multiple",
   "question": "Potassium (K) là nguyên tố", 
   "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "knowledge": "Potassium (K) là nguyên tố kim loại.",
   "answer": 0
   },
   { 
   "type": "multiple",
   "question": "Vàng (Au) là nguyên tố", 
   "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
+  "knowledge": "Vàng (Au) là nguyên tố kim loại",
   "answer": 0
   },
   { 
   "type": "multiple",
   "question": "Nguyên tử silicon có 14 electron. Số lớp electron và số electron lớp ngoài cùng của nguyên tử này lần lượt là", 
   "options": ["3 lớp electron, 3 electron lớp ngoài cùng.", "3 lớp electron, 5 electron lớp ngoài cùng.", "2 lớp electron, 5 electron lớp ngoài cùng.","3 lớp electron, 4 electron lớp ngoài cùng."], 
+  "knowledge": "Nguyên tử Silicon có 14 electron bao gồm 3 lớp electron và 4 electron lớp ngoài cùng.",
   "answer": 3
   },
   { 
   "type": "multiple",
   "question": "Ở điều kiện thường, các phi kim có thể tồn tại ở trạng thái nào?", 
   "options": ["Lỏng và khí.", "Rắn và lỏng.", "Rắn và khí.","Rắn, lỏng và khí."], 
+  "knowledge": "Ở điều kiện thường, các phi kim có thể tồn tại ở trạng thái rắn, lỏng và khí.",
   "answer": 3
   },
   { 
   "type": "multiple",
   "question": "Đặc điểm nào sau đây là đặc điểm chung của nhóm nguyên tố halogen?", 
   "options": ["Đều thuộc nhóm VIIIA.", "Chỉ tồn tại ở thể rắn.", "Có màu sắc đậm dần từ fluorine tới iodine.","Có lợi đối với các sinh vật."], 
+  "knowledge": "Đặc điểm của nhóm nguyên tố halogen là có màu sắc đậm dần từ Fluorine tới Iodine",
   "answer": 2
   },
   { 
   "type": "multiple",
   "question": "Đặc điểm nào sau đây không phải là đặc điểm chung của nhóm nguyên tố khí hiếm ở điều kiện thường?", 
   "options": ["Chất lỏng, không màu.", "Chất khí, không màu.", "Kém hoạt động, hầu như không phản ứng với nhau và với các chất khác.","Tồn tại dưới dạng đơn nguyên tử."], 
+  "knowledge": "Nhóm nguyên tố khí hiếm (Khí trơ) có đặc điểm chung ở điều kiện thường là chất khí không màu, kém hoạt động và hầu như không phản ứng với các chất khác, tồn tại dưới dạng đơn nguyên tử.",
   "answer": 0
   },
    { 
   "type": "multiple",
   "question": "Hãy cho biết kim loại nào có thể cắt bằng dao?", 
   "options": ["Magnesium (Mg).", "Iron (Fe).", "Mercury (Hg).","Sodium (Na)."], 
+  "knowledge": "Sodium (Na) là kim loại kiềm mềm có thể cắt được bằng dao.",
   "answer": 3
   },
   { 
   "type": "multiple",
   "question": "Nguyên tố nào được sử dụng trong việc chế tạo con chip máy tính?", 
   "options": ["Neon (Ne).", "Bromine (Br).", "Silver (Ag).","Silicon (Si)."], 
+  "knowledge": "Silicon (Si) được ứng dụng vào ngành công nghiệp sản xuất chíp máy tính nói chung và chíp bán dẫn nói riêng.",
   "answer": 3
   },
   { 
   "type": "multiple",
   "question": "Nguyên tố phi kim nào tồn tại ở dạng lỏng ở nhiệt độ phòng?", 
   "options": ["Nitrogen (N).", "Bromine (Br).", "Argon (Ar).","Mercury (Hg)."], 
+  "knowledge": "Bromine (Br) là nguyên tố phi kim có độ nóng chảy thấp nên có thể tồn tại dạng lỏng ở nhiệt độ phòng. ",
   "answer": 1
   },
   { 
   "type": "multiple",
   "question": "Aluminium (Al) là nguyên tố", 
   "options": ["kim loại.", "phi kim.", "khí hiếm.","á kim."], 
-  "answer": 1
+  "knowledge": "Aluminium (Al) là nguyên tố kim loại",
+  "answer": 0
   },
   { 
   "type": "multiple",
   "question": "Nguyên tử boron có 5 electron. Số lớp electron và số electron lớp ngoài cùng của nguyên tử này lần lượt là", 
   "options": ["3 lớp electron, 3 electron lớp ngoài cùng.", "2 lớp electron, 5 electron lớp ngoài cùng.", "3 lớp electron, 8 electron lớp ngoài cùng.","2 lớp electron, 3 electron lớp ngoài cùng."], 
+  "knowledge": "Nguyên tử Boron (B) có 5 electron. Số electron lớp ngoài cùng là 3 electron và số lớp electron là 2 lớp",
   "answer": 3
   },
   {
   "type": "fill",
-  "question": "Oxygen nằm ở nhóm A và có 6 electron lớp ngoài cùng. Oxygen thuộc nhóm __A  ", 
+  "question": "Oxygen (O) nằm ở nhóm A và có 6 electron lớp ngoài cùng. Oxygen thuộc nhóm __A  ", 
+  "knowledge": "Oxgen (O) có 6 eletron lớp ngoài cùng nên nguyên tố này thuộc nhóm VIA.",
   "answer": "VI" 
   }
 
