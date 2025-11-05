@@ -1,0 +1,22 @@
+
+[
+   {
+    "type": "drag", 
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["H", "Li", "He", "Be"], 
+    "correct": ["H", "He", "Li", "Be"], 
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)." 
+  },
+  {
+    "type": "drag", 
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["H", "Li", "He", "Be"], 
+    "correct": ["H", "He", "Li", "Be"], 
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)." 
+  }
+]
+
+
+  
+
+  
