@@ -1,22 +1,142 @@
-
 [
-   {
-    "type": "drag", 
+  {
+    "type": "drag",
     "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
-    "items": ["H", "Li", "He", "Be"], 
-    "correct": ["H", "He", "Li", "Be"], 
-    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)." 
+    "items": ["C", "O", "N", "B"],
+    "correct": ["B", "C", "N", "O"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: B(5), C(6), N(7), O(8)."
   },
   {
-    "type": "drag", 
+    "type": "drag",
     "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
-    "items": ["H", "Li", "He", "Be"], 
-    "correct": ["H", "He", "Li", "Be"], 
-    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)." 
+    "items": ["Na", "Ne", "Mg", "F"],
+    "correct": ["F", "Ne", "Na", "Mg"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: F(9), Ne(10), Na(11), Mg(12)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Al", "Si", "Mg", "Na"],
+    "correct": ["Na", "Mg", "Al", "Si"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Na(11), Mg(12), Al(13), Si(14)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["S", "P", "Cl", "Si"],
+    "correct": ["Si", "P", "S", "Cl"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Si(14), P(15), S(16), Cl(17)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Ca", "K", "Ar", "Cl"],
+    "correct": ["Cl", "Ar", "K", "Ca"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Cl(17), Ar(18), K(19), Ca(20)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["H", "Li", "He", "Be"],
+    "correct": ["H", "He", "Li", "Be"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["O", "F", "N", "C"],
+    "correct": ["C", "N", "O", "F"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: C(6), N(7), O(8), F(9)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Be", "B", "Li", "C"],
+    "correct": ["Li", "Be", "B", "C"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Li(3), Be(4), B(5), C(6)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Mg", "Al", "Na", "Ne"],
+    "correct": ["Ne", "Na", "Mg", "Al"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Ne(10), Na(11), Mg(12), Al(13)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["P", "Si", "S", "Al"],
+    "correct": ["Al", "Si", "P", "S"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Al(13), Si(14), P(15), S(16)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Cl", "Ar", "S", "P"],
+    "correct": ["P", "S", "Cl", "Ar"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: P(15), S(16), Cl(17), Ar(18)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["K", "Ca", "Ar", "Cl"],
+    "correct": ["Cl", "Ar", "K", "Ca"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Cl(17), Ar(18), K(19), Ca(20)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["He", "H", "Li", "Be"],
+    "correct": ["H", "He", "Li", "Be"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["F", "O", "Ne", "N"],
+    "correct": ["N", "O", "F", "Ne"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: N(7), O(8), F(9), Ne(10)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["B", "Be", "C", "Li"],
+    "correct": ["Li", "Be", "B", "C"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Li(3), Be(4), B(5), C(6)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Si", "Na", "Mg", "Al"],
+    "correct": ["Na", "Mg", "Al", "Si"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Na(11), Mg(12), Al(13), Si(14)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["S", "Cl", "P", "Ar"],
+    "correct": ["P", "S", "Cl", "Ar"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: P(15), S(16), Cl(17), Ar(18)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Ne", "F", "O", "N"],
+    "correct": ["N", "O", "F", "Ne"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: N(7), O(8), F(9), Ne(10)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["Ca", "Mg", "Na", "K"],
+    "correct": ["Na", "Mg", "K", "Ca"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: Na(11), Mg(12), K(19), Ca(20)."
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["H", "He", "Li", "Be"],
+    "correct": ["H", "He", "Li", "Be"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: H(1), He(2), Li(3), Be(4)."
   }
 ]
-
-
-  
-
-  

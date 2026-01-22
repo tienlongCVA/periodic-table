@@ -1,0 +1,111 @@
+[
+  {
+    "type": "multiple",
+    "question": "Magnesium nằm ở ô số 12. Số hạt electron trong nguyên tử magnesium là",
+    "options": ["6.", "3.", "12.", "18."],
+    "knowledge": "Trong nguyên tử trung hòa, số electron bằng số hiệu nguyên tử. Magnesium có Z = 12 nên có 12 electron.",
+    "answer": 2
+  },
+  {
+    "type": "multiple",
+    "question": "Oxygen nằm ở ô số 8. Số hạt mang điện trong nguyên tử oxygen là",
+    "options": ["8.", "16.", "24.", "4."],
+    "knowledge": "Hạt mang điện gồm proton và electron. Oxygen có 8 proton và 8 electron nên có tổng 16 hạt mang điện.",
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Sodium nằm ở chu kì 3. Nguyên tử sodium có số lớp electron là",
+    "options": ["1.", "2.", "3.", "4."],
+    "knowledge": "Số chu kì bằng số lớp electron. Sodium ở chu kì 3 nên có 3 lớp electron.",
+    "answer": 2
+  },
+  {
+    "type": "multiple",
+    "question": "Aluminum nằm ở chu kì 3. Nguyên tử aluminum có số lớp electron là",
+    "options": ["1.", "2.", "3.", "4."],
+    "knowledge": "Aluminum thuộc chu kì 3 nên có 3 lớp electron.",
+    "answer": 2
+  },
+  {
+    "type": "multiple",
+    "question": "Chlorine nằm ở chu kì 3. Nguyên tử chlorine có số lớp electron là",
+    "options": ["2.", "3.", "4.", "5."],
+    "knowledge": "Chlorine thuộc chu kì 3 nên nguyên tử có 3 lớp electron.",
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Neon nằm ở chu kì 2. Nguyên tử neon có số lớp electron là",
+    "options": ["1.", "2.", "3.", "4."],
+    "knowledge": "Neon ở chu kì 2 nên có 2 lớp electron.",
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Potassium nằm ở chu kì 4. Nguyên tử potassium có số lớp electron là",
+    "options": ["2.", "3.", "4.", "5."],
+    "knowledge": "Potassium thuộc chu kì 4 nên có 4 lớp electron.",
+    "answer": 2
+  },
+  {
+    "type": "multiple",
+    "question": "Cho biết một nguyên tử của nguyên tố X có điện tích hạt nhân là +17. Hãy chọn câu đúng.",
+    "options": [
+      "Nguyên tố X ở chu kì 3, nhóm VIIA; là phi kim; có 17 proton, 7 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm VIIA; là phi kim; có 17 proton, 17 electron.",
+      "Nguyên tố X ở chu kì 2, nhóm VIIA; là kim loại; có 17 proton, 17 electron.",
+      "Nguyên tố X ở chu kì 2, nhóm VIIA; là phi kim; có 17 proton, 7 electron."
+    ],
+    "knowledge": "Điện tích hạt nhân +17 ⇒ Z = 17 ⇒ nguyên tố Cl, ở chu kì 3, nhóm VIIA, là phi kim, có 17 proton và 17 electron.",
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Cho biết một nguyên tử của nguyên tố X có điện tích hạt nhân là +11. Hãy chọn câu đúng.",
+    "options": [
+      "Nguyên tố X ở chu kì 2, nhóm IA; là kim loại; có 11 proton, 11 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm IA; là kim loại; có 11 proton, 11 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm IIA; là phi kim; có 11 proton, 11 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm IA; là phi kim; có 11 proton, 1 electron."
+    ],
+    "knowledge": "Z = 11 là sodium (Na), thuộc chu kì 3, nhóm IA, là kim loại, có 11 proton và 11 electron.",
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Cho biết một nguyên tử của nguyên tố X có điện tích hạt nhân là +8. Hãy chọn câu đúng.",
+    "options": [
+      "Nguyên tố X ở chu kì 2, nhóm VIA; là phi kim; có 8 proton, 8 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm VIA; là kim loại; có 8 proton, 8 electron.",
+      "Nguyên tố X ở chu kì 2, nhóm VA; là phi kim; có 8 proton, 5 electron.",
+      "Nguyên tố X ở chu kì 1, nhóm VIIIA; là khí hiếm; có 8 proton, 8 electron."
+    ],
+    "knowledge": "Z = 8 là oxygen (O), thuộc chu kì 2, nhóm VIA, là phi kim, có 8 proton và 8 electron.",
+    "answer": 0
+  },
+  {
+    "type": "multiple",
+    "question": "Cho biết một nguyên tử của nguyên tố X có điện tích hạt nhân là +12. Hãy chọn câu đúng.",
+    "options": [
+      "Nguyên tố X ở chu kì 2, nhóm IIA; là kim loại; có 12 proton, 12 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm IIA; là kim loại; có 12 proton, 12 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm IIIA; là phi kim; có 12 proton, 12 electron.",
+      "Nguyên tố X ở chu kì 4, nhóm IIA; là kim loại; có 12 proton, 2 electron."
+    ],
+    "knowledge": "Z = 12 là magnesium (Mg), thuộc chu kì 3, nhóm IIA, là kim loại, có 12 proton và 12 electron.",
+    "answer": 1
+  },
+  {
+    "type": "multiple",
+    "question": "Cho biết một nguyên tử của nguyên tố X có điện tích hạt nhân là +10. Hãy chọn câu đúng.",
+    "options": [
+      "Nguyên tố X ở chu kì 2, nhóm VIIIA; là khí hiếm; có 10 proton, 10 electron.",
+      "Nguyên tố X ở chu kì 3, nhóm VIIIA; là phi kim; có 10 proton, 10 electron.",
+      "Nguyên tố X ở chu kì 2, nhóm VIA; là phi kim; có 10 proton, 6 electron.",
+      "Nguyên tố X ở chu kì 1, nhóm VIIIA; là khí hiếm; có 10 proton, 10 electron."
+    ],
+    "knowledge": "Z = 10 là neon (Ne), thuộc chu kì 2, nhóm VIIIA, là khí hiếm, có 10 proton và 10 electron.",
+    "answer": 0
+  }
+]
