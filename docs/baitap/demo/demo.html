@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập 1</title>
+  <link rel="stylesheet" href="demo.css" />
+</head>
+<body>
+  <div id="start-screen" class="start-screen">
+  <h2>🎯 Bạn đã sẵn sàng chưa?</h2>
+  <button id="start-btn">Bắt đầu</button>
+  <div id="countdown" class="countdown" style="display:none;">3</div>
+  </div>
+
+    <button class="back-btn" onclick="goBack()">Bài tập</button>
+  <div class="quiz-box">
+    <div class="score">Điểm: 0</div>
+    <div class="timer-bar">
+      <div class="timer-fill"></div>
+    </div>
+    <div class="question">Đang tải câu hỏi...</div>
+    <div class="options"></div>
+    <div class="interactive"></div>
+    <div class="end-screen">
+      <h2>🎉 Kết thúc bài tập!</h2>
+      <p class="final-score"></p>
+      <button class="back-btn" onclick="goBack()">Quay lại</button>
+    </div>
+  </div>
+  <script src="demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+[
+  {
+    "type": "multiple",
+    "question": "Bảng tuần hoàn các nguyên tố hóa học được sắp xếp theo:",
+    "options": ["Chiều tăng dần của số electron lớp ngoài cùng của nguyên tử", "Chiều tăng dần của điện tích hạt nhân của nguyên tử", "Chiều tăng dần của nguyên tử khối", "Chiều giảm dần của điện tích hạt nhân nguyên tử"],
+    "knowledge": "Bảng tuần hoàn hóa học của Mendeleev được sắp xếp theo chiều tăng dần điện tích hạt nhân nguyên tử.",
+    "answer": 1
+  },
+  {
+    "type": "fill",
+    "question": "Sodium nằm ở nhóm IA. Số electron lớp ngoài cùng của sodium là",
+    "knowledge": "Số electron của các nguyên tố hóa học trong nhóm IA là 1.",
+    "answer": "1"
+  },
+  {
+    "type": "multiple",
+    "question": "Tất cả nguyên tử của các nguyên tố nhóm VA đều có 5 electron ở lớp ngoài cùng.",
+    "options": ["Đúng","Sai"],
+    "knowledge": "Các nguyên tử của các nguyên tố trong nhóm VA đều có 5 eletron ở lớp ngoài cùng. ",
+    "answer": 0
+  },
+  {
+    "type": "drag",
+    "question": "Sắp xếp các nguyên tố sau theo thứ tự tăng dần số hiệu nguyên tử.",
+    "items": ["C", "O", "N", "B"],
+    "correct": ["B", "C", "N", "O"],
+    "knowledge": "Số hiệu nguyên tử tăng theo thứ tự: B(5), C(6), N(7), O(8)."
+  },
+  {
+    "type": "multiple",
+    "question": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.",
+    "options": ["Đúng","Sai"],
+    "knowledge": "Trong nguyên tử, các electron được xếp theo từng lớp. Các electron được sắp xếp lần lượt vào các lớp theo chiều từ gần hạt nhân ra ngoài. Mỗi lớp electron có một số electron nhất định.",
+    "answer": 0
+  }
+]
+
+  
+
+  
