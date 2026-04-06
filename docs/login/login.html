@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+    <title>Đăng nhập - Hệ thống Mô phỏng 3D</title>
     <link rel="stylesheet" href="login.css">
-     <link rel="shortcut icon" type="image/jpg" href="../img/images.jpg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Đăng nhập</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Đăng nhập</button>
-        </form>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 
-        <p id="errorMessage" class="error"></p>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>ĐĂNG NHẬP</h1>
+            <p>Trang mô phỏng 3D cấu tạo nguyên tử trong bảng tuần hoàn hóa học</p>
+            
+            <div class="input-group">
+                <input type="text" id="studentIDInput" required placeholder=" ">
+                <label>Nhập mã số thẻ học sinh</label>
+            </div>
+            <div class="stars"></div>
+            <div class="stars-medium"></div>
+            <div class="stars-big"></div>
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+
+            <button id="loginBtn">BẮT ĐẦU KHÁM PHÁ</button>
+            <div id="error-msg" class="error"></div>
+        </div>
     </div>
-    <script src="login.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+        // DÁN FIREBASE CONFIG CỦA BẠN VÀO ĐÂY
+        const firebaseConfig = {
+            apiKey: "AIzaSyBOAsuFx2EOV60cbyQ6CETPXQ4vv6c5aoI",
+            authDomain: "trang-mo-phong-3d-bthhh.firebaseapp.com",
+            projectId: "trang-mo-phong-3d-bthhh",
+            storageBucket: "trang-mo-phong-3d-bthhh.firebasestorage.app",
+            messagingSenderId: "331870971692",
+            appId: "1:331870971692:web:ca84647275e7da36642e89",
+            measurementId: "G-YNNZV77S3Q",
+            databaseURL: "https://trang-mo-phong-3d-bthhh-default-rtdb.firebaseio.com"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        async function handleLogin() {
+            const studentID = document.getElementById("studentIDInput").value.trim();
+            const errorMsg = document.getElementById("error-msg");
+        
+
+            if (!studentID) {
+                errorMsg.innerText = "Vui lòng nhập mã số thẻ!";
+                return;
+            }
+
+            try {
+                const dbRef = ref(db);
+                const snapshot = await get(child(dbRef, `users/${studentID}`));
+
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+                    localStorage.setItem("isLoggedIn", "true");
+                    localStorage.setItem("userName", userData.name);
+                    localStorage.setItem("userID", studentID);
+                    localStorage.setItem("userDob", userData.dob || "Chưa cập nhật");
+                    localStorage.setItem("userGender", userData.gender || "Chưa xác định");
+                    window.location.href = "../index.html";
+                } else {
+                    errorMsg.innerText = "Mã số không hợp lệ hoặc chưa đăng ký!";
+                }
+            } catch (error) {
+                errorMsg.innerText = "Lỗi kết nối máy chủ!";
+            }
+        }
+
+        document.getElementById("loginBtn").addEventListener("click", handleLogin);
+    </script>
 </body>
 </html>

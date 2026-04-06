@@ -1,43 +1,181 @@
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #000; /* Nền đen sâu để làm nổi bật sao trắng */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
 }
+
+/* HÀM TẠO SAO DÀY ĐẶC */
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    z-index: 0;
+}
+
+/* LỚP 1: SAO NHỎ (1000+ điểm sáng) */
+.stars {
+    box-shadow: 
+        10px 10px #fff, 50px 100px #fff, 150px 50px #fff, 200px 200px #fff, 300px 150px #fff, 400px 50px #fff, 500px 300px #fff, 600px 100px #fff, 700px 400px #fff, 800px 200px #fff, 900px 500px #fff, 1000px 100px #fff, 1100px 450px #fff, 1200px 200px #fff, 1300px 600px #fff, 1400px 150px #fff, 1500px 500px #fff, 1600px 100px #fff, 1700px 400px #fff, 1800px 250px #fff, 1900px 600px #fff, 2000px 50px #fff,
+        /* Copy thêm cụm tọa độ để dày đặc */
+        85px 445px #fff, 192px 732px #fff, 356px 890px #fff, 512px 234px #fff, 689px 456px #fff, 823px 123px #fff, 954px 678px #fff, 112px 890px #fff, 245px 321px #fff, 412px 765px #fff, 590px 112px #fff, 734px 543px #fff, 901px 234px #fff, 1056px 789px #fff, 1234px 123px #fff, 1345px 567px #fff, 1567px 890px #fff, 1789px 345px #fff, 1901px 678px #fff, 156px 234px #fff, 345px 567px #fff, 567px 890px #fff, 789px 123px #fff, 901px 456px #fff;
+    animation: moveStars 120s linear infinite;
+}
+.stars:after {
+    content: "";
+    position: absolute;
+    top: 2000px; /* Lặp lại để không bị đứt quãng khi trôi */
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: inherit;
+}
+
+/* LỚP 2: SAO VỪA (Tăng mật độ trung bình) */
+.stars2 {
+    width: 3px;
+    height: 3px;
+    box-shadow: 
+        50px 50px #fff, 250px 350px #fff, 450px 150px #fff, 650px 550px #fff, 850px 250px #fff, 1050px 450px #fff, 1250px 50px #fff, 1450px 650px #fff, 1650px 250px #fff, 1850px 450px #fff,
+        150px 750px #fff, 350px 150px #fff, 550px 850px #fff, 750px 350px #fff, 950px 950px #fff, 1150px 250px #fff, 1350px 750px #fff, 1550px 450px #fff, 1750px 150px #fff, 1950px 850px #fff;
+    animation: moveStars 180s linear infinite;
+}
+.stars2:after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: inherit;
+}
+
+/* LỚP 3: SAO LỚN (Phát sáng lấp lánh) */
+.stars3 {
+    width: 5px;
+    height: 5px;
+    box-shadow: 100px 400px #fff, 500px 800px #fff, 900px 200px #fff, 1300px 600px #fff, 1700px 900px #fff, 300px 100px #fff, 700px 500px #fff, 1100px 150px #fff, 1500px 750px #fff, 1900px 350px #fff;
+    animation: moveStars 250s linear infinite;
+}
+.stars3:after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    box-shadow: inherit;
+}
+
+/* CHUYỂN ĐỘNG TRÔI DẢI NGÂN HÀ */
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+}
+
+/* BOX ĐĂNG NHẬP */
 .login-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-input {
+    position: relative;
+    z-index: 10;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    max-width: 400px;
 }
+
+.login-box {
+    background: rgba(0, 0, 0, 0.9); /* Nền hộp cực tối để nổi bật sao xung quanh */
+    padding: 50px 40px;
+    border-radius: 4px;
+    border: 1px solid #fff; /* Viền trắng mảnh đúng chất mô hình 3D */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 5px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 15px #fff;
+}
+
+p {
+    color: #666;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+    text-transform: uppercase;
+}
+
+/* INPUT */
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 1.1rem;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #444;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+.input-group input:focus {
+    border-bottom: 1px solid #fff;
+}
+
+/* NÚT NEON TRẮNG */
 button {
     width: 100%;
-    padding: 10px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 16px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-family:  sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: 0.4s;
 }
+
 button:hover {
-    background: #5567c1;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 30px #fff, 0 0 50px #fff;
 }
+
 .error {
-    color: red;
-    margin-top: 10px;
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 20px;
 }

@@ -1,24 +1,52 @@
-// Hàm hiển thị ảnh khi chọn file từ máy tính
+window.onload = function() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    
+    if (isLoggedIn === "true") {
+        // Lấy dữ liệu từ bộ nhớ
+        const userName = localStorage.getItem("userName");
+        const userID = localStorage.getItem("userID");
+        const userDob = localStorage.getItem("userDob");
+        const userGender = localStorage.getItem("userGender");
+
+        // Đổ dữ liệu vào giao diện HTML
+        document.getElementById("username").innerText = userName;
+        document.getElementById("email").innerText = "Mã số thẻ: " + userID;
+        
+        // Cập nhật ngày sinh và giới tính
+        if (document.getElementById("dob")) {
+            document.getElementById("dob").innerText = userDob;
+        }
+        if (document.getElementById("gender")) {
+            document.getElementById("gender").innerText = userGender;
+        }
+
+        // Kiểm tra ảnh đại diện cũ
+        const savedAvatar = localStorage.getItem("userAvatar");
+        if (savedAvatar) {
+            document.getElementById("avatar").src = savedAvatar;
+        }
+    } else {
+        window.location.href = "login.html";
+    }
+};
+
+// Hàm hiển thị ảnh khi chọn file và LƯU LẠI vào máy
 function previewAvatar(event) {
   const file = event.target.files[0];
   if (file) {
     const reader = new FileReader();
     reader.onload = function(e) {
-      document.getElementById("avatar").src = e.target.result;
+      const imageData = e.target.result;
+      document.getElementById("avatar").src = imageData;
+      
+      // Lưu ảnh vào localStorage để khi F5 hoặc quay lại vẫn còn ảnh này
+      localStorage.setItem("userAvatar", imageData);
     };
     reader.readAsDataURL(file);
   }
 }
 
-// Hàm chỉnh sửa thông tin cá nhân
+// Chỉnh sửa lại hàm editProfile để thông báo dữ liệu này là cố định từ thẻ
 function editProfile() {
-  let newName = prompt("Nhập tên mới:", document.getElementById("username").innerText);
-  let newEmail = prompt("Nhập email mới:", document.getElementById("email").innerText);
-  let newDob = prompt("Nhập ngày sinh mới:", document.getElementById("dob").innerText);
-  let newGender = prompt("Nhập giới tính (Nam/Nữ):", document.getElementById("gender").innerText);
-
-  if (newName) document.getElementById("username").innerText = newName;
-  if (newEmail) document.getElementById("email").innerText = newEmail;
-  if (newDob) document.getElementById("dob").innerText = newDob;
-  if (newGender) document.getElementById("gender").innerText = newGender;
+  alert("Họ tên và Mã số thẻ được đồng bộ từ hệ thống thẻ học sinh và không thể thay đổi thủ công.");
 }
