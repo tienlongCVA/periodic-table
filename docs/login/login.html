@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập - Hệ thống Mô phỏng 3D</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" type="image/jpg" href="../img/images.jpg"/>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="stars"></div>
@@ -52,34 +54,36 @@
         const db = getDatabase(app);
 
         async function handleLogin() {
-            const studentID = document.getElementById("studentIDInput").value.trim();
-            const errorMsg = document.getElementById("error-msg");
-        
+    const studentID = document.getElementById("studentIDInput").value.trim();
+    const errorMsg = document.getElementById("error-msg");
 
-            if (!studentID) {
-                errorMsg.innerText = "Vui lòng nhập mã số thẻ!";
-                return;
-            }
+    try {
+        const dbRef = ref(db);
+        const snapshot = await get(child(dbRef, `users/${studentID}`));
 
-            try {
-                const dbRef = ref(db);
-                const snapshot = await get(child(dbRef, `users/${studentID}`));
+        if (snapshot.exists()) {
+            const userData = snapshot.val();
+            
+            // 1. Lưu dữ liệu
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("userName", userData.name);
+            localStorage.setItem("userID", studentID);
+            localStorage.setItem("userDob", userData.dob || "Chưa cập nhật");
+            localStorage.setItem("userGender", userData.gender || "Chưa xác định");
+            
+            // 2. Đánh dấu để hiện thông báo ở trang CHỦ
+            localStorage.setItem("showWelcome", "true"); 
+            
+            // 3. Chuyển hướng
+            window.location.href = "../index.html";
 
-                if (snapshot.exists()) {
-                    const userData = snapshot.val();
-                    localStorage.setItem("isLoggedIn", "true");
-                    localStorage.setItem("userName", userData.name);
-                    localStorage.setItem("userID", studentID);
-                    localStorage.setItem("userDob", userData.dob || "Chưa cập nhật");
-                    localStorage.setItem("userGender", userData.gender || "Chưa xác định");
-                    window.location.href = "../index.html";
-                } else {
-                    errorMsg.innerText = "Mã số không hợp lệ hoặc chưa đăng ký!";
-                }
-            } catch (error) {
-                errorMsg.innerText = "Lỗi kết nối máy chủ!";
-            }
+        } else {
+            errorMsg.innerText = "Mã số không hợp lệ hoặc chưa đăng ký!";
         }
+    } catch (error) {
+        errorMsg.innerText = "Lỗi kết nối máy chủ!";
+    }
+}
 
         document.getElementById("loginBtn").addEventListener("click", handleLogin);
     </script>

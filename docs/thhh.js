@@ -1,3 +1,27 @@
+window.addEventListener('load', function() {
+    const showWelcome = localStorage.getItem("showWelcome");
+    const userName = localStorage.getItem("userName");
+
+    if (showWelcome === "true" && userName) {
+        Swal.fire({
+            title: `Chào mừng <br> <b style="color: #fff; text-shadow: 0 0 20px #fff;">${userName}</b>!`,
+            text: `Bạn đã đăng nhập thành công vào bảng tuần hoàn hóa học 3D!`,
+            icon: 'success',
+            background: '#0a192f',
+            color: '#ffffff',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: () => {
+                const title = Swal.getTitle();
+                title.style.textShadow = '0 0 15px #fff';
+            }
+        });
+
+        // Xóa dấu để lần sau load lại trang không hiện nữa
+        localStorage.removeItem("showWelcome");
+    }
+});
 function showElementDetails(name, symbol, number, mass) {
     // Mở trang element3d.html với query string
     const url = `element3d.html?name=${encodeURIComponent(name)}&number=${number}&mass=${mass}`;

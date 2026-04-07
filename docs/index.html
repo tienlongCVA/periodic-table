@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANG MÔ PHỎNG 3D CẦU TẠO NGUYÊN TỬ CỦA CÁC NGUYÊN TỐ TRONG BẢNG TUẦN HOÀN HÓA HỌC</title>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
    // Kiểm tra xem người dùng đã đăng nhập chưa
 const loggedIn = localStorage.getItem("isLoggedIn");
 if (loggedIn !== "true") {
     // Nếu chưa đăng nhập THẬT SỰ thì mới quay về login
     window.location.href = "login/login.html";
-} else {
-    const name = localStorage.getItem("userName");
-    console.log("Chào mừng " + name + " đến với ");
-    // Bạn có thể chèn tên vào một thẻ div nào đó trên trang chủ:
-    // document.getElementById('user-display').innerText = "Học sinh: " + name;
-}
+} 
   </script> 
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/jpg" href="img/images.jpg"/>
 </head>
-<!-- Khung hiển thị mô hình 3D Carbon -->
+<!-- Khung hiển thị mô hình 3D-->
 <div id="carbon-popup" style="display: none; position: fixed; top: 10%; left: 50%; transform: translateX(-50%); background: #222; padding: 20px; border-radius: 12px; z-index: 1000; box-shadow: 0 0 10px black;">
   <h3 style="color: white; text-align: center;">Mô hình nguyên tử Carbon</h3>
   <iframe src="Carbon/build/index.html" width="400" height="400" frameborder="0" style="border-radius: 10px;"></iframe>
