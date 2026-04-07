@@ -10,10 +10,10 @@
 const loggedIn = localStorage.getItem("isLoggedIn");
 if (loggedIn !== "true") {
     // Nếu chưa đăng nhập THẬT SỰ thì mới quay về login
-    window.location.href = "login.html";
+    window.location.href = "login/login.html";
 } else {
     const name = localStorage.getItem("userName");
-    console.log("Chào mừng " + name + " đến với ChemVerse 8!");
+    console.log("Chào mừng " + name + " đến với ");
     // Bạn có thể chèn tên vào một thẻ div nào đó trên trang chủ:
     // document.getElementById('user-display').innerText = "Học sinh: " + name;
 }
