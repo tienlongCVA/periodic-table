@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" type="image/jpg" href="../img/images.jpg"/>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="stars"></div>
@@ -70,11 +69,7 @@
             localStorage.setItem("userID", studentID);
             localStorage.setItem("userDob", userData.dob || "Chưa cập nhật");
             localStorage.setItem("userGender", userData.gender || "Chưa xác định");
-            
-            // 2. Đánh dấu để hiện thông báo ở trang CHỦ
-            localStorage.setItem("showWelcome", "true"); 
-            
-            // 3. Chuyển hướng
+            // 2. Chuyển hướng
             window.location.href = "../index.html";
 
         } else {
@@ -84,7 +79,6 @@
         errorMsg.innerText = "Lỗi kết nối máy chủ!";
     }
 }
-
         document.getElementById("loginBtn").addEventListener("click", handleLogin);
     </script>
 </body>
