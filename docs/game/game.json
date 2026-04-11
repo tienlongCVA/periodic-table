@@ -1,0 +1,22 @@
+[
+  {"z": 1, "symbol": "H", "name": "Hydrogen", "shells": [1]},
+  {"z": 2, "symbol": "He", "name": "Helium", "shells": [2]},
+  {"z": 3, "symbol": "Li", "name": "Lithium", "shells": [2, 1]},
+  {"z": 4, "symbol": "Be", "name": "Beryllium", "shells": [2, 2]},
+  {"z": 5, "symbol": "B", "name": "Boron", "shells": [2, 3]},
+  {"z": 6, "symbol": "C", "name": "Carbon", "shells": [2, 4]},
+  {"z": 7, "symbol": "N", "name": "Nitrogen", "shells": [2, 5]},
+  {"z": 8, "symbol": "O", "name": "Oxygen", "shells": [2, 6]},
+  {"z": 9, "symbol": "F", "name": "Fluorine", "shells": [2, 7]},
+  {"z": 10, "symbol": "Ne", "name": "Neon", "shells": [2, 8]},
+  {"z": 11, "symbol": "Na", "name": "Sodium", "shells": [2, 8, 1]},
+  {"z": 12, "symbol": "Mg", "name": "Magnesium", "shells": [2, 8, 2]},
+  {"z": 13, "symbol": "Al", "name": "Aluminum", "shells": [2, 8, 3]},
+  {"z": 14, "symbol": "Si", "name": "Silicon", "shells": [2, 8, 4]},
+  {"z": 15, "symbol": "P", "name": "Phosphorus", "shells": [2, 8, 5]},
+  {"z": 16, "symbol": "S", "name": "Sulfur", "shells": [2, 8, 6]},
+  {"z": 17, "symbol": "Cl", "name": "Chlorine", "shells": [2, 8, 7]},
+  {"z": 18, "symbol": "Ar", "name": "Argon", "shells": [2, 8, 8]},
+  {"z": 19, "symbol": "K", "name": "Potassium", "shells": [2, 8, 8, 1]},
+  {"z": 20, "symbol": "Ca", "name": "Calcium", "shells": [2, 8, 8, 2]}
+]

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="image/jpg" href="../img/images.jpg"/>
+    <title>Trò chơi</title>
+    <style>
+        :root {
+            --neon-cyan: #00f2ff;
+            --neon-glow: rgba(0, 242, 255, 0.5);
+            --bg-dark: #0a0f1a;
+        }
+
+        body {
+            margin: 0; background: var(--bg-dark); color: white;
+            font-family: 'Segoe UI', sans-serif; overflow: hidden;
+            display: flex; flex-direction: column; align-items: center; height: 100vh;
+        }
+
+        /* Nền sao lấp lánh */
+        .stars-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+        }
+
+        h1 { text-shadow: 0 0 15px var(--neon-cyan); margin: 15px 0 5px; color: var(--neon-cyan); }
+
+        .container {
+            display: flex; width: 95%; max-width: 1100px; height: 75vh; gap: 20px;
+        }
+
+        /* KHO ELECTRON */
+        .sidebar {
+            width: 220px; border: 2px solid var(--neon-cyan); border-radius: 15px;
+            padding: 15px; background: rgba(0, 242, 255, 0.05);
+            display: flex; flex-direction: column; box-shadow: 0 0 15px var(--neon-glow);
+        }
+
+        .electron-bin {
+            flex-grow: 1; border: 1px dashed var(--neon-cyan); border-radius: 10px;
+            display: flex; flex-wrap: wrap; align-content: flex-start;
+            gap: 8px; padding: 10px; overflow-y: auto; background: rgba(0,0,0,0.2);
+        }
+
+        /* MÔ HÌNH NGUYÊN TỬ */
+        .game-area {
+            flex-grow: 1; border: 2px solid var(--neon-cyan); border-radius: 15px;
+            position: relative; background: rgba(0, 0, 0, 0.3);
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 0 15px var(--neon-glow);
+        }
+
+        .atom-display { position: relative; width: 450px; height: 450px; }
+
+        .nucleus {
+            position: absolute; top: 50%; left: 50%; width: 50px; height: 50px;
+            background: radial-gradient(circle, #ff6b6b, #ee5253);
+            border-radius: 50%; transform: translate(-50%, -50%);
+            display: flex; justify-content: center; align-items: center;
+            font-weight: bold; box-shadow: 0 0 25px #ff6b6b; z-index: 100;
+        }
+
+        .orbit {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        /* Fix lỗi kén chọn lớp: Vòng nhỏ z-index cao hơn */
+        .orbit[data-idx="0"] { width: 130px; height: 130px; z-index: 40; }
+        .orbit[data-idx="1"] { width: 220px; height: 220px; z-index: 30; }
+        .orbit[data-idx="2"] { width: 310px; height: 310px; z-index: 20; }
+        .orbit[data-idx="3"] { width: 400px; height: 400px; z-index: 10; }
+
+        .orbit.over { background: rgba(0, 242, 255, 0.1); border-width: 2px; }
+
+        /* HẠT ELECTRON */
+        .electron {
+            width: 18px; height: 18px; background: var(--neon-cyan);
+            border-radius: 50%; box-shadow: 0 0 10px var(--neon-cyan);
+            cursor: grab; z-index: 50;
+        }
+
+        /* Khi electron nằm trong kho (layout tự do) */
+        .electron-bin .electron { position: relative !important; left: auto !important; top: auto !important; transform: none !important; }
+
+        /* Khi electron nằm trên quỹ đạo (layout tuyệt đối) */
+        .orbit .electron { position: absolute; transform: translate(-50%, -50%); }
+
+        /* THÔNG BÁO */
+        .overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+            display: none; justify-content: center; align-items: center; z-index: 1000;
+        }
+        .modal {
+            background: #111; border: 3px solid var(--neon-cyan); border-radius: 20px;
+            padding: 40px; text-align: center; max-width: 400px;
+            box-shadow: 0 0 30px var(--neon-cyan); animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes pop { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        
+        button {
+            padding: 10px 25px; background: transparent; border: 2px solid var(--neon-cyan);
+            color: var(--neon-cyan); border-radius: 5px; cursor: pointer; font-weight: bold;
+            text-transform: uppercase; margin-top: 15px; transition: 0.3s;
+        }
+        button:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 15px var(--neon-cyan); }
+
+        .element-info { position: absolute; top: 20px; right: 20px; text-align: right; color: var(--neon-cyan); }
+        .back-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background: #ff4d4d;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+             box-shadow: 0 0 10px rgba(255,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars-bg"></div>
+    <h1>TRUY TÌM ELECTRON</h1>
+    <p id="mission">Đang tải dữ liệu...</p>
+    <button class="back-btn" onclick="goBack()">⏎ Quay lại</button>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h3 style="margin-top:0">Kho Electron</h3>
+            <div class="electron-bin" id="bin"></div>
+        </div>
+
+        <div class="game-area">
+            <div class="element-info">
+                <div id="el-name" style="font-size: 1.5rem; font-weight: bold;">---</div>
+                <div id="el-symbol">---</div>
+            </div>
+            <div class="atom-display">
+                <div class="nucleus" id="nucleus">?</div>
+                <div id="orbits-container">
+                    <div class="orbit" data-idx="0"></div>
+                    <div class="orbit" data-idx="1"></div>
+                    <div class="orbit" data-idx="2"></div>
+                    <div class="orbit" data-idx="3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <button onclick="check()">Kiểm tra kết quả</button>
+        <button onclick="nextLevel()">Đổi nguyên tố</button>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <h2 id="modal-title"></h2>
+            <p id="modal-msg"></p>
+            <button onclick="closeModal()">Đã hiểu</button>
+        </div>
+    </div>
+
+    <script>
+        let elements = [];
+        let current = null;
+
+        // 1. Tải dữ liệu
+        fetch('game.json').then(r => r.json()).then(data => {
+            elements = data;
+            nextLevel();
+        });
+
+        // 2. Khởi tạo màn chơi
+        function nextLevel() {
+            current = elements[Math.floor(Math.random() * elements.length)];
+            document.getElementById('nucleus').innerText = "+" + current.z;
+            document.getElementById('el-name').innerText = current.name;
+            document.getElementById('el-symbol').innerText = `Ký hiệu: ${current.symbol}`;
+            document.getElementById('mission').innerText = `Nhiệm vụ: Sửa lại cấu hình Electron cho ${current.name}`;
+
+            // Reset kho
+            const bin = document.getElementById('bin');
+            bin.innerHTML = '';
+            for(let i=0; i<30; i++) createElectron(`e-bin-${i}`, bin);
+
+            // Reset và tạo lỗi (Kiểu 3)
+            const orbits = document.querySelectorAll('.orbit');
+            orbits.forEach((orb, i) => {
+                orb.innerHTML = '';
+                orb.style.display = i < current.shells.length ? 'block' : 'none';
+                
+                // Tạo một vài electron sai ngẫu nhiên
+                let count = current.shells[i] + (Math.random() > 0.5 ? 1 : -1);
+                if(count < 0) count = 0;
+                for(let j=0; j<count; j++) createElectron(`e-init-${i}-${j}`, orb);
+                reposition(orb);
+            });
+
+            initEvents();
+        }
+
+        function createElectron(id, parent) {
+            const e = document.createElement('div');
+            e.className = 'electron';
+            e.id = id;
+            e.draggable = true;
+            e.addEventListener('dragstart', (ev) => ev.dataTransfer.setData("text", ev.target.id));
+            parent.appendChild(e);
+        }
+
+        // 3. Xử lý logic kéo thả (Trái tim của Game)
+        function initEvents() {
+            const orbits = document.querySelectorAll('.orbit');
+            const sidebar = document.getElementById('sidebar');
+
+            // Thả vào quỹ đạo
+            orbits.forEach(orb => {
+                orb.ondragover = (e) => { e.preventDefault(); orb.classList.add('over'); };
+                orb.ondragleave = () => orb.classList.remove('over');
+                orb.ondrop = (e) => {
+                    e.preventDefault();
+                    orb.classList.remove('over');
+                    const id = e.dataTransfer.getData("text");
+                    const el = document.getElementById(id);
+                    if(el) {
+                        orb.appendChild(el);
+                        updateAllOrbits();
+                    }
+                };
+            });
+
+            // Thả ngược về kho (Thu hồi)
+            sidebar.ondragover = (e) => e.preventDefault();
+            sidebar.ondrop = (e) => {
+                e.preventDefault();
+                const id = e.dataTransfer.getData("text");
+                const el = document.getElementById(id);
+                if(el) {
+                    document.getElementById('bin').appendChild(el);
+                    updateAllOrbits();
+                }
+            };
+        }
+
+        function updateAllOrbits() {
+            document.querySelectorAll('.orbit').forEach(reposition);
+        }
+
+        function reposition(orb) {
+            const es = orb.querySelectorAll('.electron');
+            const n = es.length;
+            if(n === 0) return;
+            const r = orb.offsetWidth / 2;
+            const step = 360 / n;
+            es.forEach((e, i) => {
+                const rad = (step * i) * (Math.PI / 180);
+                e.style.left = (r + r * Math.cos(rad)) + 'px';
+                e.style.top = (r + r * Math.sin(rad)) + 'px';
+            });
+        }
+
+        // 4. Kiểm tra và Thông báo
+        function check() {
+            const orbits = document.querySelectorAll('.orbit:not([style*="display: none"])');
+            let userConfig = [];
+            orbits.forEach(o => userConfig.push(o.querySelectorAll('.electron').length));
+
+            const isCorrect = JSON.stringify(userConfig) === JSON.stringify(current.shells);
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-msg');
+
+            if(isCorrect) {
+                title.innerText = "CHÍNH XÁC! 🎉";
+                title.style.color = "var(--neon-cyan)";
+                msg.innerText = `Bạn đã hoàn thành nguyên tử ${current.name} một cách tuyệt vời.`;
+            } else {
+                title.innerText = "CHƯA ĐÚNG! ❌";
+                title.style.color = "#ff6b6b";
+                msg.innerText = `Gợi ý: ${current.name} có số hiệu Z=${current.z}. Hãy kiểm tra lại số electron trên từng lớp.`;
+            }
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function goBack() {
+            window.location.href = "../index.html"; // Quay lại bảng tuần hoàn
+        }
+
+        function closeModal() { document.getElementById('overlay').style.display = 'none'; }
+    </script>
+</body>
+</html>
