@@ -9,6 +9,7 @@
             --neon-cyan: #00f2ff;
             --neon-glow: rgba(0, 242, 255, 0.5);
             --bg-dark: #0a0f1a;
+            --nucleus-red: #ff4757;
         }
 
         body {
@@ -23,11 +24,10 @@
         }
 
         h1 { text-shadow: 0 0 15px var(--neon-cyan); margin: 15px 0 5px; color: var(--neon-cyan); letter-spacing: 2px; }
-        #mission { font-size: 1.1rem; color: #fff; background: rgba(0, 242, 255, 0.1); padding: 8px 25px; border-radius: 30px; border: 1px solid var(--neon-cyan); }
+        #mission { font-size: 1.1rem; color: #fff; background: rgba(0, 242, 255, 0.1); padding: 8px 25px; border-radius: 30px; border: 1px solid var(--neon-cyan); text-align: center; }
 
-        .container { display: flex; width: 95%; max-width: 1100px; height: 70vh; gap: 20px; margin-top: 15px; }
+        .container { display: flex; width: 95%; max-width: 1100px; height: 65vh; gap: 20px; margin-top: 15px; }
 
-        /* SIDEBAR & BIN */
         .sidebar {
             width: 240px; border: 2px solid var(--neon-cyan); border-radius: 15px;
             padding: 15px; background: rgba(0, 242, 255, 0.05);
@@ -36,98 +36,115 @@
         .electron-bin {
             flex-grow: 1; border: 1px dashed var(--neon-cyan); border-radius: 10px;
             display: flex; flex-wrap: wrap; align-content: flex-start;
-            gap: 8px; padding: 10px; overflow-y: auto; background: rgba(0,0,0,0.2);
+            gap: 10px; padding: 15px; overflow-y: auto; background: rgba(0,0,0,0.3); margin-top: 10px;
         }
 
-        #input-zone { display: none; margin-top: 15px; text-align: center; }
-        #z-answer { background: rgba(255,255,255,0.1); border: 2px solid var(--neon-cyan); color: white; padding: 10px; width: 80%; border-radius: 5px; font-size: 1.5rem; text-align: center; outline: none; }
+        #input-zone { margin-top: 15px; text-align: center; }
+        #z-answer {
+            background: rgba(0,0,0,0.5); border: 2px solid var(--neon-cyan);
+            color: var(--neon-cyan); padding: 10px; width: 80%;
+            font-size: 1.5rem; text-align: center; border-radius: 8px;
+        }
 
-        /* GAME AREA */
         .game-area {
             flex-grow: 1; border: 2px solid var(--neon-cyan); border-radius: 15px;
             position: relative; background: rgba(0, 0, 0, 0.4);
             display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 0 15px var(--neon-glow);
         }
-        
-        /* Nút thu hồi ở góc trái trên ô mô hình */
-        .reset-player-btn {
-            position: absolute; top: 15px; left: 15px; z-index: 250;
-            padding: 8px 15px; background: rgba(255, 0, 0, 0.2);
-            border: 1px solid #ff0000; color: #ff0000; border-radius: 5px;
-            cursor: pointer; font-size: 0.8rem; font-weight: bold; transition: 0.3s;
-        }
-        .reset-player-btn:hover { background: #ff0000; color: white; box-shadow: 0 0 10px #ff0000; }
 
-        .element-info { position: absolute; top: 15px; right: 20px; text-align: right; z-index: 200; }
-        #el-name { font-size: 1.6rem; font-weight: bold; color: var(--neon-cyan); }
-        #el-symbol { font-size: 1rem; opacity: 0.8; font-family: monospace; }
+        .element-info { position: absolute; top: 15px; right: 20px; text-align: right; z-index: 300; }
+        #el-name { font-size: 1.8rem; font-weight: bold; color: var(--neon-cyan); text-transform: uppercase; }
+        
+        .reset-player-btn {
+            position: absolute; top: 15px; left: 15px; z-index: 300;
+            padding: 10px 18px; background: var(--nucleus-red);
+            border: none; color: white; border-radius: 5px;
+            cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.3s;
+        }
 
         .atom-display { position: relative; width: 450px; height: 450px; }
         .nucleus {
-            position: absolute; top: 50%; left: 50%; width: 55px; height: 55px;
-            background: radial-gradient(circle, #ff6b6b, #ee5253);
+            position: absolute; top: 50%; left: 50%; width: 60px; height: 60px;
+            background: radial-gradient(circle, #ff6b6b, var(--nucleus-red));
             border-radius: 50%; transform: translate(-50%, -50%);
             display: flex; justify-content: center; align-items: center;
-            font-weight: bold; font-size: 1.4rem; box-shadow: 0 0 25px #ff6b6b; z-index: 100;
+            font-weight: bold; font-size: 1.6rem; box-shadow: 0 0 30px var(--nucleus-red); z-index: 200;
         }
 
         .orbit {
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            border: 1px solid rgba(0, 242, 255, 0.25); border-radius: 50%;
-            transition: background 0.2s;
+            border: 1.5px solid rgba(0, 242, 255, 0.2); border-radius: 50%;
         }
-        .orbit[data-idx="0"] { width: 130px; height: 130px; z-index: 40; }
-        .orbit[data-idx="1"] { width: 220px; height: 220px; z-index: 30; }
-        .orbit[data-idx="2"] { width: 310px; height: 310px; z-index: 20; }
-        .orbit[data-idx="3"] { width: 400px; height: 400px; z-index: 10; }
-        .orbit.over { background: rgba(0, 242, 255, 0.1); border-width: 2px; }
+        .orbit[data-idx="0"] { width: 140px; height: 140px; z-index: 100; }
+        .orbit[data-idx="1"] { width: 230px; height: 230px; z-index: 90; }
+        .orbit[data-idx="2"] { width: 320px; height: 320px; z-index: 80; }
+        .orbit[data-idx="3"] { width: 410px; height: 410px; z-index: 70; }
 
+        .orbit.over { border: 3px solid var(--neon-cyan); background: rgba(0, 242, 255, 0.1); }
+
+        /* --- ANIMATION ELECTRON --- */
         .electron {
-            width: 18px; height: 18px; background: var(--neon-cyan);
+            width: 20px; height: 20px; background: var(--neon-cyan);
             border-radius: 50%; box-shadow: 0 0 12px var(--neon-cyan);
-            cursor: grab; z-index: 150;
+            cursor: grab;
+            /* Animation mượt khi thay đổi vị trí */
+            transition: left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        top 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        opacity 0.3s ease;
         }
-        /* Đánh dấu hạt hệ thống để tránh bị xóa */
-        .electron.system-init { background: #fff; box-shadow: 0 0 12px #fff; }
+        
+        .electron.system-init { 
+            background: #fff; 
+            box-shadow: 0 0 15px #fff; 
+            border: 2px solid #ccc;
+        }
 
-        .electron-bin .electron { position: relative !important; left: auto !important; top: auto !important; transform: none !important; }
-        .orbit .electron { position: absolute; transform: translate(-50%, -50%); transition: left 0.3s ease, top 0.3s ease; }
+        .orbit .electron { 
+            position: absolute; 
+            transform: translate(-50%, -50%); 
+            z-index: 150; 
+            pointer-events: none;
+        }
 
-        /* MODAL */
+        /* Hiệu ứng xuất hiện mới */
+        @keyframes spawn {
+            from { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+        .orbit .electron { animation: spawn 0.4s ease-out; }
+
+        .orbit .electron.interactable { pointer-events: auto !important; }
+        .electron-bin .electron { pointer-events: auto; animation: none; }
+
         .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 1000; }
-        .modal { background: #0a0f1a; border: 3px solid var(--neon-cyan); border-radius: 20px; padding: 40px; text-align: center; max-width: 450px; box-shadow: 0 0 50px var(--neon-cyan); }
-
-        .btn-container { margin-top: 25px; display: flex; gap: 10px; justify-content: center; }
-        button.main-btn { padding: 12px 30px; background: transparent; border: 2px solid var(--neon-cyan); color: var(--neon-cyan); border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
-        button.main-btn:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 20px var(--neon-cyan); }
+        .modal { background: #0a0f1a; border: 3px solid var(--neon-cyan); border-radius: 20px; padding: 40px; text-align: center; }
+        .btn-container { margin-top: 25px; display: flex; gap: 10px; }
+        button.main-btn { padding: 12px 30px; background: transparent; border: 2px solid var(--neon-cyan); color: var(--neon-cyan); border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
     </style>
 </head>
 <body>
     <div class="stars-bg"></div>
     <h1>KIẾN TRÚC SƯ NGUYÊN TỬ</h1>
-    <p id="mission">Đang chuẩn bị...</p>
+    <p id="mission">...</p>
 
     <div class="container">
         <div class="sidebar" id="sidebar">
-            <h3 style="margin-top:0; color: var(--neon-cyan);">CÔNG CỤ</h3>
+            <h3 style="margin:0; color: var(--neon-cyan); text-align: center;">KHO HẠT</h3>
             <div class="electron-bin" id="bin"></div>
-            <div id="input-zone">
-                <p>Dự đoán số Z:</p>
+            <div id="input-zone" style="display: none;">
+                <p>Nhập số hiệu nguyên tử (Z):</p>
                 <input type="number" id="z-answer" placeholder="?">
             </div>
         </div>
 
-        <div class="game-area" id="drop-zone-atom">
-            <button class="reset-player-btn" onclick="recallPlayerElectrons()">Thu hồi hạt đã thêm</button>
-            
+        <div class="game-area">
+            <button class="reset-player-btn" id="recall-btn" onclick="recallPlayerElectrons()">THU HỒI HẠT XANH</button>
             <div class="element-info">
                 <div id="el-name">???</div>
                 <div id="el-symbol">???</div>
             </div>
-            
             <div class="atom-display">
-                <div class="nucleus" id="nucleus">?</div>
+                <div class="nucleus" id="nucleus">+0</div>
                 <div id="orbits-container">
                     <div class="orbit" data-idx="0"></div>
                     <div class="orbit" data-idx="1"></div>
@@ -139,22 +156,22 @@
     </div>
 
     <div class="btn-container">
-        <button class="main-btn" onclick="check()">Kiểm tra kết quả</button>
-        <button class="main-btn" onclick="nextLevel()" style="border-color: #fff; color: #fff;">Đổi thử thách</button>
+        <button class="main-btn" onclick="check()">XÁC NHẬN</button>
+        <button class="main-btn" onclick="nextLevel()" style="border-color:#fff; color:#fff;">TIẾP THEOgit</button>
     </div>
 
     <div class="overlay" id="overlay">
         <div class="modal">
             <h2 id="modal-title"></h2>
             <p id="modal-msg"></p>
-            <button class="main-btn" onclick="closeModal()">Tiếp tục</button>
+            <button class="main-btn" onclick="closeModal()">TIẾP TỤC</button>
         </div>
     </div>
 
     <script>
         let elements = [];
         let current = null;
-        let mode = 1; 
+        let mode = 1;
 
         fetch('game.json').then(r => r.json()).then(data => {
             elements = data;
@@ -163,94 +180,91 @@
 
         function nextLevel() {
             current = elements[Math.floor(Math.random() * elements.length)];
-            mode = Math.floor(Math.random() * 3) + 1; 
+            mode = Math.floor(Math.random() * 3) + 1;
             
             document.getElementById('z-answer').value = '';
             document.getElementById('input-zone').style.display = (mode === 2) ? 'block' : 'none';
             document.getElementById('bin').style.display = (mode === 2) ? 'none' : 'flex';
-            
-            const orbits = document.querySelectorAll('.orbit');
-            orbits.forEach(o => { o.innerHTML = ''; o.classList.remove('over'); });
+            document.getElementById('recall-btn').style.display = (mode === 2) ? 'none' : 'block';
 
-            const nameDisp = document.getElementById('el-name');
-            const symbolDisp = document.getElementById('el-symbol');
-            const missionDisp = document.getElementById('mission');
-            const nucleusDisp = document.getElementById('nucleus');
+            const orbits = document.querySelectorAll('.orbit');
+            orbits.forEach(o => { o.innerHTML = ''; o.style.display = 'none'; });
+
+            const nuc = document.getElementById('nucleus');
+            const infoName = document.getElementById('el-name');
+            const infoSym = document.getElementById('el-symbol');
 
             if (mode === 1) {
-                missionDisp.innerText = "Nhiệm vụ: Xây dựng cấu hình Electron dựa trên số hiệu nguyên tử (Z)";
-                nameDisp.innerText = "???"; symbolDisp.innerText = "Ký hiệu: ???";
-                nucleusDisp.innerText = current.z;
-                showOrbits(4);
+                document.getElementById('mission').innerText = `Xây dựng cấu hình Electron cho Z = ${current.z}`;
+                nuc.innerText = "+" + current.z;
+                infoName.innerText = "???"; infoSym.innerText = "Ký hiệu: ???";
+                orbits.forEach(o => o.style.display = 'block');
             } 
             else if (mode === 2) {
-                missionDisp.innerText = "Nhiệm vụ: Xác định số hiệu nguyên tử (Z) dựa trên mô hình cho sẵn";
-                nameDisp.innerText = "???"; symbolDisp.innerText = "Ký hiệu: ???";
-                nucleusDisp.innerText = "?";
-                showOrbits(current.shells.length);
-                fillElectrons(true); // Điền đúng, đánh dấu hạt hệ thống
-            } 
+                document.getElementById('mission').innerText = `Đếm hạt và đoán số hiệu nguyên tử Z`;
+                nuc.innerText = "+?";
+                infoName.innerText = "???"; infoSym.innerText = "Ký hiệu: ???";
+                current.shells.forEach((_, i) => orbits[i].style.display = 'block');
+                fillElectrons(true);
+            }
             else {
-                missionDisp.innerText = `Nhiệm vụ: Sửa lỗi cấu hình Electron cho nguyên tố ${current.name}`;
-                nameDisp.innerText = current.name;
-                symbolDisp.innerText = `Ký hiệu: ${current.symbol}`;
-                nucleusDisp.innerText = current.z;
-                showOrbits(current.shells.length);
-                fillElectrons(false); // Điền sai, đánh dấu hạt hệ thống
+                document.getElementById('mission').innerText = `Sửa lỗi cấu hình của ${current.name} (Z = ${current.z})`;
+                nuc.innerText = "+" + current.z;
+                infoName.innerText = current.name;
+                infoSym.innerText = `Ký hiệu: ${current.symbol}`;
+                current.shells.forEach((_, i) => orbits[i].style.display = 'block');
+                fillElectrons(false);
             }
 
             const bin = document.getElementById('bin');
             bin.innerHTML = '';
             if (mode !== 2) {
-                for(let i=0; i<30; i++) createElectron(`e-pool-${i}`, bin, false);
+                for(let i=0; i<25; i++) createElectron(`e-user-${i}`, bin, false);
             }
+            
             initDragEvents();
-        }
-
-        function showOrbits(num) {
-            document.querySelectorAll('.orbit').forEach((o, i) => {
-                o.style.display = i < num ? 'block' : 'none';
-            });
+            setTimeout(updateAll, 50);
         }
 
         function createElectron(id, parent, isSystem) {
             const e = document.createElement('div');
-            e.className = 'electron' + (isSystem ? ' system-init' : ' player-added');
             e.id = id;
-            e.draggable = true;
+            e.className = 'electron' + (isSystem ? ' system-init' : ' player-added interactable');
+            if(isSystem && mode === 3) e.classList.add('interactable');
+            e.draggable = e.classList.contains('interactable');
+
             e.addEventListener('dragstart', (ev) => {
                 ev.dataTransfer.setData("text", ev.target.id);
+                ev.target.style.transition = "none"; // Tắt transition khi đang kéo
+                setTimeout(() => ev.target.style.opacity = "0.5", 0);
             });
+            e.addEventListener('dragend', (ev) => {
+                ev.target.style.transition = ""; // Bật lại transition khi thả
+                ev.target.style.opacity = "1";
+            });
+            
             parent.appendChild(e);
-            return e;
         }
 
         function fillElectrons(isCorrect) {
             const orbits = document.querySelectorAll('.orbit');
             current.shells.forEach((count, i) => {
-                let finalCount = isCorrect ? count : Math.max(0, count + (Math.random() > 0.5 ? 1 : -1));
-                for(let j=0; j<finalCount; j++) {
-                    createElectron(`e-sys-${i}-${j}`, orbits[i], true);
-                }
-                reposition(orbits[i]);
+                let finalCount = isCorrect ? count : Math.max(1, count + (Math.random() > 0.5 ? 1 : -1));
+                for(let j=0; j<finalCount; j++) createElectron(`e-sys-${i}-${j}`, orbits[i], true);
             });
         }
 
-        // CHỨC NĂNG THU HỒI HẠT NGƯỜI CHƠI THÊM VÀO
         function recallPlayerElectrons() {
-            const playerElectrons = document.querySelectorAll('.orbit .electron.player-added');
             const bin = document.getElementById('bin');
-            playerElectrons.forEach(el => {
+            document.querySelectorAll('.orbit .electron.player-added').forEach(el => {
+                el.style.cssText = ""; 
                 bin.appendChild(el);
             });
             updateAll();
         }
 
         function initDragEvents() {
-            const orbits = document.querySelectorAll('.orbit');
-            const sidebar = document.getElementById('sidebar');
-
-            orbits.forEach(orb => {
+            document.querySelectorAll('.orbit').forEach(orb => {
                 orb.ondragover = (e) => { e.preventDefault(); orb.classList.add('over'); };
                 orb.ondragleave = () => orb.classList.remove('over');
                 orb.ondrop = (e) => {
@@ -258,22 +272,20 @@
                     orb.classList.remove('over');
                     const id = e.dataTransfer.getData("text");
                     const el = document.getElementById(id);
-                    if(el) {
-                        orb.appendChild(el);
-                        updateAll();
-                    }
+                    if(el) { orb.appendChild(el); updateAll(); }
                 };
             });
 
-            // Thả về Sidebar: Không cần hover chính xác vào kho, thả vào cả vùng Sidebar là nhận
+            const sidebar = document.getElementById('sidebar');
             sidebar.ondragover = (e) => e.preventDefault();
             sidebar.ondrop = (e) => {
                 e.preventDefault();
                 const id = e.dataTransfer.getData("text");
                 const el = document.getElementById(id);
-                if(el) {
-                    document.getElementById('bin').appendChild(el);
-                    updateAll();
+                if(el) { 
+                    el.style.cssText = ""; 
+                    document.getElementById('bin').appendChild(el); 
+                    updateAll(); 
                 }
             };
         }
@@ -282,24 +294,15 @@
             document.querySelectorAll('.orbit').forEach(reposition);
         }
 
-        // Hàm tính toán vị trí chuẩn xác để không bị lệch quỹ đạo
         function reposition(orb) {
             const es = orb.querySelectorAll('.electron');
-            const n = es.length;
-            if(n === 0) return;
-            
-            // Lấy bán kính từ kích thước thực tế của orbit
+            if(es.length === 0) return;
             const r = orb.offsetWidth / 2;
-            const step = 360 / n;
-
+            const step = 360 / es.length;
             es.forEach((e, i) => {
                 const rad = (step * i) * (Math.PI / 180);
-                // Tọa độ tính từ tâm của orbit (r, r)
-                const x = r + r * Math.cos(rad);
-                const y = r + r * Math.sin(rad);
-                
-                e.style.left = x + 'px';
-                e.style.top = y + 'px';
+                e.style.left = (r + r * Math.cos(rad)) + 'px';
+                e.style.top = (r + r * Math.sin(rad)) + 'px';
             });
         }
 
@@ -308,19 +311,23 @@
             let msg = "";
 
             if (mode === 2) {
-                const ans = document.getElementById('z-answer').value;
-                isCorrect = parseInt(ans) === current.z;
-                msg = isCorrect ? `Chính xác! Đây là ${current.name}.` : `Sai rồi! Đáp án là Z = ${current.z}.`;
+                isCorrect = (parseInt(document.getElementById('z-answer').value) === current.z);
+                msg = isCorrect ? `Đúng! Z=${current.z} là ${current.name}.` : `Sai rồi! Z=${current.z} mới đúng.`;
             } else {
-                const orbits = document.querySelectorAll('.orbit:not([style*="display: none"])');
+                const orbits = document.querySelectorAll('.orbit');
                 let userConfig = [];
-                orbits.forEach(o => userConfig.push(o.querySelectorAll('.electron').length));
-                isCorrect = JSON.stringify(userConfig) === JSON.stringify(current.shells);
-                msg = isCorrect ? `Hoàn hảo! Bạn đã xây dựng đúng ${current.name}.` : `Chưa đúng! Hãy xem lại cấu hình của ${current.name}.`;
+                for(let i=0; i < current.shells.length; i++) {
+                    userConfig.push(orbits[i].querySelectorAll('.electron').length);
+                }
+                let extra = 0;
+                for(let i=current.shells.length; i<4; i++) extra += orbits[i].querySelectorAll('.electron').length;
+
+                isCorrect = (JSON.stringify(userConfig) === JSON.stringify(current.shells)) && extra === 0;
+                msg = isCorrect ? `Giỏi lắm! Bạn đã xếp đúng cấu hình.` : `Chưa đúng! Đáp án: ${current.shells.join('-')}`;
             }
 
             const title = document.getElementById('modal-title');
-            title.innerText = isCorrect ? "THÀNH CÔNG! 🎉" : "THẤT BẠI! ❌";
+            title.innerText = isCorrect ? "CHÍNH XÁC! 🎉" : "THỬ LẠI XEM! ❌";
             title.style.color = isCorrect ? "var(--neon-cyan)" : "#ff6b6b";
             document.getElementById('modal-msg').innerText = msg;
             document.getElementById('overlay').style.display = 'flex';
@@ -328,7 +335,7 @@
 
         function closeModal() {
             document.getElementById('overlay').style.display = 'none';
-            if(document.getElementById('modal-title').innerText.includes("THÀNH CÔNG")) nextLevel();
+            if(document.getElementById('modal-title').innerText.includes("CHÍNH XÁC")) nextLevel();
         }
     </script>
 </body>
