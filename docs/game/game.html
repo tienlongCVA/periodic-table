@@ -120,13 +120,32 @@
         .modal { background: #0a0f1a; border: 3px solid var(--neon-cyan); border-radius: 20px; padding: 40px; text-align: center; }
         .btn-container { margin-top: 25px; display: flex; gap: 10px; }
         button.main-btn { padding: 12px 30px; background: transparent; border: 2px solid var(--neon-cyan); color: var(--neon-cyan); border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
+        .back-btn {
+            z-index: 99;
+            position: absolute;
+            left: 52px;
+            top: 50px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background: #ff4d4d;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 0 10px rgba(255,0,0,0.6);
+            }
+        .back-btn:hover {
+            background: #ff1a1a;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
     <div class="stars-bg"></div>
     <h1>KIẾN TRÚC SƯ NGUYÊN TỬ</h1>
     <p id="mission">...</p>
-
+    <button class="back-btn" onclick="window.location.href='../index.html';">Trang chủ</button>
     <div class="container">
         <div class="sidebar" id="sidebar">
             <h3 style="margin:0; color: var(--neon-cyan); text-align: center;">KHO HẠT</h3>
@@ -157,7 +176,7 @@
 
     <div class="btn-container">
         <button class="main-btn" onclick="check()">XÁC NHẬN</button>
-        <button class="main-btn" onclick="nextLevel()" style="border-color:#fff; color:#fff;">TIẾP THEOgit</button>
+        <button class="main-btn" onclick="nextLevel()" style="border-color:#fff; color:#fff;">TIẾP THEO</button>
     </div>
 
     <div class="overlay" id="overlay">
